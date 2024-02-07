@@ -2,12 +2,23 @@ project:
   type: website
 
 website:
-  title: "RMedicine_website"
+  title: "R/Medicine 2024"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: Register.qmd
+        text: Register
+      - href: Attend.qmd
+        text: Attend
+      - href: Program.qmd
+        text: Program
+      - href: Contact.qmd
+        text: Contact us
+      - href: Events.qmd
+        text: Past Events
+      
+
 
 format:
   html:

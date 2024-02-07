@@ -1,16 +1,44 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
+    "objectID": "Events.html",
+    "href": "Events.html",
     "title": "R/Medicine 2024",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "2023\n2022\n2021\n2020\n2019\n2018"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
+    "objectID": "Events.html#past-rmedicine-conferences",
+    "href": "Events.html#past-rmedicine-conferences",
+    "title": "R/Medicine 2024",
+    "section": "",
+    "text": "2023\n2022\n2021\n2020\n2019\n2018"
+  },
+  {
+    "objectID": "Register.html",
+    "href": "Register.html",
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "Attend.html#diversity-and-inclusion",
+    "href": "Attend.html#diversity-and-inclusion",
+    "title": "R/Medicine 2024",
+    "section": "Diversity and Inclusion",
+    "text": "Diversity and Inclusion"
+  },
+  {
+    "objectID": "index.html#an-r-consortium-virtual-conference",
+    "href": "index.html#an-r-consortium-virtual-conference",
+    "title": "R/Medicine 2024",
+    "section": "AN R CONSORTIUM VIRTUAL CONFERENCE",
+    "text": "AN R CONSORTIUM VIRTUAL CONFERENCE"
+  },
+  {
+    "objectID": "index.html#june-2024",
+    "href": "index.html#june-2024",
+    "title": "R/Medicine 2024",
+    "section": "JUNE 2024",
+    "text": "JUNE 2024"
   }
 ]
