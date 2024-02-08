@@ -17,14 +17,11 @@ website:
         text: Contact us
       - href: Events.qmd
         text: Past Events
-      
-
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
-
+    default-image-extension: svg
 editor: visual
-

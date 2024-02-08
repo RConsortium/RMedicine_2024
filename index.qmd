@@ -13,6 +13,19 @@ title: "R/Medicine 2024"
 
 ## **AN R CONSORTIUM VIRTUAL CONFERENCE**
 
+::: {layout-ncol=2}
+
+#### VIDEOS
+[![
+To experience the best of this year’s event, be sure to watch session recordings, available on the R Consortium YouTube Channel.
+](images/video){height=150}](https://youtube.com/playlist?list=PL4IzsxWztPdlpR3NqGzUI01M4_jqzIWqo)
+
+#### PRESENTATIONS
+[![
+Review session slides from speakers who provided them via the event schedule.
+](images/slide-show){height=150}](https://rmed2023a.sched.com/)
+:::
+
 ## **JUNE  2024**
 
 
@@ -23,6 +36,30 @@ title: "R/Medicine 2024"
 The R/Medicine conference provides a forum for sharing R based tools and approaches used to analyze and gain insights from health data. Conference workshops provide a way to learn and develop your R skills. Midweek demos allow you to try out new R packages and tools, and our hackathon provides an opportunity to learn how to develop new R tools. The conference talks share new packages, and successes in analyzing health, laboratory, and clinical data with R and Shiny with a vigorous ongoing discussion with speakers (with pre-recorded talks) in the chat.
 
 
+### BROUGHT TO YOU BY
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+<br>
 
+[![](images/R-con.png){fig-alt="R Consortium" fig-align="center" height=150}](https://www.r-consortium.org/)
+
+[![](images/cynkra.png){fig-alt="cynkra.com" fig-align="center" height=200}](https://cynkra.com/)
+
+
+
+
+
+<hr>
+Join our mailing list to hear all the latest about events, news and more
+
+<!--[if lte IE 8]>
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+<![endif]-->
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+<script>
+  hbspt.forms.create({
+	region: "na1",
+	portalId: "8112310",
+	formId: "b41bf142-22db-4911-893a-52b856c8288f",
+	sfdcCampaignId: "7012M000001nUWFQA2"
+});
+</script>
