@@ -2,16 +2,16 @@
 title: "R/Medicine 2024"
 ---
 
-![](cadusus.png)
- 
 
+![](Main.png)
 
-![](rm.png)
-
-
-:::{.r-stack}
+::: r-stack
 
 ## **AN R CONSORTIUM VIRTUAL CONFERENCE**
+
+## **JUNE 2024**
+
+
 
 ::: {layout-ncol=2}
 
