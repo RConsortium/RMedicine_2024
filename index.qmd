@@ -9,9 +9,10 @@ title: "R/Medicine 2024"
 
 ## **AN R CONSORTIUM VIRTUAL CONFERENCE**
 
-## **JUNE 2024**
 
 
+
+:::
 
 ::: {layout-ncol=2}
 
@@ -29,7 +30,7 @@ Review session slides from speakers who provided them via the event schedule her
 ## **JUNE  2024**
 
 
-:::
+
 
 ### WHY ATTEND?
 
