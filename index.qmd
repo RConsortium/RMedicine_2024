@@ -1,18 +1,14 @@
 ---
-title: "R/Medicine 2024"
+title: ""
 ---
 
+![](images/Main.png)
+ 
 
-![](Main.png)
-
-::: r-stack
+:::{.r-stack}
 
 ## **AN R CONSORTIUM VIRTUAL CONFERENCE**
-
-
-
-
-
+:::
 
 ::: {layout-ncol=2}
 
@@ -23,9 +19,13 @@ To experience the best of this year’s event, be sure to watch session recordin
 
 #### PRESENTATIONS
 [![
-Review session slides from speakers who provided them via the event schedule here.
+Review session slides from speakers who provided them via the event schedule.
 ](images/slide-show){height=150}](https://rmed2023a.sched.com/)
 :::
+
+## **JUNE  2024**
+
+
 
 
 ### WHY ATTEND?
@@ -39,7 +39,6 @@ The R/Medicine conference provides a forum for sharing R based tools and approac
 
 [![](images/R-con.png){fig-alt="R Consortium" fig-align="center" height=150}](https://www.r-consortium.org/)
 
-[![](images/cynkra.png){fig-alt="cynkra.com" fig-align="center" height=200}](https://cynkra.com/)
 
 
 
@@ -61,5 +60,3 @@ Join our mailing list to hear all the latest about events, news and more
 });
 </script>
 
-
-:::
