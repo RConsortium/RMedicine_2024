@@ -3,7 +3,7 @@ title: "R/Medicine 2024"
 ---
 
 
-![](Main.png)
+![](images/Main.png)
 
 ::: r-stack
 
@@ -43,7 +43,6 @@ The R/Medicine conference provides a forum for sharing R based tools and approac
 
 [![](images/R-con.png){fig-alt="R Consortium" fig-align="center" height=150}](https://www.r-consortium.org/)
 
-[![](images/cynkra.png){fig-alt="cynkra.com" fig-align="center" height=200}](https://cynkra.com/)
 
 
 
