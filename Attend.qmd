@@ -1,5 +1,55 @@
-
 ## Code of Conduct
 
+The R Consortium and its working groups  are dedicated to providing a harassment-free experience for participants at all of our events, whether they are held in person or virtually. R Consortium events are working conferences intended for professional networking and collaboration within the open source community. They exist to encourage the open exchange of ideas and expression and require an environment that recognizes the inherent worth of every person and group. While at R Consortium events or related ancillary or social events, any participants, including members, speakers, attendees, volunteers, sponsors, exhibitors, booth staff and anyone else, should not engage in harassment in any form.
 
-## Diversity and Inclusion
+This Code of Conduct may be revised at any time by The R Consortium and the terms are non-negotiable. Your registration for or attendance at any R Consortium event, whether it’s held in person or virtually, indicates your agreement to abide by this policy and its terms.
+
+### Expected Behavior
+
+All event participants, whether they are attending an in-person event or a virtual event, are expected to behave in accordance with professional standards, with both this Code of Conduct as well as their respective employer’s policies governing appropriate workplace behavior and applicable laws.
+
+### Unacceptable Behavior
+
+Harassment will not be tolerated in any form, whether in person or virtually, including, but not limited to, harassment based on sex, gender, sexual orientation, disability, physical appearance, body size, race, age, religion or any other status protected by laws in which the conference or program is being held. Harassment includes the use of abusive, offensive or degrading language, intimidation, stalking, harassing photography or recording, inappropriate physical contact, sexual imagery and unwelcome sexual advances or requests for sexual favors. Any report of harassment at one of our events, whether in person or virtual, will be addressed immediately. Participants asked to stop any harassing behavior are expected to comply immediately. Anyone who witnesses or is subjected to unacceptable behavior should notify a conference organizer at once.
+
+Exhibitors should not use sexualized images, activities, or other material in their booths and must refrain from the use of sexualized clothing, uniforms, costumes, or otherwise creating a sexualized environment. Speakers should not use sexual language, images, or any language or images that would constitute harassment as defined above in their talks.
+
+Individuals who participate (or plan to participate) in R Consortium events, whether its an in-person event or a virtual event, should conduct themselves at all times in a manner that comports with both the letter and spirit of this policy prohibiting harassment and abusive behavior, whether before, during or after the event.  This includes statements made in social media postings, on-line publications, text messages, and all other forms of electronic communication.
+
+### Consequences of Unacceptable Behavior
+
+If a participant engages in harassing behavior, whether in person or virtually, the conference organizers may take any action they deem appropriate depending on the circumstances, ranging from issuance of a warning to the offending individual to expulsion from the conference with no refund. The R Consortium reserves the right to exclude any participant found to be engaging in harassing behavior from participating in any further R Consortium events, working groups, trainings or other activities.
+
+If a participant (or individual wishing to participate in an R Consortium event, in-person and/or virtual), through postings on social media or other online publications or another form of electronic communication, engages in conduct that violates this policy, whether before, during or after a R Consortium  event, the R Consortium  may take appropriate corrective action, which could include imposing a temporary or permanent ban on an individual’s participation in future R Consortium events, events, working groups, trainings or other activities.
+
+### What To Do If You Witness or Are Subject To Unacceptable Behavior
+
+If you are being harassed, notice that someone else is being harassed, or have any other concerns relating to harassment, please contact a member of the conference staff immediately. You are also encouraged to contact Emily Ruf, Senior Event Manager for R/Medicine at eruf\@linuxfoundation.org.
+
+### Incident Response
+
+Our staff has taken incident response training and responds to harassment reports quickly and thoroughly. As referenced above, if a participant engages in harassing behavior, whether in-person or virtually, the conference organizers may take any action they deem appropriate, ranging from issuance of a warning to the offending individual to expulsion from the conference with no refund, depending on the circumstances. The R Consortium reserves the right to exclude any participant found to be engaging in harassing behavior from participating in any further R Consortium events, working groups, trainings or other activities.
+
+Conference staff will also provide support to victims, including, but not limited to:
+
+-   **Providing an Escort**
+
+-   **Contacting Hotel/Venue Security or Local Law Enforcement**
+
+-   **Briefing Key Event Staff For Response/Victim Assistance**
+
+-   **And otherwise assisting those experiencing harassment to ensure that they feel safe for the duration of the conference.**
+
+### COVID-19 Conduct Requirements
+
+In order for us to be able to resume holding in-person events during the ongoing COVID-19 pandemic, it is necessary for all attendees to cooperate and protect one another. COVID-19 health and safety requirements are not only for your own protection, but also for the protection of others, including those who may be physically unable to be vaccinated at applicable events.
+
+Attendees at in-person events must commit to strictly complying with all applicable local health regulations, as well as all venue and event health and safety requirements. The specific requirements may vary from event to event, and will be communicated prior to and during the event. Attendees’ obligations include without limitation complying with all requirements prior to attending the event (such as confirming vaccination status and/or test result status, when applicable) as well as safety procedures while at the event (such as wearing masks, socially distancing, and avoiding contact if you begin to feel unwell). Please visit the Register page for more information on current safety and health guidelines for the event.
+
+If an attendee fails to comply with any COVID-19 health and safety requirement, The R Consortium may take appropriate corrective action, which could include immediate removal from the event and venue without a refund, and/or imposing a temporary or permanent ban on an individual’s participation in future R Consortium events.\
+\
+If you witness an attendee failing to comply with any COVID-19 health and safety requirements, please report it to a member of the conference staff immediately. You are also encouraged to contact Emily Ruf, Senior Event Manager at eruf\@linuxfoundation.org.
+
+### Pre-Event Concerns
+
+If you are planning to attend an upcoming event, whether in-person or virtually and have concerns regarding another individual who may be present, please contact Emily Ruf (eruf\@linuxfoundation.org). Precautions will be taken to ensure your comfort and safety, including, but not limited to providing an escort, prepping onsite event staff, keeping victim and harasser from attending the same talks/social events and providing onsite contact cell phone numbers for immediate contact.

@@ -9,10 +9,10 @@ website:
         text: Home
       - href: Register.qmd
         text: Register
-      - href: Attend.qmd
-        text: Attend
       - href: Program.qmd
         text: Program
+      - href: Attend.qmd
+        text: Code of Conduct
       - href: Contact.qmd
         text: Contact us
       - href: Events.qmd
