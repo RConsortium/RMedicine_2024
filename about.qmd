@@ -2,8 +2,9 @@
 title: "About"
 ---
 
-About this site
+The R/Medicine conference provides a forum for sharing R based tools and approaches used to analyze and gain insights from health data. Conference workshops provide a way to learn and develop your R skills. Midweek demos allow you to try out new R packages and tools, and our hackathon provides an opportunity to learn how to develop new R tools. The conference talks share new packages, and successes in analyzing health, laboratory, and clinical data with R and Shiny with a vigorous ongoing discussion with speakers (with pre-recorded talks) in the chat.
 
-```{r}
-1 + 1
-```
+### [R Medicine 2023 Virtual Conference](https://www.youtube.com/playlist?list=PL4IzsxWztPdlpR3NqGzUI01M4_jqzIWqo)
+
+### [R/Medicine 2022 Virtual Conference](https://www.youtube.com/playlist?list=PL4IzsxWztPdmSeucR67EH_8_hzldqYZX4)
+

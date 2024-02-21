@@ -1,16 +1,16 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "R/Medicine 2024",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "The R/Medicine conference provides a forum for sharing R based tools and approaches used to analyze and gain insights from health data. Conference workshops provide a way to learn and develop your R skills. Midweek demos allow you to try out new R packages and tools, and our hackathon provides an opportunity to learn how to develop new R tools. The conference talks share new packages, and successes in analyzing health, laboratory, and clinical data with R and Shiny with a vigorous ongoing discussion with speakers (with pre-recorded talks) in the chat.\n\nR Medicine 2023 Virtual Conference\n\n\nR/Medicine 2022 Virtual Conference"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R/Medicine 2024",
+    "section": "",
+    "text": "R/Medicine 2024"
   }
 ]
