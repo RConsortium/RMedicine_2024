@@ -1,9 +1,45 @@
 
 ## Past R/Medicine Conferences
 
+![](images/RM2023.png){width=50% height=25%}
+
+
 * [2023](https://events.linuxfoundation.org/r-medicine/contact-us/)
 * [2022](https://events.linuxfoundation.org/archive/2022/r-medicine/)
 * [2021](https://r-medicine-2021.netlify.app/)
 * [2020](https://events.linuxfoundation.org/archive/2020/r-medicine/)
+
+
+![](images/RM2019.png){width=50% height=25%}
+
 * [2019](https://r-medicine-2019.netlify.app/)
+
+![](images/RM2018.png){width=50% height=25%}
+
 * [2018](https://r-medicine-2018.netlify.app/)
+
+
+
+:::: {.columns}
+
+::: {.column width="45%"}
+#### VIDEOS
+
+[![To experience the best of this year’s event, be sure to watch session recordings, available on the R Consortium YouTube Channel.](images/video){height="75"}](https://youtube.com/playlist?list=PL4IzsxWztPdlpR3NqGzUI01M4_jqzIWqo)
+
+
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="20%"}
+#### PRESENTATIONS
+
+[![Review session slides from speakers who provided them via the event schedule.](images/slide-show){height="75"}](https://rmed2023a.sched.com/)
+:::
+
+::::
+
+
