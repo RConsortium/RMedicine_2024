@@ -8,15 +8,7 @@ title: "R/Medicine 2024"
 ## **AN R CONSORTIUM VIRTUAL CONFERENCE**
 :::
 
-::: {layout-ncol="2"}
-#### VIDEOS
 
-[![To experience the best of this year’s event, be sure to watch session recordings, available on the R Consortium YouTube Channel.](images/video){height="75"}](https://youtube.com/playlist?list=PL4IzsxWztPdlpR3NqGzUI01M4_jqzIWqo)
-
-#### PRESENTATIONS
-
-[![Review session slides from speakers who provided them via the event schedule.](images/slide-show){height="75"}](https://rmed2023a.sched.com/)
-:::
 
 ### WHY ATTEND?
 
