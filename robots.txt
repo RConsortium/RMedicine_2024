@@ -1,0 +1,1 @@
+Sitemap: https://RConsortium.github.io/RMedicine_website/sitemap.xml
