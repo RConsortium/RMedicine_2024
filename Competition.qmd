@@ -1,0 +1,5 @@
+## Competition
+
+### **The Challenge**
+
+In this data challenge, you will analyze the impact of inequitable green space access on communities using various data sources on our Redivis platform in individual or team notebooks. Your goal will be to transform these green space datasets into actionable community indicators that illustrate the effects of green space across one of four dimensions: public health, public safety, effects on a specific population (e.g., by age, race, or location), or physical environment (e.g. pollution levels).
