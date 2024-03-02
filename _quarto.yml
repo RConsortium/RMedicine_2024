@@ -13,6 +13,8 @@ website:
         text: Program
       - href: Attend.qmd
         text: Code of Conduct
+      - href: Competition.qmd
+        text: Competition
       - href: Contact.qmd
         text: Contact us
       - href: Events.qmd
