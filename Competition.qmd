@@ -1,8 +1,8 @@
 ## Competition
 
-**How can we optimize medication treatments for opiod use disorder?**
+**How can we optimize medication treatments for opioid use disorder?**
 
-**Which individuals are more at risk for dropping out of a treatment program?**
+**Which individuals are more at risk of dropping out of a treatment program?**
 
 **Which individuals are more at risk of relapsing?**
 
@@ -18,7 +18,7 @@ In this data challenge, you will analyze various factors that may contribute to 
 
 We ask that all analyses be done and submitted as Quarto documents. Participants can submit as an individual or as part of a team (but not both). Your goal will be to transform these datasets into actionable indicators that illustrate which factors are important to understanding why some patients achieve success with treatment for opioid use disorder and why others drop out or relapse.
 
-The data for this challenge is available on CRAN.The following 2 code chunks demonstrate how to install and load the necessary packages. You can read more about the package on CRAN [here](https://cran.r-project.org/web/packages/public.ctn0094data/index.html).
+The data for this challenge is available on CRAN.The following 2 code chunks demonstrate how to install and load the necessary packages. You can read more about the packages on CRAN [here](https://cran.r-project.org/web/packages/public.ctn0094data/index.html) and [here](https://cran.r-project.org/web/packages/public.ctn0094extra/index.html).
 
 ```{r}
 #| eval: false
@@ -36,7 +36,7 @@ library(public.ctn0094extra)
 
 ```
 
-In addition to the provided data, you may request to use additional publicly available data in your submission by submitting a request by April 1st, 2024 at 5:00PM EST. If approved, the data will be available to all participants.
+In addition to the provided data, you may request to use additional publicly available data in your submission by submitting a request by April 1st, 2024 at 5:00PM EST. If approved, the data will be made available to all participants.
 
 You will be evaluated by judges based on the relevance, completeness, and quality of your submission. Remember that tables and visualizations will also be judged and ranked separately for the prizes of best table and best visualization. Judges include:
 
@@ -50,7 +50,7 @@ Peter Higgins, MD, PhD, MSc, University of Michigan
 
 -   Are there any drugs/substances that seem to be more associated with higher or lower drop out/relapse rates?
 
-### Guidelines 
+### Guidelines
 
 **When:** Now - May 1st, 2024
 
@@ -62,13 +62,13 @@ Peter Higgins, MD, PhD, MSc, University of Michigan
 
 **Submissions and evaluation:** Participants will conduct their analyses and submit a short project narrative that describes the research question, analytic approach, and key findings. We encourage participants to find creative ways to incorporate tables, visualizations, and other aspects of data storytelling to create a compelling narrative. In addition to their completed analysis with the indicators they used, participants will be asked to submit documentation describing each step of their process. The documentation should be detailed enough as to make the project fully replicable. The narrative, methods, organization, and documentation of each participant's project will be evaluated for relevance, completeness, and quality. More information on evaluation will be added to the FAQs section at the bottom of this page.
 
-### Prize Information 
+### Prize Information
 
-| Prize Categories                  | First  | Second  | Third  |
-|-----------------------------------|--------|---------|--------|
-| Best Overall Analysis/Quarto Doc  | TBD    | TBD     | TBD    |
-| Best Table                        | TBD    | TBD     | TBD    |
-| Best Visualization                | TBD    | TBD     | TBD    |
+| Prize Categories                 | First | Second | Third |
+|----------------------------------|-------|--------|-------|
+| Best Overall Analysis/Quarto Doc | TBD   | TBD    | TBD   |
+| Best Table                       | TBD   | TBD    | TBD   |
+| Best Visualization               | TBD   | TBD    | TBD   |
 
 Finalists will be required to present their project at the R/Medicine conference (can be prerecorded).
 
