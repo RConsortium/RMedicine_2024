@@ -31,18 +31,6 @@ jobs:
         
       - name: Check rmarkdown package version
         run: Rscript -e "packageVersion('rmarkdown')"
-        
-      # Setup R dependencies
-      - name: Install R dependencies
-        uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          cache-version: 2
-          extra-packages: |
-            ggplot2
-            rcmdcheck
-          needs: |
-            website
-            coverage
 
       # Setup Quarto
       - name: Set up Quarto
