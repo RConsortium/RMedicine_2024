@@ -28,3 +28,6 @@ format:
     toc: true
     default-image-extension: svg
 editor: visual
+
+execute:
+  freeze: auto
