@@ -32,8 +32,8 @@ jobs:
         with:
           cache-version: 2
           extra-packages: |
-            any::ggplot2
-            any::rcmdcheck
+            ggplot2
+            rcmdcheck
           needs: |
             website
             coverage
