@@ -1,1 +1,304 @@
 
+---
+title: "R/Medicine Schedule"
+author: "Rich Iannone"
+date: "3/09/2024"
+format: 
+  html:
+    code-fold: true
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(lubridate)
+library(gt)
+# For every day of the conference, have data laid out in this way
+schedule_day_1 <-
+  dplyr::tribble(
+    ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
+    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
+    "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+  ) |>
+  dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
+```
+
+```{r}
+
+# Create a table for the day of events
+gt(schedule_day_1) |>
+  tab_header(title = md("<br>Monday, June 10, 2024.<br><br>")) |> # <- insert the date
+  fmt_time(columns = c(start_time, end_time), time_style = "h_m_p") |>
+  fmt_duration(
+    columns = duration,
+    input_units = "minutes",
+    output_units = c("hours", "minutes")
+  ) |>
+  cols_move(columns = duration, after = end_time) |>
+  cols_merge(
+    columns = c(t_number, t_type, t_title, t_speakers, t_speaker_titles, t_companies),
+    pattern = md("<<{1} - >>{2}<br><< {3}<br>{4}<br>{5}, {6}>>")
+  ) |>
+  cols_label(
+    start_time ~ "Start Time",
+    end_time ~ "End Time",
+    duration ~ "Duration",
+    t_number ~ ""
+  ) |>
+  cols_align(align = "center") |>
+  cols_width(
+    c(start_time, end_time, duration) ~ px(90),
+    everything() ~ px(600)
+  ) |>
+  opt_align_table_header(align = "left") |>
+  tab_options(
+    heading.background.color = "lightblue",
+    column_labels.background.color = "gray85"
+  ) |>
+  tab_style(
+    locations = cells_body(rows = t_type == "Break"),
+    style = cell_fill(color = "bisque")
+  )
+
+```
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(lubridate)
+library(gt)
+# For every day of the conference, have data laid out in this way
+schedule_day_2 <-
+  dplyr::tribble(
+    ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
+    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
+    "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+  ) |>
+  dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
+```
+
+```{r}
+
+# Create a table for the day of events
+gt(schedule_day_2) |>
+  tab_header(title = md("<br>Tuesday, June 11, 2024.<br><br>")) |> # <- insert the date
+  fmt_time(columns = c(start_time, end_time), time_style = "h_m_p") |>
+  fmt_duration(
+    columns = duration,
+    input_units = "minutes",
+    output_units = c("hours", "minutes")
+  ) |>
+  cols_move(columns = duration, after = end_time) |>
+  cols_merge(
+    columns = c(t_number, t_type, t_title, t_speakers, t_speaker_titles, t_companies),
+    pattern = md("<<{1} - >>{2}<br><< {3}<br>{4}<br>{5}, {6}>>")
+  ) |>
+  cols_label(
+    start_time ~ "Start Time",
+    end_time ~ "End Time",
+    duration ~ "Duration",
+    t_number ~ ""
+  ) |>
+  cols_align(align = "center") |>
+  cols_width(
+    c(start_time, end_time, duration) ~ px(90),
+    everything() ~ px(600)
+  ) |>
+  opt_align_table_header(align = "left") |>
+  tab_options(
+    heading.background.color = "lightblue",
+    column_labels.background.color = "gray85"
+  ) |>
+  tab_style(
+    locations = cells_body(rows = t_type == "Break"),
+    style = cell_fill(color = "bisque")
+  )
+
+```
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(lubridate)
+library(gt)
+# For every day of the conference, have data laid out in this way
+schedule_day_3 <-
+  dplyr::tribble(
+    ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
+    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
+    "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+  ) |>
+  dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
+```
+
+```{r}
+
+# Create a table for the day of events
+gt(schedule_day_3) |>
+  tab_header(title = md("<br>Wednesday, June 12, 2024.<br><br>")) |> # <- insert the date
+  fmt_time(columns = c(start_time, end_time), time_style = "h_m_p") |>
+  fmt_duration(
+    columns = duration,
+    input_units = "minutes",
+    output_units = c("hours", "minutes")
+  ) |>
+  cols_move(columns = duration, after = end_time) |>
+  cols_merge(
+    columns = c(t_number, t_type, t_title, t_speakers, t_speaker_titles, t_companies),
+    pattern = md("<<{1} - >>{2}<br><< {3}<br>{4}<br>{5}, {6}>>")
+  ) |>
+  cols_label(
+    start_time ~ "Start Time",
+    end_time ~ "End Time",
+    duration ~ "Duration",
+    t_number ~ ""
+  ) |>
+  cols_align(align = "center") |>
+  cols_width(
+    c(start_time, end_time, duration) ~ px(90),
+    everything() ~ px(600)
+  ) |>
+  opt_align_table_header(align = "left") |>
+  tab_options(
+    heading.background.color = "lightblue",
+    column_labels.background.color = "gray85"
+  ) |>
+  tab_style(
+    locations = cells_body(rows = t_type == "Break"),
+    style = cell_fill(color = "bisque")
+  )
+
+```
+
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(lubridate)
+library(gt)
+# For every day of the conference, have data laid out in this way
+schedule_day_4 <-
+  dplyr::tribble(
+    ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
+    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
+    "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+  ) |>
+  dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
+```
+
+```{r}
+
+# Create a table for the day of events
+gt(schedule_day_1) |>
+  tab_header(title = md("<br>Thursday, June 13, 2024.<br><br>")) |> # <- insert the date
+  fmt_time(columns = c(start_time, end_time), time_style = "h_m_p") |>
+  fmt_duration(
+    columns = duration,
+    input_units = "minutes",
+    output_units = c("hours", "minutes")
+  ) |>
+  cols_move(columns = duration, after = end_time) |>
+  cols_merge(
+    columns = c(t_number, t_type, t_title, t_speakers, t_speaker_titles, t_companies),
+    pattern = md("<<{1} - >>{2}<br><< {3}<br>{4}<br>{5}, {6}>>")
+  ) |>
+  cols_label(
+    start_time ~ "Start Time",
+    end_time ~ "End Time",
+    duration ~ "Duration",
+    t_number ~ ""
+  ) |>
+  cols_align(align = "center") |>
+  cols_width(
+    c(start_time, end_time, duration) ~ px(90),
+    everything() ~ px(600)
+  ) |>
+  opt_align_table_header(align = "left") |>
+  tab_options(
+    heading.background.color = "lightblue",
+    column_labels.background.color = "gray85"
+  ) |>
+  tab_style(
+    locations = cells_body(rows = t_type == "Break"),
+    style = cell_fill(color = "bisque")
+  )
+
+```
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(lubridate)
+library(gt)
+# For every day of the conference, have data laid out in this way
+schedule_day_5 <-
+  dplyr::tribble(
+    ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
+    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
+    "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+  ) |>
+  dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
+```
+
+```{r}
+
+# Create a table for the day of events
+gt(schedule_day_5) |>
+  tab_header(title = md("<br>Friday, June 14, 2024.<br><br>")) |> # <- insert the date
+  fmt_time(columns = c(start_time, end_time), time_style = "h_m_p") |>
+  fmt_duration(
+    columns = duration,
+    input_units = "minutes",
+    output_units = c("hours", "minutes")
+  ) |>
+  cols_move(columns = duration, after = end_time) |>
+  cols_merge(
+    columns = c(t_number, t_type, t_title, t_speakers, t_speaker_titles, t_companies),
+    pattern = md("<<{1} - >>{2}<br><< {3}<br>{4}<br>{5}, {6}>>")
+  ) |>
+  cols_label(
+    start_time ~ "Start Time",
+    end_time ~ "End Time",
+    duration ~ "Duration",
+    t_number ~ ""
+  ) |>
+  cols_align(align = "center") |>
+  cols_width(
+    c(start_time, end_time, duration) ~ px(90),
+    everything() ~ px(600)
+  ) |>
+  opt_align_table_header(align = "left") |>
+  tab_options(
+    heading.background.color = "lightblue",
+    column_labels.background.color = "gray85"
+  ) |>
+  tab_style(
+    locations = cells_body(rows = t_type == "Break"),
+    style = cell_fill(color = "bisque")
+  )
+
+```
+
