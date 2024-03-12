@@ -1,0 +1,28 @@
+- title: "R/Medicine 2023"
+  date: 2023-06-05
+  image: ./images/events/2023.png
+  path: https://events.linuxfoundation.org/r-medicine/contact-us/
+  playlist: https://www.youtube.com/playlist?list=PL4IzsxWztPdlpR3NqGzUI01M4_jqzIWqo
+- title: "R/Medicine 2022"
+  date: 2022-08-23
+  image: ./images/events/2022.png
+  path: https://events.linuxfoundation.org/archive/2022/r-medicine/
+  playlist: https://www.youtube.com/playlist?list=PL4IzsxWztPdmSeucR67EH_8_hzldqYZX4
+- title: "R/Medicine 2021"
+  date: 2021-08-24
+  image: ./images/events/2021.png
+  path: https://r-medicine-2021.netlify.app/
+  playlist: https://www.youtube.com/watch?v=sM9GEAm6Uew&list=PL4IzsxWztPdmHxCpS_c2l_jbMfrywWciZ
+- title: "R/Medicine 2020"
+  date: 2020-08-27
+  image: ./images/events/2020.png
+  path: https://events.linuxfoundation.org/archive/2020/r-medicine/
+  playlist: https://www.youtube.com/watch?v=vE-oMxWYgIo&list=PL4IzsxWztPdljYo7uE5G_R2PtYw3fUReo
+- title: "R/Medicine 2019"
+  date: 2019-09-12
+  image: ./images/events/2019.png
+  path: https://r-medicine-2019.netlify.app/
+- title: "R/Medicine 2018"
+  date: 2018-09-07
+  image: ./images/events/2018.png
+  path: https://r-medicine-2018.netlify.app/
