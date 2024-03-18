@@ -22,7 +22,7 @@ schedule_day_1 <-
     "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
     "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 15:15", "2024-06-11 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```

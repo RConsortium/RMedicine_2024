@@ -8,9 +8,50 @@ title: "R/Medicine 2024"
 ## **AN R CONSORTIUM VIRTUAL CONFERENCE**
 :::
 
-### WHY ATTEND
+## WHY ATTEND
 
 The R/Medicine conference provides a forum for sharing R based tools and approaches used to analyze and gain insights from health data. Conference workshops provide a way to learn and develop your R skills. Midweek demos allow you to try out new R packages and tools, and our hackathon provides an opportunity to learn how to develop new R tools. The conference talks share new packages, and successes in analyzing health, laboratory, and clinical data with R and Shiny with a vigorous ongoing discussion with speakers (with pre-recorded talks) in the chat.
+
+## KeyNote Addresses
+
+::: columns
+::: {.column width="45%"}
+### Stephanie Hicks
+*Statistical Challenges in Single-Cell and Spatial Transcriptomics*
+
+Thursday, June 13
+
+![](images/Hicks.jpeg)
+
+#### Biography
+
+Stephanie Hicks, PhD, MA and Associate Professor of Biomedical Engineering and Biostatistics at Johns Hopkins University, is an applied statistician working at the intersection of genomics and biomedical data science.
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+
+::: {.column width="45%"}
+### Gundula Bosch
+*Reproducibility in Medical Research*
+<br />
+<br />
+
+Friday, June 14
+
+![](images/Gundula.jpeg)
+
+#### Biography
+
+Gundula Bosch, PhD, MEd '16, MS, is a scientist and educator leading global education reform through training programs in critical, broad, and interdisciplinary scientific thinking. She is the director of the R3 Center for Innovation and Science Education at the Johns Hopkins School of Public Health.
+
+:::
+:::
+
+
+
 
 ### BROUGHT TO YOU BY
 
@@ -42,6 +83,6 @@ Join our mailing list to hear all the latest about events, news and more
 ```
 ### HELP EDIT THIS WEBSITE
 
-This entire website was made using R.
+This entire website was made using Quarto and R.
 
 If you notice any problems or have any additions please submit a Pull Request to our public [GitHub Repo](https://github.com/RConsortium/RMedicine_website/)
