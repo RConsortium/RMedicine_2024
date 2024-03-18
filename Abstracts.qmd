@@ -1,0 +1,11 @@
+## Call for Abstracts
+
+We are seeking Abstracts for:
+
+- Lightning talk (10 min, Thursday or Friday June 13-14) Can pre-record so that you can be live on chat to answer questions
+- Regular talk (20 min, Thursday or Friday June 13-14) Can pre-record so that you can be live on chat to answer questions
+- Demo - (1 hour demo of an approach or a package, Wednesday June 12) Done live, preferably interactive
+- Workshop - 2-3 hours on a topic, on Monday or Tuesday Jan 10-11, usually with a website and a repo, participants can choose to code along. Usual 5-10 min  breaks each hour.
+- Poster for poster session on Wednesday June 12. Can include live demos of an app or a package.
+
+[Fill out this form](https://forms.gle/5hcCf1KQxuLwwp2C8)
