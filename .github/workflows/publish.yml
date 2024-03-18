@@ -30,7 +30,13 @@ jobs:
       - name: Check rmarkdown package version
         run: Rscript -e "packageVersion('rmarkdown')"
 
-      # Setup Quarto
+      - name: Install rmarkdown package
+        run: Rscript -e "install.packages('lubridate')"   
+        
+      - name: Check rmarkdown package version
+        run: Rscript -e "packageVersion('lubridate')"
+
+        # Setup Quarto
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
