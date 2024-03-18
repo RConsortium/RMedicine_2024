@@ -35,7 +35,19 @@ jobs:
         
       - name: Check rmarkdown package version
         run: Rscript -e "packageVersion('lubridate')"
-
+      
+      - name: Install rmarkdown package
+        run: Rscript -e "install.packages('gt')"   
+        
+      - name: Check rmarkdown package version
+        run: Rscript -e "packageVersion('gt')"
+ 
+      - name: Install rmarkdown package
+        run: Rscript -e "install.packages('tidyverse')"   
+        
+      - name: Check rmarkdown package version
+        run: Rscript -e "packageVersion('tidyverse')"
+        
         # Setup Quarto
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
