@@ -24,7 +24,7 @@ If a participant (or individual wishing to participate in an R Consortium event,
 
 ### What To Do If You Witness or Are Subject To Unacceptable Behavior
 
-If you are being harassed, notice that someone else is being harassed, or have any other concerns relating to harassment, please contact a member of the conference staff immediately. You are also encouraged to contact operations@r-consortium.org.
+If you are being harassed, notice that someone else is being harassed, or have any other concerns relating to harassment, please contact a member of the conference staff immediately. You are also encouraged to contact abuse\@r-consortium.org.
 
 ### Incident Response
 
@@ -48,8 +48,8 @@ Attendees at in-person events must commit to strictly complying with all applica
 
 If an attendee fails to comply with any COVID-19 health and safety requirement, The R Consortium may take appropriate corrective action, which could include immediate removal from the event and venue without a refund, and/or imposing a temporary or permanent ban on an individual’s participation in future R Consortium events.\
 \
-If you witness an attendee failing to comply with any COVID-19 health and Esafety requirements, please report it to a member of the conference staff immediately. You are also encouraged to contact operations@r-consortium.org.
+If you witness an attendee failing to comply with any COVID-19 health and Esafety requirements, please report it to a member of the conference staff immediately. You are also encouraged to contact operations\@r-consortium.org.
 
 ### Pre-Event Concerns
 
-If you are planning to attend an upcoming event, whether in-person or virtually and have concerns regarding another individual who may be present, please contact operations@r-consortium.org. Precautions will be taken to ensure your comfort and safety, including, but not limited to providing an escort, prepping onsite event staff, keeping victim and harasser from attending the same talks/social events and providing onsite contact cell phone numbers for immediate contact.
+If you are planning to attend an upcoming event, whether in-person or virtually and have concerns regarding another individual who may be present, please contact conduct\@r-consortium.org. Precautions will be taken to ensure your comfort and safety, including, but not limited to providing an escort, prepping onsite event staff, keeping victim and harasser from attending the same talks/social events and providing onsite contact cell phone numbers for immediate contact.
