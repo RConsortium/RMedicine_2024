@@ -92,21 +92,25 @@ Create.
 
 #### 6. Git Commit your changes
 
-Make your changes locally save them and commit them. Be sure to make your commit message descriptive of the work you did.
+Make your changes locally, save them, stage them, and commit them. Be sure to make your commit message descriptive of the work you did.
 
-#### 7. Open a pull request
+#### 7. Push your changes to your Github origin repo.
 
-a\. Go to **your** github.com website, and find your RMedicine_website repo.
+On the github tab, click on the Push button (up arrow).
 
-b\. Select the branch you were working on in the branch menu ("switch branches").
+#### 8. Open a pull request
+
+a\. Go to **your** github.com website, and find **your** RMedicine_website repo.
+
+b\. Select the branch you were working on in the branch menu ("switch branches") in a dropdown near the top left.
 
 c\. Above the list of files, in the yellow banner, click **Compare & pull request** to create a pull request for the associated branch.
 
-d\. Use the *operations (base)* branch dropdown menu to select the branch you'd like to merge your changes into, then use the *compare* branch drop-down menu to choose the topic branch you made your changes in.
+d\. In the gray section near the top of the page, use the *operations (base)* branch dropdown menu (on the left) to select the branch you'd like to merge your changes into, then use the *compare* branch drop-down menu (on the right) to choose the topic branch you made your changes in.
 
-e\. Type a title and description for your pull request.
+e\. Edit the title and description for your pull request as desired
 
-f\. To create a pull request that is ready for review, click **Create Pull Request**.
+f\. To create a pull request that is ready for review, click on the green button called **Create Pull Request** at the bottom right.
 
 If your changes are accepted they will be merged by a website administrator
 
