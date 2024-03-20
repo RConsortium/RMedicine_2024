@@ -1,21 +1,32 @@
-
 ## Registration
+
+### Registration Pricing
+
+The following table list the registration fees for three categories of attendees: students, academics and members of non-profit organizations, and professionals employed in industry who do not have non-profit status. All prices are in U.S. dollars. Early Bird pricing ends **May 14, 2024**.
+
+|Category              |Early Bird |Regular|
+|----------------------|:---------:|:-----:|
+|Students              | \$10      | \$25  |
+|Academic / Non-profit | \$30      | \$45  |
+|Industry              | \$40      | \$60  |
+
+## Register Here
+
+Registration will open during the week of March 25th. Please check back then.
 
 ## Additional Information
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="45%"}
-
-
 ### Invoices & Certificates of Attendance
+
 #### Registration Invoices
+
 Invoice receipts are downloadable from the confirmation email you received after registering under the Payment Receipt Information section. If the downloadable invoice receipt does not meet your needs or you need to have your confirmation email resent, please submit your request here. Please include any additional customization you need for your invoice receipt in the request.
 
 #### Certificates of Attendance:
+
 To request a Certificate of Attendance, please submit a request here. Please Note: We verify attendance through the registration system, and Certificate of Attendance letters are sent out after the event is completed.
-
-
 :::
 
 ::: {.column width="10%"}
@@ -24,16 +35,17 @@ To request a Certificate of Attendance, please submit a request here. Please Not
 
 ::: {.column width="45%"}
 ### Refund Policy
+
 #### Cancellations:
-If you must cancel for any reason, please sign back into your registration, click the “Register/Modify” button and select “Unregister.” If you need further assistance, email registration@linuxfoundation.org.
+
+If you must cancel for any reason, please sign back into your registration, click the “Register/Modify” button and select “Unregister.” If you need further assistance, email registration\@linuxfoundation.org.
 
 Refunds will only be issued for cancellations received two weeks prior to the event start date, including bulk ticket request refunds, and will appear as a credit on the card’s statement 7 – 10 business days after cancellation. Due to the ongoing pandemic, individual refund requests due to COVID-19 positive tests will be honored up until the start date of the event, and must be accompanied by a photo of a positive COVID-19 test.
 
 Please note: Refunds can only be issued on the card the original payment was made.
 
 #### Substitutions:
+
 If you are unable to attend, you may substitute another attendee in lieu of cancellation. To substitute an attendee, sign back into your registration, click the “Register/Modify”, and select “Transfer Registration” on your confirmation page.
-
 :::
-
-::::
+:::
