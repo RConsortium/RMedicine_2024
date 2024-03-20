@@ -1,4 +1,3 @@
-
 ---
 title: "R/Medicine Schedule"
 author: "Rich Iannone"
@@ -18,11 +17,11 @@ library(gt)
 schedule_day_1 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Workshop", "title", "speakers", "speaker_titles", "companies",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:15", "2024-06-10 17:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 16:30", "2A", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 17:30", "2B", "Workshop", "title", "speakers", "speaker_titles", "companies",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
@@ -31,7 +30,7 @@ schedule_day_1 <-
 
 # Create a table for the day of events
 gt(schedule_day_1) |>
-  tab_header(title = md("<br>Monday, June 10, 2024.<br><br>")) |> # <- insert the date
+  tab_header(title = md("<br>Workshop Day 1<br>Monday, June 10, 2024.<br>All Times EST<br><br>")) |> # <- insert the date
   fmt_time(columns = c(start_time, end_time), time_style = "h_m_p") |>
   fmt_duration(
     columns = duration,
@@ -76,11 +75,11 @@ library(gt)
 schedule_day_2 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Workshop", "title", "speakers", "speaker_titles", "companies",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 17:30", "2", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 17:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
@@ -89,7 +88,7 @@ schedule_day_2 <-
 
 # Create a table for the day of events
 gt(schedule_day_2) |>
-  tab_header(title = md("<br>Tuesday, June 11, 2024.<br><br>")) |> # <- insert the date
+  tab_header(title = md("<br>Workshop Day 2<br>Tuesday, June 11, 2024.<br><br>")) |> # <- insert the date
   fmt_time(columns = c(start_time, end_time), time_style = "h_m_p") |>
   fmt_duration(
     columns = duration,
@@ -123,7 +122,6 @@ gt(schedule_day_2) |>
   )
 
 ```
-
 
 ```{r}
 #| echo: false
@@ -135,11 +133,14 @@ library(gt)
 schedule_day_3 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 10:00", "2024-06-10 10:50", "1", "Demo", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 11:50", "2", "Demo", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 12:00", "2024-06-10 12:30",  NA, "Break", NA, NA, NA, NA,
+    "2024-06-10 12:30", "2024-06-10 13:20", "3", "Demo", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 13:30", "2024-06-10 14:20", "4", "Demo", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 15:20", "5", "Demo", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 15:30", "2024-06-10 16:20", "6", "Demo", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 16:30", "2024-06-10 18:30", "7", "Poster Session", "Poster Session", NA, NA, NA,
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
@@ -148,7 +149,7 @@ schedule_day_3 <-
 
 # Create a table for the day of events
 gt(schedule_day_3) |>
-  tab_header(title = md("<br>Wednesday, June 12, 2024.<br><br>")) |> # <- insert the date
+  tab_header(title = md("<br>Demo Day<br>Wednesday, June 12, 2024.<br><br>")) |> # <- insert the date
   fmt_time(columns = c(start_time, end_time), time_style = "h_m_p") |>
   fmt_duration(
     columns = duration,
@@ -182,8 +183,6 @@ gt(schedule_day_3) |>
   )
 
 ```
-
-
 
 ```{r}
 #| echo: false
@@ -195,11 +194,11 @@ library(gt)
 schedule_day_4 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 11:10", "1", "Intro", "Welcome to R/Medicine 2024", "Peter Higgins", "Professor", "University of Michigan",
+    "2024-06-10 11:13", "2024-06-10 12:13", "2", "Keynote", "Statistical Challenges in Single-Cell and Spatial Transcriptomics", "Stephanie Hicks", "Associate Professor", "Johns Hopkins",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 15:15", "3", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 15:15", "2024-06-10 16:30", "4", "Workshop", "title", "speakers", "speaker_titles", "companies",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
@@ -207,8 +206,8 @@ schedule_day_4 <-
 ```{r}
 
 # Create a table for the day of events
-gt(schedule_day_1) |>
-  tab_header(title = md("<br>Thursday, June 13, 2024.<br><br>")) |> # <- insert the date
+gt(schedule_day_4) |>
+  tab_header(title = md("<br>Meeting Day 1<br>Thursday, June 13, 2024.<br><br>")) |> # <- insert the date
   fmt_time(columns = c(start_time, end_time), time_style = "h_m_p") |>
   fmt_duration(
     columns = duration,
@@ -242,7 +241,6 @@ gt(schedule_day_1) |>
   )
 
 ```
-
 
 ```{r}
 #| echo: false
@@ -254,8 +252,8 @@ library(gt)
 schedule_day_5 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 11:10", "1", "Intro", "Welcome to R/Medicine 2024", "Peter Higgins", "Professor", "University of Michigan",
+    "2024-06-10 11:13", "2024-06-10 12:13", "2", "Keynote", "Reproducibility in Medical Research", "Gundula Bosch", "Research Professor", "Johns Hopkins",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
     "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
     "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
@@ -267,7 +265,7 @@ schedule_day_5 <-
 
 # Create a table for the day of events
 gt(schedule_day_5) |>
-  tab_header(title = md("<br>Friday, June 14, 2024.<br><br>")) |> # <- insert the date
+  tab_header(title = md("<br>Meeting Day 2<br>Friday, June 14, 2024.<br><br>")) |> # <- insert the date
   fmt_time(columns = c(start_time, end_time), time_style = "h_m_p") |>
   fmt_duration(
     columns = duration,
@@ -301,4 +299,3 @@ gt(schedule_day_5) |>
   )
 
 ```
-
