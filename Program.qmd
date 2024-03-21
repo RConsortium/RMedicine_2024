@@ -75,7 +75,7 @@ library(gt)
 schedule_day_2 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "A Long Workshop Title About a Cool Topic", "title", "speakers", "speaker_titles", "companies",
     "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Workshop", "title", "speakers", "speaker_titles", "companies",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
     "2024-06-10 14:30", "2024-06-10 17:30", "2", "Workshop", "title", "speakers", "speaker_titles", "companies",
@@ -133,7 +133,7 @@ library(gt)
 schedule_day_3 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 10:00", "2024-06-10 10:50", "1", "Demo", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 10:00", "2024-06-10 10:50", "1", "A Long Title about a Demonstration of a Cool New Package", "title", "speakers", "speaker_titles", "companies",
     "2024-06-10 11:00", "2024-06-10 11:50", "2", "Demo", "title", "speakers", "speaker_titles", "companies",
     "2024-06-10 12:00", "2024-06-10 12:30",  NA, "Break", NA, NA, NA, NA,
     "2024-06-10 12:30", "2024-06-10 13:20", "3", "Demo", "title", "speakers", "speaker_titles", "companies",
@@ -197,8 +197,8 @@ schedule_day_4 <-
     "2024-06-10 11:00", "2024-06-10 11:10", "1", "Intro", "Welcome to R/Medicine 2024", "Peter Higgins", "Professor", "University of Michigan",
     "2024-06-10 11:13", "2024-06-10 12:13", "2", "Keynote", "Statistical Challenges in Single-Cell and Spatial Transcriptomics", "Stephanie Hicks", "Associate Professor", "Johns Hopkins",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 15:15", "3", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:15", "2024-06-10 16:30", "4", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 15:15", "3", "Lightning Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 15:15", "2024-06-10 16:30", "4", "Regular Talk", "title", "speakers", "speaker_titles", "companies",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
@@ -252,11 +252,11 @@ library(gt)
 schedule_day_5 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 11:10", "1", "Intro", "Welcome to R/Medicine 2024", "Peter Higgins", "Professor", "University of Michigan",
+    "2024-06-10 11:00", "2024-06-10 11:10", "1", "Welcome Back", "Welcome to R/Medicine 2024", "Peter Higgins", "Professor", "University of Michigan",
     "2024-06-10 11:13", "2024-06-10 12:13", "2", "Keynote", "Reproducibility in Medical Research", "Gundula Bosch", "Research Professor", "Johns Hopkins",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 15:15", "2", "Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:15", "2024-06-10 16:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 15:15", "3", "A Long Title about a Complicated Lightning Talk Topic", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 15:15", "2024-06-10 16:30", "4", "Regular Talk", "title", "speakers", "speaker_titles", "companies",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
