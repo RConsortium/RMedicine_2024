@@ -1,6 +1,6 @@
 ## Code of Conduct
 
-The R Consortium and its working groups  are dedicated to providing a harassment-free experience for participants at all of our events, whether they are held in person or virtually. R Consortium events are working conferences intended for professional networking and collaboration within the open source community. They exist to encourage the open exchange of ideas and expression and require an environment that recognizes the inherent worth of every person and group. While at R Consortium events or related ancillary or social events, any participants, including members, speakers, attendees, volunteers, sponsors, exhibitors, booth staff and anyone else, should not engage in harassment in any form.
+The R Consortium and its working groups are dedicated to providing a harassment-free experience for participants at all of our events, whether they are held in person or virtually. R Consortium events are working conferences intended for professional networking and collaboration within the open source community. They exist to encourage the open exchange of ideas and expression and require an environment that recognizes the inherent worth of every person and group. While at R Consortium events or related ancillary or social events, any participants, including members, speakers, attendees, volunteers, sponsors, exhibitors, booth staff and anyone else, should not engage in harassment in any form.
 
 This Code of Conduct may be revised at any time by The R Consortium and the terms are non-negotiable. Your registration for or attendance at any R Consortium event, whether it’s held in person or virtually, indicates your agreement to abide by this policy and its terms.
 
@@ -39,16 +39,6 @@ Conference staff will also provide support to victims, including, but not limite
 -   **Briefing Key Event Staff For Response/Victim Assistance**
 
 -   **And otherwise assisting those experiencing harassment to ensure that they feel safe for the duration of the conference.**
-
-### COVID-19 Conduct Requirements
-
-In order for us to be able to resume holding in-person events during the ongoing COVID-19 pandemic, it is necessary for all attendees to cooperate and protect one another. COVID-19 health and safety requirements are not only for your own protection, but also for the protection of others, including those who may be physically unable to be vaccinated at applicable events.
-
-Attendees at in-person events must commit to strictly complying with all applicable local health regulations, as well as all venue and event health and safety requirements. The specific requirements may vary from event to event, and will be communicated prior to and during the event. Attendees’ obligations include without limitation complying with all requirements prior to attending the event (such as confirming vaccination status and/or test result status, when applicable) as well as safety procedures while at the event (such as wearing masks, socially distancing, and avoiding contact if you begin to feel unwell). Please visit the Register page for more information on current safety and health guidelines for the event.
-
-If an attendee fails to comply with any COVID-19 health and safety requirement, The R Consortium may take appropriate corrective action, which could include immediate removal from the event and venue without a refund, and/or imposing a temporary or permanent ban on an individual’s participation in future R Consortium events.\
-\
-If you witness an attendee failing to comply with any COVID-19 health and Esafety requirements, please report it to a member of the conference staff immediately. You are also encouraged to contact operations\@r-consortium.org.
 
 ### Pre-Event Concerns
 
