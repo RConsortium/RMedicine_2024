@@ -1,0 +1,35 @@
+
+## Workshops
+
+::: columns
+::: {.column width="45%"}
+
+### Lucy D’Agostino McGowan
+
+![](images/Lucy_D_M.jpg)
+
+### Biography
+[Lucy D’Agostino McGowan](https://www.lucymcgowan.com/about/
+) is an assistant professor in the Department of Statistical Sciences at Wake Forest University. She received her PhD in Biostatistics from Vanderbilt University and completed her postdoctoral training at Johns Hopkins University Bloomberg School of Public Health. Her research focuses on analytic design theory, statistical communication, causal inference, and data science pedagogy. 
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+
+## Causal Inference in R
+
+### Abstract
+
+This workshop will use the NHANES Epidemiologic Follow-up Study (NHEFS) data. In this workshop, we’ll teach the essential elements of answering causal questions in R through causal diagrams, and causal modeling techniques such as propensity scores and inverse probability weighting.
+
+### Dr. McGowan on the Web
+
+Dr. McGowan can be found blogging at [livefreeordichotomize.com](https://livefreeordichotomize.com/), on Twitter [\@LucyStats](https://twitter.com/LucyStats), and podcasting on the American Journal of Epidemiology partner podcast, [Casual Inference](https://casualinfer.libsyn.com/).
+
+:::
+:::
+
+

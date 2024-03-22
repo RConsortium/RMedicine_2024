@@ -14,6 +14,8 @@ website:
         text: Abstracts
       - href: Program.qmd
         text: Program
+      - href: workshops.qmd
+        text: Workshops
       - href: Attend.qmd
         text: Code of Conduct
       - href: Competition.qmd
