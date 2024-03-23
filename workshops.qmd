@@ -1,16 +1,14 @@
-
 ## Workshops
 
 ::: columns
 ::: {.column width="45%"}
-
 ### Lucy D’Agostino McGowan
 
 ![](images/Lucy_D_M.jpg)
 
 ### Biography
-[Lucy D’Agostino McGowan](https://www.lucymcgowan.com/about/
-) is an assistant professor in the Department of Statistical Sciences at Wake Forest University. She received her PhD in Biostatistics from Vanderbilt University and completed her postdoctoral training at Johns Hopkins University Bloomberg School of Public Health. Her research focuses on analytic design theory, statistical communication, causal inference, and data science pedagogy. 
+
+[Lucy D’Agostino McGowan](https://www.lucymcgowan.com/about/) is an assistant professor in the Department of Statistical Sciences at Wake Forest University. She received her PhD in Biostatistics from Vanderbilt University and completed her postdoctoral training at Johns Hopkins University Bloomberg School of Public Health. Her research focuses on analytic design theory, statistical communication, causal inference, and data science pedagogy.
 :::
 
 ::: {.column width="10%"}
@@ -18,7 +16,6 @@
 :::
 
 ::: {.column width="45%"}
-
 ## Causal Inference in R
 
 ### Abstract
@@ -28,8 +25,43 @@ This workshop will use the NHANES Epidemiologic Follow-up Study (NHEFS) data. In
 ### Dr. McGowan on the Web
 
 Dr. McGowan can be found blogging at [livefreeordichotomize.com](https://livefreeordichotomize.com/), on Twitter [\@LucyStats](https://twitter.com/LucyStats), and podcasting on the American Journal of Epidemiology partner podcast, [Casual Inference](https://casualinfer.libsyn.com/).
-
 :::
 :::
 
+::: columns
+::: {.column width="45%"}
+### Joy Payton
 
+![](images/Payton.jpeg)
+
+### Biography
+
+[Joy Payton](https://www.linkedin.com/in/joypayton/) is the Supervisor of Data Education at the Children's Hospital of Philadelphia, where her goal is to make every scientist a data scientist. She has earned a Masters degree in Data Science from the City University of New York (CUNY), an Information Systems Security certificate from Penn State University, and her undergraduate degree at Agnes Scott College (Go Scotties!). She is a Google Cloud Certified Associate Cloud Engineer and an AWS Certified Cloud Practitioner.
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+## Google BigQuery: First Steps in R
+
+### Abstract
+
+In this hands-on workshop, you’ll use the free tier of Google Cloud Platform to work with large public datasets in Google’s cloud data warehousing solution, BigQuery. We’ll cover topics including:
+
+-   Brief overview of cloud solutions and why they matter in medicine
+
+-   How to sign up for services for free for your own learning
+
+-   Practicing SQL queries in BigQuery
+
+-   Using R and BigQuery together
+
+You’ll leave this workshop with the beginnings of a data analysis of a large public dataset, a Google Cloud account that will allow you to continue learning on your own, and a newfound confidence in SQL, cloud computing, and system interoperability.
+
+### Joy Payton on the Web
+
+Joy Payton can be found on Twitter [\@KJoyPayton](https://twitter.com/kjoypayton), and sharing educational resources on the [Arcus Website](https://education.arcus.chop.edu/team/).
+:::
+:::
