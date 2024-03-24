@@ -65,3 +65,33 @@ You’ll leave this workshop with the beginnings of a data analysis of a large p
 Joy Payton can be found on Twitter [\@KJoyPayton](https://twitter.com/kjoypayton), and sharing educational resources on the [Arcus Website](https://education.arcus.chop.edu/team/).
 :::
 :::
+
+
+
+::: columns
+::: {.column width="45%"}
+### Garrick Aden-Buie
+
+![](images/garrick-profile.jpg)
+
+### Biography
+
+[Garrick Aden-Buie](https://www.garrickadenbuie.com/) is an software engineer for Shiny at Posit. He received a BS from Lehigh University in Applied Mathematics, and developed smart home sensors for healthy aging in place at the University of South Florida, before becoming a data scientist at Moffit Cancer Center. At Posit, Garrick builds tools that help everyone do data science in R with RMarkdown, Quarto, and Shiny.
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+## Next Generation Shiny Apps with {bslib}
+
+### Abstract
+
+Learn to build Shiny apps using modern user interfaces (UI) and layouts with bslib, the next generation of Shiny UI. We’ll cover stylish and convenient dashboard layouts and components as we showcase the ways in which bslib can replace shinydashboard. We’ll also learn about exciting new ways to deploy Shiny apps with shinylive as static sites that run entirely in the user’s browser and don’t require setting up or maintaining a Shiny server.
+
+### Garrick Aden-Buie on the Web
+
+Garrick can be found blogging at [garrickadenbuie.com](https://www.garrickadenbuie.com/blog/), on Mastodon [\@grrrck@fosstodon.org](https://fosstodon.org/@grrrck), and sticking things together with [epoxy](https://github.com/gadenbuie/epoxy).
+:::
+:::
