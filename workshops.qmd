@@ -67,7 +67,6 @@ Joy Payton can be found on Twitter [\@KJoyPayton](https://twitter.com/kjoypayton
 :::
 
 
-
 ::: columns
 ::: {.column width="45%"}
 ### Garrick Aden-Buie
@@ -93,5 +92,43 @@ Learn to build Shiny apps using modern user interfaces (UI) and layouts with bsl
 ### Garrick Aden-Buie on the Web
 
 Garrick can be found blogging at [garrickadenbuie.com](https://www.garrickadenbuie.com/blog/), on Mastodon [\@grrrck@fosstodon.org](https://fosstodon.org/@grrrck), and sticking things together with [epoxy](https://github.com/gadenbuie/epoxy).
+:::
+:::
+
+
+
+::: columns
+::: {.column width="45%"}
+### Stephan Kadauke and Will Beasley
+
+![](images/kadauke_stephan.jpeg)
+
+### Biographies
+
+[Stephan Kadauke](https://www.chop.edu/doctors/kadauke-stephan) is the Assistant Director of the Cell and Gene Therapy Laboratory at Children's Hospital of Philadelphia. He received his MD degree and a PhD in Cell and Molecular Biology from the University of Pennsylvania, and did his residency in Clinical Pathology at Massachusetts General Hospital, before Fellowship in Transfusion Medicine at Harvard. At CHOP, he is responsible for the development and implementation of new technologies including CAR-T therapy in the Cell and Gene Therapy Laboratory.
+
+![](images/william_beasley.jpg)
+
+[Will Beasley](https://www.chop.edu/doctors/kadauke-stephan) is a Professor of Pediatrics and leads the Clinical Research Data Warehouse at the Oklahoma University Health Sciences Center. He received his PhD in quantitative psychology from University of Oklahoma. In addition to his role in BBMC and the CRDW, he provides statistical analysis and software development to research studies at OUHSC. Dr. Beasley's areas of expertise and interest include Bayesian and Frequentist statistics, bioinformatics, simulation methods, and exploratory and graphical analysis, and reproducible research. He also has a wealth of software programming experience including SQL Server, C#, and R.
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+## Tidying your REDCap Data with {REDCapTidieR}
+
+### Abstract
+
+This workshop will use the {REDCap Tidier} package to get clinical data out of REDCap and prepare it for analysis. REDCap is an electronic data capture software that is widely used in the medical research community. The REDCapR package streamlines calls to the REDCap API from an R environment. One of REDCapR’s main uses is to import records from a REDCap project. This works well for simple projects, however this workflow becomes fugly when complex databases that include longitudinal structure and/or repeating instruments are used.
+
+The REDCapTidieR package aims to make the life of analysts who deal with complex REDCap databases easier. It builds upon REDCapR to make its output tidier. Instead of one large data frame that contains all the data from your project, you get to work with a set of tidy tibbles, one for each REDCap instrument.
+
+### Stephan Kadauke and Will Beasley on the Web
+
+Stephan can be found automating everything at CHOP, on Twitter at [\@StephanKadauke](https://twitter.com/StephanKadauke), and promoting reproducible medical research with R.
+
+Will can be found working on improving [REDCap Workflows](https://ouhscbbmc.github.io/REDCapR/articles/workflow-read.html), and supporting a variety of research studies at OUHSC.
 :::
 :::
