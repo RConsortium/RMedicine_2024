@@ -4,11 +4,17 @@
 
 The following table list the registration fees for three categories of attendees: students, academics and members of non-profit organizations, and professionals employed in industry who do not have non-profit status. All prices are in U.S. dollars. Early Bird pricing ends **May 14, 2024**.
 
-|Category              |Early Bird |Regular|
-|----------------------|:---------:|:-----:|
-|Students              | \$10      | \$25  |
-|Academic / Non-profit | \$30      | \$45  |
-|Industry              | \$40      | \$60  |
+| Category              | Early Bird | Regular |
+|-----------------------|:----------:|:-------:|
+| Students              |    \$10    |  \$25   |
+| Academic / Non-profit |    \$30    |  \$45   |
+| Industry              |    \$40    |  \$60   |
+
+## **Scholarships: Diversity & Need-Based**
+
+A limited number of complimentary registrations are available to enable community members to attend when they would otherwise be unable due to a lack of funding. We place an emphasis on funding applicants who are from historically underrepresented or untapped groups, from low GDP countries, and/or those of lower socioeconomic status. If you work for a company that has the ability to fund your travel, we ask that you not apply, to save funds for those that need it.
+
+Tell us why you need one of the limited number of complimentary registrations. Limit 500 characters. Submit [here](https://docs.google.com/forms/d/1Rnd9GLI9dhQvTYmMRHMWCC9RsJWyQdYacr-vUMNyvAI/edit).
 
 ## [Register Here](https://cvent.me/79MlP4)
 
