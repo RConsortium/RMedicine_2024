@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://RConsortium.github.io/RMedicine_website/Register.html</loc>
-    <lastmod>2024-04-09T01:49:04.554Z</lastmod>
-  </url>
-  <url>
     <loc>https://RConsortium.github.io/RMedicine_website/Contact.html</loc>
-    <lastmod>2024-04-09T01:49:04.550Z</lastmod>
-  </url>
-  <url>
-    <loc>https://RConsortium.github.io/RMedicine_website/Program.html</loc>
-    <lastmod>2024-04-09T01:49:04.550Z</lastmod>
+    <lastmod>2024-04-22T12:19:52.078Z</lastmod>
   </url>
   <url>
     <loc>https://RConsortium.github.io/RMedicine_website/index.html</loc>
-    <lastmod>2024-04-09T01:49:04.686Z</lastmod>
-  </url>
-  <url>
-    <loc>https://RConsortium.github.io/RMedicine_website/Abstracts.html</loc>
-    <lastmod>2024-04-09T01:49:04.550Z</lastmod>
-  </url>
-  <url>
-    <loc>https://RConsortium.github.io/RMedicine_website/workshops.html</loc>
-    <lastmod>2024-04-09T01:49:04.686Z</lastmod>
-  </url>
-  <url>
-    <loc>https://RConsortium.github.io/RMedicine_website/Competition.html</loc>
-    <lastmod>2024-04-09T01:49:04.550Z</lastmod>
-  </url>
-  <url>
-    <loc>https://RConsortium.github.io/RMedicine_website/Attend.html</loc>
-    <lastmod>2024-04-09T01:49:04.550Z</lastmod>
+    <lastmod>2024-04-22T12:19:52.214Z</lastmod>
   </url>
   <url>
     <loc>https://RConsortium.github.io/RMedicine_website/Events.html</loc>
-    <lastmod>2024-04-09T01:49:04.550Z</lastmod>
+    <lastmod>2024-04-22T12:19:52.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RConsortium.github.io/RMedicine_website/Program.html</loc>
+    <lastmod>2024-04-22T12:19:52.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RConsortium.github.io/RMedicine_website/Register.html</loc>
+    <lastmod>2024-04-22T12:19:52.082Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RConsortium.github.io/RMedicine_website/Competition.html</loc>
+    <lastmod>2024-04-22T12:19:52.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RConsortium.github.io/RMedicine_website/workshops.html</loc>
+    <lastmod>2024-04-22T12:19:52.214Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RConsortium.github.io/RMedicine_website/Abstracts.html</loc>
+    <lastmod>2024-04-22T12:19:52.078Z</lastmod>
+  </url>
+  <url>
+    <loc>https://RConsortium.github.io/RMedicine_website/Attend.html</loc>
+    <lastmod>2024-04-22T12:19:52.078Z</lastmod>
   </url>
 </urlset>
