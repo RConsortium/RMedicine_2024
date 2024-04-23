@@ -12,11 +12,11 @@ An abstract proposal should describe a presentation of methodology, a study or p
 
 [Dates to Remember]{.underline}
 
-**CFP Closes:**  Monday, April 22 at 11:59 PM EDT
+**CFP Closes:**  Monday, April 29 at 11:59 PM EDT
 
-**CFP Notifications:**  **April 29**
+**CFP Notifications:**  **May 6**
 
-**Schedule Announcement:**  **May 6**
+**Schedule Announcement:**  **May 10**
 
 **Pre-Recorded Video Submission:  June 3**
 
@@ -44,9 +44,9 @@ Poster sessions can be a static rectangular graphic, and can include a 'share wi
 
 We do not intend to provide strict instructions on how to prepare your proposal; however, we hope you will review the following guidelines to help you prepare the best submission possible.  To get started, here are three questions you should consider before submitting your proposal:
 
-1.   What are you hoping to get from your presentation?
+1.  What are you hoping to get from your presentation?
 
-2.   What do you expect the audience to gain from your presentation?
+2.  What do you expect the audience to gain from your presentation?
 
 3.  How will your presentation help better the R Medicine ecosystem?
 
