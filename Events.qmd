@@ -3,11 +3,12 @@ title: "Past R/Medicine Conferences"
 listing:
   id: events-listing
   contents:
-    - "metadata.yml"
+    - "events-metadata.yml"
   type: grid
   fields: [date, title, image]
   sort: "date desc"
   image-height: 100%
+  template: event-listing.ejs
 page-layout: full
 title-block-banner: "#330033"
 title-block-banner-color: "white"
