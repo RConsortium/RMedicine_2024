@@ -18,19 +18,12 @@
 }
 
 .button {
-  /* Align text to the left */
   text-align: left;
-  /* Set text color to grey */
   color: #666;
-  /* Add padding above and below the button */
   padding: 10px 16px;
-  /* Reduce padding around text */
   padding: 6px 12px;
-  /* Remove default margin */
   margin: 0;
-  /* Set display to inline-block */
   display: inline-block;
-  /* Add additional styles */
   background-color: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: .25rem;
@@ -45,7 +38,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  vertical-align: middle; /* Adjust vertical alignment */
+  vertical-align: middle; 
 }
 
 .button:hover,
@@ -103,6 +96,10 @@
 }
 
 .listing-links {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.listing-links a {
+    margin-top: 5px;
   }
