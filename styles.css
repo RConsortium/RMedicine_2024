@@ -1,1 +1,105 @@
-/* css styles */
+/* CSS */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+.listing-links {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.listing-links .listing-url:first-child {
+  margin-right: 10px;
+}
+
+.source-sans-3-light {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.button {
+  text-align: left;
+  color: #666;
+  padding: 10px 16px;
+  padding: 6px 12px;
+  margin: 0;
+  display: inline-block;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  font-family: "Source Sans 3";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle; 
+}
+
+.button:hover,
+.button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.quarto-title-block .quarto-title-banner {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.quarto-title-block .quarto-title-banner h1 {
+  margin-left: 130px;
+}
+
+.quarto-title-banner {
+  margin-bottom: -30px;
+}
+
+.item-container {
+  border: 1px solid #ccc;
+  padding: 0px;
+  padding-top: 0px;
+  margin-bottom: 10px;
+}
+  
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list-container li {
+  width: calc(33.33% - 20px);
+  margin: 0 0 10 10px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.listing-links {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.listing-links a {
+    margin-top: 5px;
+  }
