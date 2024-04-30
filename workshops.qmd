@@ -132,25 +132,22 @@ Will can be found working on improving [REDCap Workflows](https://ouhscbbmc.gith
 
 ::: columns
 ::: {.column width="45%"}
-### Catalina Canizares-Escobar
+### Catalina Cañizares and Francisco Cardozo
 
 ![](images/catalina.jpeg)
 
+
 ### Biography
 
-[Catalina Canizares-Escobar](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html) is a passionate data scientist and a Ph.D. candidate in Social Welfare, dedicated to using data to gain insights into emotional disorders. I’ve been delving deep into data analysis, especially with R. My focus? Making data understandable and useful.
+[Catalina Cañizares](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html)  is a passionate data scientist and a Ph.D. candidate in Social Welfare, dedicated to using data to gain insights into emotional disorders. She has been delving deep into data analysis, especially with R. Her focus? Making data understandable and useful. She specializes in cleaning and merging data, and loves exploring data with tools like tidyverse, table1, gtsummary, and skimr, among others. She is also interested in using Machine Learning models, with the tidymodels package, to better understand emotional disorders. Plus, She is all about keeping things clear and reproducible by using tools such as Quarto. 
 
-I specialize in cleaning and merging data, and I love exploring data with tools like tidyverse, table1, gtsummary, and skimr among others. I’m also interested in using Machine Learning models, with the tidymodels package, to better understand emotional disorders.
-
-Plus, I’m all about keeping things clear and reproducible by using tools such as Quarto and RMarkdown. That means you can trust my work, and it can be easily followed by others.
+[Francisco Cardozo](https://focardozom.github.io/) is a PhD canidate in prevention science and community health, he specializes in applying quantitative techniques to evaluate the efficacy of prevention programs, focusing on understanding the dynamics of how and for whom these programs are most effective. He is dedicated to developing precise measurements and analyses that inform decisions about program operations. Francisco is passionate about translating resource science into practical, real-world applications. 
 
 ### Biografía
 
-[Catalina Canizares-Escobar](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html) es un científico de datos apasionado y un Ph.D. Candidato en Bienestar Social, dedicado al uso de datos para obtener información sobre los trastornos emocionales. He estado profundizando en el análisis de datos, especialmente con R. ¿Mi enfoque? Hacer que los datos sean comprensibles y útiles.
+[Catalina Cañizares](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html) es una científica de datos apasionada y candidata Ph.D. en trabajo social. Ella se dedidca al uso de datos para obtener información sobre los trastornos emocionales. Ha estado profundizando en el análisis de datos, especialmente con R y su enfoque es hacer que los datos sean comprensibles y útiles. Se especializo en limpiar y fusionar datos, y le encanta explorar datos con herramientas como tidyverse, table1, gtsummary y skimr, entre otras. También se interesa utilizar modelos de Machine Learning, con el paquete tidymodels, para comprender mejor los trastornos emocionales.
 
-Me especializo en limpiar y fusionar datos, y me encanta explorar datos con herramientas como tidyverse, table1, gtsummary y skimr, entre otras. También me interesa utilizar modelos de Machine Learning, con el paquete tidymodels, para comprender mejor los trastornos emocionales.
-
-Además, me gusta mantener las cosas claras y reproducibles mediante el uso de herramientas como Quarto y RMarkdown. Eso significa que puedes confiar en mi trabajo y que otros pueden seguirlo fácilmente.
+[Francisco Cardozo](https://focardozom.github.io/) es un candidato a PhD en Ciencias de las Prevención y Salud Comunitaria, se especializa en aplicar técnicas cuantitativas para evaluar la eficacia de programas de prevención, centrándose en entender la dinámica de cómo y para quién estos programas son más efectivos. Está dedicado a desarrollar mediciones y análisis  que informen decisiones sobre cómo operar los programas. Francisco siente pasión por traducir hallazgos científicos en aplicaciones prácticas. 
 
 ## Enhancing Scientific Equity: A Spanish Introduction to Using R for Biostatistical and Data Science Programming
 
@@ -172,6 +169,7 @@ A pesar de los abundantes recursos disponibles para aprender R, la mayoría de e
 
 ### Speakers on the Web
 ![](images/catalina2.png)
-Catalina Cañizares can be found leading an R club focused on Public Health and Social work [here](https://ccani007.github.io/R_club/), and creating many R teaching resources which can be found [here](https://ccani007.github.io/ccani_website/teaching.html).
+Catalina Cañizares can be found leading an R club focused on Public Health and Social work [here](https://ccani007.github.io/R_club/), and creating many R teaching resources which can be found [here](https://ccani007.github.io/ccani_website/teaching.html).  
+Francisco Cardozo leads Machine Learning workshops across Latin America, which can be explored [here](https://focardozom.github.io/workshops/), He is an active member of the ROpenSci community which can be found [here](https://ropensci.org/blog/2024/04/18/champions-program-2024/), and also serves as a Software Carpentry [instructor](https://carpentries.org/instructors/)
 :::
 :::
