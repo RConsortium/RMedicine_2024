@@ -1,16 +1,20 @@
 ---
 title: "R/Medicine Schedule"
 author: "Rich Iannone"
-date: "3/09/2024"
+date: "5/10/2024"
 format: 
   html:
-    code-fold: true
+    code-fold: false
+    echo: false
 ---
+
+
 
 ```{r}
 #| echo: false
 #| warning: false
 #| message: false
+
 library(lubridate)
 library(gt)
 # For every day of the conference, have data laid out in this way
@@ -18,10 +22,11 @@ schedule_day_1 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
     "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Workshop", "Causal Inference in R", "Lucy D'Agostino McGowan, Malcom Barrett", "Assistant Professor, Research Software Engineer", "Wake Forest University, Stanford University",
-    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Workshop", "Promover la Equidad Científica: Una Introducción al uso de R para la programación en Bioestadística y Ciencia de Datos, en Español", "Catalina Canizares-Escobar, Francisco Cardozo", "Study Coordinator, PhD student", "Florida International University",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 16:30", "2A", "Workshop", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 14:30", "2024-06-10 17:30", "2B", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 17:30", "2A", "Workshop", "Google BigQuery: First Steps in R", "Joy Payton", "Data Scientist", "CHOP",
+    "2024-06-10 14:30", "2024-06-10 17:30", "2B", "Workshop", "Project Oriented Workflows", "Shannon Pileggi", "Data Scientist", "Prostate Cancer Clinical Trials Consortium",
+    "2024-06-10 17:30", "2024-06-10 20:30", "3A", "Workshop", "Tidy time series analysis and forecasting", "Mitchell O'Hara-Wild", "Data Scientist", "Nectric"
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
@@ -75,11 +80,11 @@ library(gt)
 schedule_day_2 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "A Long Workshop Title About a Cool Topic", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "4A", "Workshop", "Next Generation Shiny Apps with {bslib} ", "Garrick Aden-Buie", "Software Engineer", "Posit",
+    "2024-06-10 11:00", "2024-06-10 14:00", "4B", "Workshop", "From R to PowerPoint: Advanced PowerPoint Presentations Using {officer}", "Theo Roe, Colin Gillespie", "R educators", "Jumping Rivers",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 17:30", "2", "Workshop", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 14:30", "2024-06-10 17:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 17:30", "5A", "Workshop", "Setting Up a Dockerized R Development Environment with VScode", "Rami Krispin", "Senior Manager/Data Scientist", "Apple",
+    "2024-06-10 14:30", "2024-06-10 17:30", "5B", "Workshop", "Tidying your REDCap Data with {REDCapTidieR}", "Stephan Kadauke, Will Beasley", "Assistant Professor, Associate Professor", "CHOP, Oklahoma University Health Sciences Center",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
@@ -133,14 +138,14 @@ library(gt)
 schedule_day_3 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 10:00", "2024-06-10 10:50", "1", "A Long Title about a Demonstration of a Cool New Package", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 11:00", "2024-06-10 11:50", "2", "Demo", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 10:00", "2024-06-10 10:55", "1", "Demo", "R Consortium's R-based Test Submission Package for FDA Evaluation: A Milestone in R-based Regulatory Submissions", "Joel Laxamana", "", "Genentech, A Member of the Roche Group",
+    "2024-06-10 11:00", "2024-06-10 11:55", "2", "Demo", "R + Snowflake to enable Medical Research", "Ryan MacLean", "", "Snowflake",
     "2024-06-10 12:00", "2024-06-10 12:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 12:30", "2024-06-10 13:20", "3", "Demo", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 13:30", "2024-06-10 14:20", "4", "Demo", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 14:30", "2024-06-10 15:20", "5", "Demo", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:30", "2024-06-10 16:20", "6", "Demo", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 16:30", "2024-06-10 18:30", "7", "Poster Session", "Poster Session", NA, NA, NA,
+    "2024-06-10 12:30", "2024-06-10 13:25", "3", "Demo", "Handling Health Data Imbalance in Machine Learning Using R ", "Olawale Awe", "", "University of Colorado",
+    "2024-06-10 13:30", "2024-06-10 14:25", "4", "Demo", "An Introduction to Tidy R Spatial Packages: Incorporating Historic Sociodemographic Data from the US Census and Visualizing Geographic Distributions ", "Stephen Uong", "", "Columbia University Mailman School of Public Health",
+    "2024-06-10 14:30", "2024-06-10 15:25", "5", "Demo", "RosyREDCap – a REDCap-project-agnostic R package that uses an API token to make a single, updating, standardized R list object containing all metadata and data for exports, imports, transformation, and shiny applications", "Brandon Rose", "", "University of Miami",
+    "2024-06-10 15:30", "2024-06-10 16:25", "6", "Demo", "Word embeddings in mental health, from exploration to confirmation, towards multidimensional diagnoses", "Thomas Charlon", "", "Harvard Medical School",
+    "2024-06-10 16:30", "2024-06-10 18:35", "7", "Demo", "No ChatGPT? No Problem!: Using the R Ecosystem to Facilitate the Extraction and Use of Knowledge from Scientific Literature", "Paul Kowalczyk", "", "Adaptimmune",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
