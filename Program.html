@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Rich Iannone">
-<meta name="dcterms.date" content="2024-03-09">
+<meta name="dcterms.date" content="2024-05-10">
 
 <title>R/Medicine 2024 - R/Medicine Schedule</title>
 <style>
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -196,7 +162,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 9, 2024</p>
+      <p class="date">May 10, 2024</p>
     </div>
   </div>
   
@@ -209,62 +175,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a table for the day of events</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(schedule_day_1) <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">"&lt;br&gt;Workshop Day 1&lt;br&gt;Monday, June 10, 2024.&lt;br&gt;All Times EST&lt;br&gt;&lt;br&gt;"</span>)) <span class="sc">|&gt;</span> <span class="co"># &lt;- insert the date</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_time</span>(<span class="at">columns =</span> <span class="fu">c</span>(start_time, end_time), <span class="at">time_style =</span> <span class="st">"h_m_p"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_duration</span>(</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> duration,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">input_units =</span> <span class="st">"minutes"</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">output_units =</span> <span class="fu">c</span>(<span class="st">"hours"</span>, <span class="st">"minutes"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_move</span>(<span class="at">columns =</span> duration, <span class="at">after =</span> end_time) <span class="sc">|&gt;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_merge</span>(</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(t_number, t_type, t_title, t_speakers, t_speaker_titles, t_companies),</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="fu">md</span>(<span class="st">"&lt;&lt;{1} - &gt;&gt;{2}&lt;br&gt;&lt;&lt; {3}&lt;br&gt;{4}&lt;br&gt;{5}, {6}&gt;&gt;"</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    start_time <span class="sc">~</span> <span class="st">"Start Time"</span>,</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    end_time <span class="sc">~</span> <span class="st">"End Time"</span>,</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    duration <span class="sc">~</span> <span class="st">"Duration"</span>,</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    t_number <span class="sc">~</span> <span class="st">""</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_width</span>(</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(start_time, end_time, duration) <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">90</span>),</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">everything</span>() <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">600</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_align_table_header</span>(<span class="at">align =</span> <span class="st">"left"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.background.color =</span> <span class="st">"lightblue"</span>,</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">"gray85"</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">rows =</span> t_type <span class="sc">==</span> <span class="st">"Break"</span>),</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"bisque"</span>)</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
 <div>
-<div id="eikrsuultv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#eikrsuultv table {
+<div id="cxflamhduf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cxflamhduf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#eikrsuultv thead, #eikrsuultv tbody, #eikrsuultv tfoot, #eikrsuultv tr, #eikrsuultv td, #eikrsuultv th {
+#cxflamhduf thead, #cxflamhduf tbody, #cxflamhduf tfoot, #cxflamhduf tr, #cxflamhduf td, #cxflamhduf th {
   border-style: none;
 }
 
-#eikrsuultv p {
+#cxflamhduf p {
   margin: 0;
   padding: 0;
 }
 
-#eikrsuultv .gt_table {
+#cxflamhduf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -290,12 +219,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_caption {
+#cxflamhduf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#eikrsuultv .gt_title {
+#cxflamhduf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -307,7 +236,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#eikrsuultv .gt_subtitle {
+#cxflamhduf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -319,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#eikrsuultv .gt_heading {
+#cxflamhduf .gt_heading {
   background-color: #ADD8E6;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -331,13 +260,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_bottom_border {
+#cxflamhduf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_col_headings {
+#cxflamhduf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -352,7 +281,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_col_heading {
+#cxflamhduf .gt_col_heading {
   color: #333333;
   background-color: #D9D9D9;
   font-size: 100%;
@@ -372,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#eikrsuultv .gt_column_spanner_outer {
+#cxflamhduf .gt_column_spanner_outer {
   color: #333333;
   background-color: #D9D9D9;
   font-size: 100%;
@@ -384,15 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#eikrsuultv .gt_column_spanner_outer:first-child {
+#cxflamhduf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#eikrsuultv .gt_column_spanner_outer:last-child {
+#cxflamhduf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#eikrsuultv .gt_column_spanner {
+#cxflamhduf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -404,11 +333,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#eikrsuultv .gt_spanner_row {
+#cxflamhduf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#eikrsuultv .gt_group_heading {
+#cxflamhduf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -434,7 +363,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#eikrsuultv .gt_empty_group_heading {
+#cxflamhduf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -449,15 +378,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#eikrsuultv .gt_from_md > :first-child {
+#cxflamhduf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#eikrsuultv .gt_from_md > :last-child {
+#cxflamhduf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#eikrsuultv .gt_row {
+#cxflamhduf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -476,7 +405,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#eikrsuultv .gt_stub {
+#cxflamhduf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -489,7 +418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#eikrsuultv .gt_stub_row_group {
+#cxflamhduf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -503,15 +432,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#eikrsuultv .gt_row_group_first td {
+#cxflamhduf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#eikrsuultv .gt_row_group_first th {
+#cxflamhduf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#eikrsuultv .gt_summary_row {
+#cxflamhduf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -521,16 +450,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#eikrsuultv .gt_first_summary_row {
+#cxflamhduf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_first_summary_row.thick {
+#cxflamhduf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#eikrsuultv .gt_last_summary_row {
+#cxflamhduf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -540,7 +469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_grand_summary_row {
+#cxflamhduf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -550,7 +479,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#eikrsuultv .gt_first_grand_summary_row {
+#cxflamhduf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -560,7 +489,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_last_grand_summary_row_top {
+#cxflamhduf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -570,11 +499,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_striped {
+#cxflamhduf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#eikrsuultv .gt_table_body {
+#cxflamhduf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -583,7 +512,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_footnotes {
+#cxflamhduf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -597,7 +526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_footnote {
+#cxflamhduf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -606,7 +535,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#eikrsuultv .gt_sourcenotes {
+#cxflamhduf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -620,7 +549,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#eikrsuultv .gt_sourcenote {
+#cxflamhduf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -628,63 +557,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#eikrsuultv .gt_left {
+#cxflamhduf .gt_left {
   text-align: left;
 }
 
-#eikrsuultv .gt_center {
+#cxflamhduf .gt_center {
   text-align: center;
 }
 
-#eikrsuultv .gt_right {
+#cxflamhduf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#eikrsuultv .gt_font_normal {
+#cxflamhduf .gt_font_normal {
   font-weight: normal;
 }
 
-#eikrsuultv .gt_font_bold {
+#cxflamhduf .gt_font_bold {
   font-weight: bold;
 }
 
-#eikrsuultv .gt_font_italic {
+#cxflamhduf .gt_font_italic {
   font-style: italic;
 }
 
-#eikrsuultv .gt_super {
+#cxflamhduf .gt_super {
   font-size: 65%;
 }
 
-#eikrsuultv .gt_footnote_marks {
+#cxflamhduf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#eikrsuultv .gt_asterisk {
+#cxflamhduf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#eikrsuultv .gt_indent_1 {
+#cxflamhduf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#eikrsuultv .gt_indent_2 {
+#cxflamhduf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#eikrsuultv .gt_indent_3 {
+#cxflamhduf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#eikrsuultv .gt_indent_4 {
+#cxflamhduf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#eikrsuultv .gt_indent_5 {
+#cxflamhduf .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -721,9 +650,9 @@ Assistant Professor, Research Software Engineer, Wake Forest University, Stanfor
 <td class="gt_row gt_center" headers="end_time">2:00 PM</td>
 <td class="gt_row gt_center" headers="duration">3h</td>
 <td class="gt_row gt_center" headers="t_number">1B - Workshop<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+Promover la Equidad Científica: Una Introducción al uso de R para la programación en Bioestadística y Ciencia de Datos, en Español<br>
+Catalina Canizares-Escobar, Francisco Cardozo<br>
+Study Coordinator, PhD student, Florida International University</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="start_time" style="background-color: #FFE4C4">2:00 PM</td>
@@ -734,21 +663,30 @@ speaker_titles, companies</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="start_time">2:30 PM</td>
-<td class="gt_row gt_center" headers="end_time">4:30 PM</td>
-<td class="gt_row gt_center" headers="duration">2h</td>
+<td class="gt_row gt_center" headers="end_time">5:30 PM</td>
+<td class="gt_row gt_center" headers="duration">3h</td>
 <td class="gt_row gt_center" headers="t_number">2A - Workshop<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+Google BigQuery: First Steps in R<br>
+Joy Payton<br>
+Data Scientist, CHOP</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="start_time">2:30 PM</td>
 <td class="gt_row gt_center" headers="end_time">5:30 PM</td>
 <td class="gt_row gt_center" headers="duration">3h</td>
 <td class="gt_row gt_center" headers="t_number">2B - Workshop<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+Project Oriented Workflows<br>
+Shannon Pileggi<br>
+Data Scientist, Prostate Cancer Clinical Trials Consortium</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">5:30 PM</td>
+<td class="gt_row gt_center" headers="end_time">8:30 PM</td>
+<td class="gt_row gt_center" headers="duration">3h</td>
+<td class="gt_row gt_center" headers="t_number">3A - Workshop<br>
+Tidy time series analysis and forecasting<br>
+Mitchell O'Hara-Wild<br>
+Data Scientist, Nectric</td>
 </tr>
 </tbody>
 </table>
@@ -758,62 +696,25 @@ speaker_titles, companies</td>
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a table for the day of events</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(schedule_day_2) <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">"&lt;br&gt;Workshop Day 2&lt;br&gt;Tuesday, June 11, 2024.&lt;br&gt;&lt;br&gt;"</span>)) <span class="sc">|&gt;</span> <span class="co"># &lt;- insert the date</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_time</span>(<span class="at">columns =</span> <span class="fu">c</span>(start_time, end_time), <span class="at">time_style =</span> <span class="st">"h_m_p"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_duration</span>(</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> duration,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">input_units =</span> <span class="st">"minutes"</span>,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">output_units =</span> <span class="fu">c</span>(<span class="st">"hours"</span>, <span class="st">"minutes"</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_move</span>(<span class="at">columns =</span> duration, <span class="at">after =</span> end_time) <span class="sc">|&gt;</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_merge</span>(</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(t_number, t_type, t_title, t_speakers, t_speaker_titles, t_companies),</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="fu">md</span>(<span class="st">"&lt;&lt;{1} - &gt;&gt;{2}&lt;br&gt;&lt;&lt; {3}&lt;br&gt;{4}&lt;br&gt;{5}, {6}&gt;&gt;"</span>)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    start_time <span class="sc">~</span> <span class="st">"Start Time"</span>,</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    end_time <span class="sc">~</span> <span class="st">"End Time"</span>,</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    duration <span class="sc">~</span> <span class="st">"Duration"</span>,</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    t_number <span class="sc">~</span> <span class="st">""</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_width</span>(</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(start_time, end_time, duration) <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">90</span>),</span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">everything</span>() <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">600</span>)</span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_align_table_header</span>(<span class="at">align =</span> <span class="st">"left"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.background.color =</span> <span class="st">"lightblue"</span>,</span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">"gray85"</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">rows =</span> t_type <span class="sc">==</span> <span class="st">"Break"</span>),</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"bisque"</span>)</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
 <div>
-<div id="lylmlgnkvf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lylmlgnkvf table {
+<div id="ejmmojytxt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ejmmojytxt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lylmlgnkvf thead, #lylmlgnkvf tbody, #lylmlgnkvf tfoot, #lylmlgnkvf tr, #lylmlgnkvf td, #lylmlgnkvf th {
+#ejmmojytxt thead, #ejmmojytxt tbody, #ejmmojytxt tfoot, #ejmmojytxt tr, #ejmmojytxt td, #ejmmojytxt th {
   border-style: none;
 }
 
-#lylmlgnkvf p {
+#ejmmojytxt p {
   margin: 0;
   padding: 0;
 }
 
-#lylmlgnkvf .gt_table {
+#ejmmojytxt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -839,12 +740,12 @@ speaker_titles, companies</td>
   border-left-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_caption {
+#ejmmojytxt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lylmlgnkvf .gt_title {
+#ejmmojytxt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -856,7 +757,7 @@ speaker_titles, companies</td>
   border-bottom-width: 0;
 }
 
-#lylmlgnkvf .gt_subtitle {
+#ejmmojytxt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -868,7 +769,7 @@ speaker_titles, companies</td>
   border-top-width: 0;
 }
 
-#lylmlgnkvf .gt_heading {
+#ejmmojytxt .gt_heading {
   background-color: #ADD8E6;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -880,13 +781,13 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_bottom_border {
+#ejmmojytxt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_col_headings {
+#ejmmojytxt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -901,7 +802,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_col_heading {
+#ejmmojytxt .gt_col_heading {
   color: #333333;
   background-color: #D9D9D9;
   font-size: 100%;
@@ -921,7 +822,7 @@ speaker_titles, companies</td>
   overflow-x: hidden;
 }
 
-#lylmlgnkvf .gt_column_spanner_outer {
+#ejmmojytxt .gt_column_spanner_outer {
   color: #333333;
   background-color: #D9D9D9;
   font-size: 100%;
@@ -933,15 +834,15 @@ speaker_titles, companies</td>
   padding-right: 4px;
 }
 
-#lylmlgnkvf .gt_column_spanner_outer:first-child {
+#ejmmojytxt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lylmlgnkvf .gt_column_spanner_outer:last-child {
+#ejmmojytxt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lylmlgnkvf .gt_column_spanner {
+#ejmmojytxt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -953,11 +854,11 @@ speaker_titles, companies</td>
   width: 100%;
 }
 
-#lylmlgnkvf .gt_spanner_row {
+#ejmmojytxt .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lylmlgnkvf .gt_group_heading {
+#ejmmojytxt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -983,7 +884,7 @@ speaker_titles, companies</td>
   text-align: left;
 }
 
-#lylmlgnkvf .gt_empty_group_heading {
+#ejmmojytxt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -998,15 +899,15 @@ speaker_titles, companies</td>
   vertical-align: middle;
 }
 
-#lylmlgnkvf .gt_from_md > :first-child {
+#ejmmojytxt .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lylmlgnkvf .gt_from_md > :last-child {
+#ejmmojytxt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lylmlgnkvf .gt_row {
+#ejmmojytxt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1025,7 +926,7 @@ speaker_titles, companies</td>
   overflow-x: hidden;
 }
 
-#lylmlgnkvf .gt_stub {
+#ejmmojytxt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1038,7 +939,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#lylmlgnkvf .gt_stub_row_group {
+#ejmmojytxt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1052,15 +953,15 @@ speaker_titles, companies</td>
   vertical-align: top;
 }
 
-#lylmlgnkvf .gt_row_group_first td {
+#ejmmojytxt .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lylmlgnkvf .gt_row_group_first th {
+#ejmmojytxt .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lylmlgnkvf .gt_summary_row {
+#ejmmojytxt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1070,16 +971,16 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#lylmlgnkvf .gt_first_summary_row {
+#ejmmojytxt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_first_summary_row.thick {
+#ejmmojytxt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lylmlgnkvf .gt_last_summary_row {
+#ejmmojytxt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1089,7 +990,7 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_grand_summary_row {
+#ejmmojytxt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1099,7 +1000,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#lylmlgnkvf .gt_first_grand_summary_row {
+#ejmmojytxt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1109,7 +1010,7 @@ speaker_titles, companies</td>
   border-top-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_last_grand_summary_row_top {
+#ejmmojytxt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1119,11 +1020,11 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_striped {
+#ejmmojytxt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lylmlgnkvf .gt_table_body {
+#ejmmojytxt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1132,7 +1033,7 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_footnotes {
+#ejmmojytxt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1146,7 +1047,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_footnote {
+#ejmmojytxt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1155,7 +1056,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#lylmlgnkvf .gt_sourcenotes {
+#ejmmojytxt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1169,7 +1070,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#lylmlgnkvf .gt_sourcenote {
+#ejmmojytxt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1177,63 +1078,63 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#lylmlgnkvf .gt_left {
+#ejmmojytxt .gt_left {
   text-align: left;
 }
 
-#lylmlgnkvf .gt_center {
+#ejmmojytxt .gt_center {
   text-align: center;
 }
 
-#lylmlgnkvf .gt_right {
+#ejmmojytxt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lylmlgnkvf .gt_font_normal {
+#ejmmojytxt .gt_font_normal {
   font-weight: normal;
 }
 
-#lylmlgnkvf .gt_font_bold {
+#ejmmojytxt .gt_font_bold {
   font-weight: bold;
 }
 
-#lylmlgnkvf .gt_font_italic {
+#ejmmojytxt .gt_font_italic {
   font-style: italic;
 }
 
-#lylmlgnkvf .gt_super {
+#ejmmojytxt .gt_super {
   font-size: 65%;
 }
 
-#lylmlgnkvf .gt_footnote_marks {
+#ejmmojytxt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lylmlgnkvf .gt_asterisk {
+#ejmmojytxt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lylmlgnkvf .gt_indent_1 {
+#ejmmojytxt .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lylmlgnkvf .gt_indent_2 {
+#ejmmojytxt .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lylmlgnkvf .gt_indent_3 {
+#ejmmojytxt .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lylmlgnkvf .gt_indent_4 {
+#ejmmojytxt .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lylmlgnkvf .gt_indent_5 {
+#ejmmojytxt .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1259,19 +1160,19 @@ Tuesday, June 11, 2024.<br>
 <td class="gt_row gt_center" headers="start_time">11:00 AM</td>
 <td class="gt_row gt_center" headers="end_time">2:00 PM</td>
 <td class="gt_row gt_center" headers="duration">3h</td>
-<td class="gt_row gt_center" headers="t_number">1A - A Long Workshop Title About a Cool Topic<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+<td class="gt_row gt_center" headers="t_number">4A - Workshop<br>
+Next Generation Shiny Apps with {bslib}<br>
+Garrick Aden-Buie<br>
+Software Engineer, Posit</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="start_time">11:00 AM</td>
 <td class="gt_row gt_center" headers="end_time">2:00 PM</td>
 <td class="gt_row gt_center" headers="duration">3h</td>
-<td class="gt_row gt_center" headers="t_number">1B - Workshop<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+<td class="gt_row gt_center" headers="t_number">4B - Workshop<br>
+From R to PowerPoint: Advanced PowerPoint Presentations Using {officer}<br>
+Theo Roe, Colin Gillespie<br>
+R educators, Jumping Rivers</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="start_time" style="background-color: #FFE4C4">2:00 PM</td>
@@ -1284,19 +1185,19 @@ speaker_titles, companies</td>
 <td class="gt_row gt_center" headers="start_time">2:30 PM</td>
 <td class="gt_row gt_center" headers="end_time">5:30 PM</td>
 <td class="gt_row gt_center" headers="duration">3h</td>
-<td class="gt_row gt_center" headers="t_number">2 - Workshop<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+<td class="gt_row gt_center" headers="t_number">5A - Workshop<br>
+Setting Up a Dockerized R Development Environment with VScode<br>
+Rami Krispin<br>
+Senior Manager/Data Scientist, Apple</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="start_time">2:30 PM</td>
 <td class="gt_row gt_center" headers="end_time">5:30 PM</td>
 <td class="gt_row gt_center" headers="duration">3h</td>
-<td class="gt_row gt_center" headers="t_number">3 - Workshop<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+<td class="gt_row gt_center" headers="t_number">5B - Workshop<br>
+Tidying your REDCap Data with {REDCapTidieR}<br>
+Stephan Kadauke, Will Beasley<br>
+Assistant Professor, Associate Professor, CHOP, Oklahoma University Health Sciences Center</td>
 </tr>
 </tbody>
 </table>
@@ -1306,62 +1207,25 @@ speaker_titles, companies</td>
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a table for the day of events</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(schedule_day_3) <span class="sc">|&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">"&lt;br&gt;Demo Day&lt;br&gt;Wednesday, June 12, 2024.&lt;br&gt;&lt;br&gt;"</span>)) <span class="sc">|&gt;</span> <span class="co"># &lt;- insert the date</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_time</span>(<span class="at">columns =</span> <span class="fu">c</span>(start_time, end_time), <span class="at">time_style =</span> <span class="st">"h_m_p"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_duration</span>(</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> duration,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">input_units =</span> <span class="st">"minutes"</span>,</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">output_units =</span> <span class="fu">c</span>(<span class="st">"hours"</span>, <span class="st">"minutes"</span>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_move</span>(<span class="at">columns =</span> duration, <span class="at">after =</span> end_time) <span class="sc">|&gt;</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_merge</span>(</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(t_number, t_type, t_title, t_speakers, t_speaker_titles, t_companies),</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="fu">md</span>(<span class="st">"&lt;&lt;{1} - &gt;&gt;{2}&lt;br&gt;&lt;&lt; {3}&lt;br&gt;{4}&lt;br&gt;{5}, {6}&gt;&gt;"</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    start_time <span class="sc">~</span> <span class="st">"Start Time"</span>,</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    end_time <span class="sc">~</span> <span class="st">"End Time"</span>,</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    duration <span class="sc">~</span> <span class="st">"Duration"</span>,</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    t_number <span class="sc">~</span> <span class="st">""</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_width</span>(</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(start_time, end_time, duration) <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">90</span>),</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">everything</span>() <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">600</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_align_table_header</span>(<span class="at">align =</span> <span class="st">"left"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.background.color =</span> <span class="st">"lightblue"</span>,</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">"gray85"</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">rows =</span> t_type <span class="sc">==</span> <span class="st">"Break"</span>),</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"bisque"</span>)</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
 <div>
-<div id="yqxulpyaac" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#yqxulpyaac table {
+<div id="cgavbbspky" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cgavbbspky table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#yqxulpyaac thead, #yqxulpyaac tbody, #yqxulpyaac tfoot, #yqxulpyaac tr, #yqxulpyaac td, #yqxulpyaac th {
+#cgavbbspky thead, #cgavbbspky tbody, #cgavbbspky tfoot, #cgavbbspky tr, #cgavbbspky td, #cgavbbspky th {
   border-style: none;
 }
 
-#yqxulpyaac p {
+#cgavbbspky p {
   margin: 0;
   padding: 0;
 }
 
-#yqxulpyaac .gt_table {
+#cgavbbspky .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1387,12 +1251,12 @@ speaker_titles, companies</td>
   border-left-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_caption {
+#cgavbbspky .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#yqxulpyaac .gt_title {
+#cgavbbspky .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1404,7 +1268,7 @@ speaker_titles, companies</td>
   border-bottom-width: 0;
 }
 
-#yqxulpyaac .gt_subtitle {
+#cgavbbspky .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1416,7 +1280,7 @@ speaker_titles, companies</td>
   border-top-width: 0;
 }
 
-#yqxulpyaac .gt_heading {
+#cgavbbspky .gt_heading {
   background-color: #ADD8E6;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -1428,13 +1292,13 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_bottom_border {
+#cgavbbspky .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_col_headings {
+#cgavbbspky .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1449,7 +1313,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_col_heading {
+#cgavbbspky .gt_col_heading {
   color: #333333;
   background-color: #D9D9D9;
   font-size: 100%;
@@ -1469,7 +1333,7 @@ speaker_titles, companies</td>
   overflow-x: hidden;
 }
 
-#yqxulpyaac .gt_column_spanner_outer {
+#cgavbbspky .gt_column_spanner_outer {
   color: #333333;
   background-color: #D9D9D9;
   font-size: 100%;
@@ -1481,15 +1345,15 @@ speaker_titles, companies</td>
   padding-right: 4px;
 }
 
-#yqxulpyaac .gt_column_spanner_outer:first-child {
+#cgavbbspky .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#yqxulpyaac .gt_column_spanner_outer:last-child {
+#cgavbbspky .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#yqxulpyaac .gt_column_spanner {
+#cgavbbspky .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1501,11 +1365,11 @@ speaker_titles, companies</td>
   width: 100%;
 }
 
-#yqxulpyaac .gt_spanner_row {
+#cgavbbspky .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#yqxulpyaac .gt_group_heading {
+#cgavbbspky .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1531,7 +1395,7 @@ speaker_titles, companies</td>
   text-align: left;
 }
 
-#yqxulpyaac .gt_empty_group_heading {
+#cgavbbspky .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1546,15 +1410,15 @@ speaker_titles, companies</td>
   vertical-align: middle;
 }
 
-#yqxulpyaac .gt_from_md > :first-child {
+#cgavbbspky .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#yqxulpyaac .gt_from_md > :last-child {
+#cgavbbspky .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#yqxulpyaac .gt_row {
+#cgavbbspky .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1573,7 +1437,7 @@ speaker_titles, companies</td>
   overflow-x: hidden;
 }
 
-#yqxulpyaac .gt_stub {
+#cgavbbspky .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1586,7 +1450,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#yqxulpyaac .gt_stub_row_group {
+#cgavbbspky .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1600,15 +1464,15 @@ speaker_titles, companies</td>
   vertical-align: top;
 }
 
-#yqxulpyaac .gt_row_group_first td {
+#cgavbbspky .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#yqxulpyaac .gt_row_group_first th {
+#cgavbbspky .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#yqxulpyaac .gt_summary_row {
+#cgavbbspky .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1618,16 +1482,16 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#yqxulpyaac .gt_first_summary_row {
+#cgavbbspky .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_first_summary_row.thick {
+#cgavbbspky .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#yqxulpyaac .gt_last_summary_row {
+#cgavbbspky .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1637,7 +1501,7 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_grand_summary_row {
+#cgavbbspky .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1647,7 +1511,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#yqxulpyaac .gt_first_grand_summary_row {
+#cgavbbspky .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1657,7 +1521,7 @@ speaker_titles, companies</td>
   border-top-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_last_grand_summary_row_top {
+#cgavbbspky .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1667,11 +1531,11 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_striped {
+#cgavbbspky .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#yqxulpyaac .gt_table_body {
+#cgavbbspky .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1680,7 +1544,7 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_footnotes {
+#cgavbbspky .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1694,7 +1558,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_footnote {
+#cgavbbspky .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1703,7 +1567,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#yqxulpyaac .gt_sourcenotes {
+#cgavbbspky .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1717,7 +1581,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#yqxulpyaac .gt_sourcenote {
+#cgavbbspky .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1725,63 +1589,63 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#yqxulpyaac .gt_left {
+#cgavbbspky .gt_left {
   text-align: left;
 }
 
-#yqxulpyaac .gt_center {
+#cgavbbspky .gt_center {
   text-align: center;
 }
 
-#yqxulpyaac .gt_right {
+#cgavbbspky .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#yqxulpyaac .gt_font_normal {
+#cgavbbspky .gt_font_normal {
   font-weight: normal;
 }
 
-#yqxulpyaac .gt_font_bold {
+#cgavbbspky .gt_font_bold {
   font-weight: bold;
 }
 
-#yqxulpyaac .gt_font_italic {
+#cgavbbspky .gt_font_italic {
   font-style: italic;
 }
 
-#yqxulpyaac .gt_super {
+#cgavbbspky .gt_super {
   font-size: 65%;
 }
 
-#yqxulpyaac .gt_footnote_marks {
+#cgavbbspky .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#yqxulpyaac .gt_asterisk {
+#cgavbbspky .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#yqxulpyaac .gt_indent_1 {
+#cgavbbspky .gt_indent_1 {
   text-indent: 5px;
 }
 
-#yqxulpyaac .gt_indent_2 {
+#cgavbbspky .gt_indent_2 {
   text-indent: 10px;
 }
 
-#yqxulpyaac .gt_indent_3 {
+#cgavbbspky .gt_indent_3 {
   text-indent: 15px;
 }
 
-#yqxulpyaac .gt_indent_4 {
+#cgavbbspky .gt_indent_4 {
   text-indent: 20px;
 }
 
-#yqxulpyaac .gt_indent_5 {
+#cgavbbspky .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1805,21 +1669,21 @@ Wednesday, June 12, 2024.<br>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_center" headers="start_time">10:00 AM</td>
-<td class="gt_row gt_center" headers="end_time">10:50 AM</td>
-<td class="gt_row gt_center" headers="duration">50m</td>
-<td class="gt_row gt_center" headers="t_number">1 - A Long Title about a Demonstration of a Cool New Package<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+<td class="gt_row gt_center" headers="end_time">10:55 AM</td>
+<td class="gt_row gt_center" headers="duration">55m</td>
+<td class="gt_row gt_center" headers="t_number">1 - Demo<br>
+R Consortium's R-based Test Submission Package for FDA Evaluation: A Milestone in R-based Regulatory Submissions<br>
+Joel Laxamana<br>
+, Genentech, A Member of the Roche Group</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="start_time">11:00 AM</td>
-<td class="gt_row gt_center" headers="end_time">11:50 AM</td>
-<td class="gt_row gt_center" headers="duration">50m</td>
+<td class="gt_row gt_center" headers="end_time">11:55 AM</td>
+<td class="gt_row gt_center" headers="duration">55m</td>
 <td class="gt_row gt_center" headers="t_number">2 - Demo<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+R + Snowflake to enable Medical Research<br>
+Ryan MacLean<br>
+, Snowflake</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="start_time" style="background-color: #FFE4C4">12:00 PM</td>
@@ -1830,46 +1694,48 @@ speaker_titles, companies</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="start_time">12:30 PM</td>
-<td class="gt_row gt_center" headers="end_time">1:20 PM</td>
-<td class="gt_row gt_center" headers="duration">50m</td>
+<td class="gt_row gt_center" headers="end_time">1:25 PM</td>
+<td class="gt_row gt_center" headers="duration">55m</td>
 <td class="gt_row gt_center" headers="t_number">3 - Demo<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+Handling Health Data Imbalance in Machine Learning Using R<br>
+Olawale Awe<br>
+, University of Colorado</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="start_time">1:30 PM</td>
-<td class="gt_row gt_center" headers="end_time">2:20 PM</td>
-<td class="gt_row gt_center" headers="duration">50m</td>
+<td class="gt_row gt_center" headers="end_time">2:25 PM</td>
+<td class="gt_row gt_center" headers="duration">55m</td>
 <td class="gt_row gt_center" headers="t_number">4 - Demo<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+An Introduction to Tidy R Spatial Packages: Incorporating Historic Sociodemographic Data from the US Census and Visualizing Geographic Distributions<br>
+Stephen Uong<br>
+, Columbia University Mailman School of Public Health</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="start_time">2:30 PM</td>
-<td class="gt_row gt_center" headers="end_time">3:20 PM</td>
-<td class="gt_row gt_center" headers="duration">50m</td>
+<td class="gt_row gt_center" headers="end_time">3:25 PM</td>
+<td class="gt_row gt_center" headers="duration">55m</td>
 <td class="gt_row gt_center" headers="t_number">5 - Demo<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+RosyREDCap – a REDCap-project-agnostic R package that uses an API token to make a single, updating, standardized R list object containing all metadata and data for exports, imports, transformation, and shiny applications<br>
+Brandon Rose<br>
+, University of Miami</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_center" headers="start_time">3:30 PM</td>
-<td class="gt_row gt_center" headers="end_time">4:20 PM</td>
-<td class="gt_row gt_center" headers="duration">50m</td>
+<td class="gt_row gt_center" headers="end_time">4:25 PM</td>
+<td class="gt_row gt_center" headers="duration">55m</td>
 <td class="gt_row gt_center" headers="t_number">6 - Demo<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+Word embeddings in mental health, from exploration to confirmation, towards multidimensional diagnoses<br>
+Thomas Charlon<br>
+, Harvard Medical School</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="start_time">4:30 PM</td>
-<td class="gt_row gt_center" headers="end_time">6:30 PM</td>
-<td class="gt_row gt_center" headers="duration">2h</td>
-<td class="gt_row gt_center" headers="t_number">7 - Poster Session<br>
-</td>
+<td class="gt_row gt_center" headers="end_time">6:35 PM</td>
+<td class="gt_row gt_center" headers="duration">2h 5m</td>
+<td class="gt_row gt_center" headers="t_number">7 - Demo<br>
+No ChatGPT? No Problem!: Using the R Ecosystem to Facilitate the Extraction and Use of Knowledge from Scientific Literature<br>
+Paul Kowalczyk<br>
+, Adaptimmune</td>
 </tr>
 </tbody>
 </table>
@@ -1879,62 +1745,25 @@ speaker_titles, companies</td>
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a table for the day of events</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(schedule_day_4) <span class="sc">|&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">"&lt;br&gt;Meeting Day 1&lt;br&gt;Thursday, June 13, 2024.&lt;br&gt;&lt;br&gt;"</span>)) <span class="sc">|&gt;</span> <span class="co"># &lt;- insert the date</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_time</span>(<span class="at">columns =</span> <span class="fu">c</span>(start_time, end_time), <span class="at">time_style =</span> <span class="st">"h_m_p"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_duration</span>(</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> duration,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">input_units =</span> <span class="st">"minutes"</span>,</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">output_units =</span> <span class="fu">c</span>(<span class="st">"hours"</span>, <span class="st">"minutes"</span>)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_move</span>(<span class="at">columns =</span> duration, <span class="at">after =</span> end_time) <span class="sc">|&gt;</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_merge</span>(</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(t_number, t_type, t_title, t_speakers, t_speaker_titles, t_companies),</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="fu">md</span>(<span class="st">"&lt;&lt;{1} - &gt;&gt;{2}&lt;br&gt;&lt;&lt; {3}&lt;br&gt;{4}&lt;br&gt;{5}, {6}&gt;&gt;"</span>)</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    start_time <span class="sc">~</span> <span class="st">"Start Time"</span>,</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    end_time <span class="sc">~</span> <span class="st">"End Time"</span>,</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    duration <span class="sc">~</span> <span class="st">"Duration"</span>,</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    t_number <span class="sc">~</span> <span class="st">""</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_width</span>(</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(start_time, end_time, duration) <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">90</span>),</span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">everything</span>() <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">600</span>)</span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_align_table_header</span>(<span class="at">align =</span> <span class="st">"left"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.background.color =</span> <span class="st">"lightblue"</span>,</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">"gray85"</span></span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">rows =</span> t_type <span class="sc">==</span> <span class="st">"Break"</span>),</span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"bisque"</span>)</span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
 <div>
-<div id="rneucdhgoh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#rneucdhgoh table {
+<div id="lscysibtkl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lscysibtkl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#rneucdhgoh thead, #rneucdhgoh tbody, #rneucdhgoh tfoot, #rneucdhgoh tr, #rneucdhgoh td, #rneucdhgoh th {
+#lscysibtkl thead, #lscysibtkl tbody, #lscysibtkl tfoot, #lscysibtkl tr, #lscysibtkl td, #lscysibtkl th {
   border-style: none;
 }
 
-#rneucdhgoh p {
+#lscysibtkl p {
   margin: 0;
   padding: 0;
 }
 
-#rneucdhgoh .gt_table {
+#lscysibtkl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1960,12 +1789,12 @@ speaker_titles, companies</td>
   border-left-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_caption {
+#lscysibtkl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#rneucdhgoh .gt_title {
+#lscysibtkl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1977,7 +1806,7 @@ speaker_titles, companies</td>
   border-bottom-width: 0;
 }
 
-#rneucdhgoh .gt_subtitle {
+#lscysibtkl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1989,7 +1818,7 @@ speaker_titles, companies</td>
   border-top-width: 0;
 }
 
-#rneucdhgoh .gt_heading {
+#lscysibtkl .gt_heading {
   background-color: #ADD8E6;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -2001,13 +1830,13 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_bottom_border {
+#lscysibtkl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_col_headings {
+#lscysibtkl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2022,7 +1851,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_col_heading {
+#lscysibtkl .gt_col_heading {
   color: #333333;
   background-color: #D9D9D9;
   font-size: 100%;
@@ -2042,7 +1871,7 @@ speaker_titles, companies</td>
   overflow-x: hidden;
 }
 
-#rneucdhgoh .gt_column_spanner_outer {
+#lscysibtkl .gt_column_spanner_outer {
   color: #333333;
   background-color: #D9D9D9;
   font-size: 100%;
@@ -2054,15 +1883,15 @@ speaker_titles, companies</td>
   padding-right: 4px;
 }
 
-#rneucdhgoh .gt_column_spanner_outer:first-child {
+#lscysibtkl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#rneucdhgoh .gt_column_spanner_outer:last-child {
+#lscysibtkl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#rneucdhgoh .gt_column_spanner {
+#lscysibtkl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2074,11 +1903,11 @@ speaker_titles, companies</td>
   width: 100%;
 }
 
-#rneucdhgoh .gt_spanner_row {
+#lscysibtkl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#rneucdhgoh .gt_group_heading {
+#lscysibtkl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2104,7 +1933,7 @@ speaker_titles, companies</td>
   text-align: left;
 }
 
-#rneucdhgoh .gt_empty_group_heading {
+#lscysibtkl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2119,15 +1948,15 @@ speaker_titles, companies</td>
   vertical-align: middle;
 }
 
-#rneucdhgoh .gt_from_md > :first-child {
+#lscysibtkl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#rneucdhgoh .gt_from_md > :last-child {
+#lscysibtkl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#rneucdhgoh .gt_row {
+#lscysibtkl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2146,7 +1975,7 @@ speaker_titles, companies</td>
   overflow-x: hidden;
 }
 
-#rneucdhgoh .gt_stub {
+#lscysibtkl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2159,7 +1988,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#rneucdhgoh .gt_stub_row_group {
+#lscysibtkl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2173,15 +2002,15 @@ speaker_titles, companies</td>
   vertical-align: top;
 }
 
-#rneucdhgoh .gt_row_group_first td {
+#lscysibtkl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#rneucdhgoh .gt_row_group_first th {
+#lscysibtkl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#rneucdhgoh .gt_summary_row {
+#lscysibtkl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2191,16 +2020,16 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#rneucdhgoh .gt_first_summary_row {
+#lscysibtkl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_first_summary_row.thick {
+#lscysibtkl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#rneucdhgoh .gt_last_summary_row {
+#lscysibtkl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2210,7 +2039,7 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_grand_summary_row {
+#lscysibtkl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2220,7 +2049,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#rneucdhgoh .gt_first_grand_summary_row {
+#lscysibtkl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2230,7 +2059,7 @@ speaker_titles, companies</td>
   border-top-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_last_grand_summary_row_top {
+#lscysibtkl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2240,11 +2069,11 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_striped {
+#lscysibtkl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#rneucdhgoh .gt_table_body {
+#lscysibtkl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2253,7 +2082,7 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_footnotes {
+#lscysibtkl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2267,7 +2096,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_footnote {
+#lscysibtkl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2276,7 +2105,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#rneucdhgoh .gt_sourcenotes {
+#lscysibtkl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2290,7 +2119,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#rneucdhgoh .gt_sourcenote {
+#lscysibtkl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2298,63 +2127,63 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#rneucdhgoh .gt_left {
+#lscysibtkl .gt_left {
   text-align: left;
 }
 
-#rneucdhgoh .gt_center {
+#lscysibtkl .gt_center {
   text-align: center;
 }
 
-#rneucdhgoh .gt_right {
+#lscysibtkl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#rneucdhgoh .gt_font_normal {
+#lscysibtkl .gt_font_normal {
   font-weight: normal;
 }
 
-#rneucdhgoh .gt_font_bold {
+#lscysibtkl .gt_font_bold {
   font-weight: bold;
 }
 
-#rneucdhgoh .gt_font_italic {
+#lscysibtkl .gt_font_italic {
   font-style: italic;
 }
 
-#rneucdhgoh .gt_super {
+#lscysibtkl .gt_super {
   font-size: 65%;
 }
 
-#rneucdhgoh .gt_footnote_marks {
+#lscysibtkl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#rneucdhgoh .gt_asterisk {
+#lscysibtkl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#rneucdhgoh .gt_indent_1 {
+#lscysibtkl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#rneucdhgoh .gt_indent_2 {
+#lscysibtkl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#rneucdhgoh .gt_indent_3 {
+#lscysibtkl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#rneucdhgoh .gt_indent_4 {
+#lscysibtkl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#rneucdhgoh .gt_indent_5 {
+#lscysibtkl .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2387,37 +2216,161 @@ Professor, University of Michigan</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="start_time">11:13 AM</td>
-<td class="gt_row gt_center" headers="end_time">12:13 PM</td>
-<td class="gt_row gt_center" headers="duration">1h</td>
+<td class="gt_row gt_center" headers="end_time">12:15 PM</td>
+<td class="gt_row gt_center" headers="duration">1h 2m</td>
 <td class="gt_row gt_center" headers="t_number">2 - Keynote<br>
 Statistical Challenges in Single-Cell and Spatial Transcriptomics<br>
 Stephanie Hicks<br>
 Associate Professor, Johns Hopkins</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_center" headers="start_time" style="background-color: #FFE4C4">2:00 PM</td>
-<td class="gt_row gt_center" headers="end_time" style="background-color: #FFE4C4">2:30 PM</td>
-<td class="gt_row gt_center" headers="duration" style="background-color: #FFE4C4">30m</td>
+<td class="gt_row gt_center" headers="start_time">12:15 PM</td>
+<td class="gt_row gt_center" headers="end_time">12:35 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">4 - Regular talk<br>
+flowchart: an R package for creating participant flow diagrams integrated with tidyverse<br>
+Pau Satorra<br>
+, Germans Trias i Pujol Research Institute and Hospital (IGTP)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">12:37 PM</td>
+<td class="gt_row gt_center" headers="end_time">12:47 PM</td>
+<td class="gt_row gt_center" headers="duration">10m</td>
+<td class="gt_row gt_center" headers="t_number">5 - Lightning talk<br>
+Survival analysis with tidymodels<br>
+Emily Zabor<br>
+, Cleveland Clinic</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">12:49 PM</td>
+<td class="gt_row gt_center" headers="end_time">1:09 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">6 - Regular talk<br>
+Reporting survival analysis results with the gtsummary and ggsurvfit packages<br>
+Hannah Frick<br>
+, Posit, PBC</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">1:11 PM</td>
+<td class="gt_row gt_center" headers="end_time">1:31 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">7 - Regular talk<br>
+Cox Regression and other ways to survive survival analyses<br>
+Mitchell Maltenfort<br>
+, Children's Hospital of Philadelphia</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">1:33 PM</td>
+<td class="gt_row gt_center" headers="end_time">1:53 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">8 - Regular talk<br>
+Identifying latent subgroups using regularized mixture cure models to develop risk stratification systems in cancer: Illustration using the hdcuremodels R package<br>
+Kellie Archer<br>
+, Ohio State University</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time" style="background-color: #FFE4C4">1:53 PM</td>
+<td class="gt_row gt_center" headers="end_time" style="background-color: #FFE4C4">2:08 PM</td>
+<td class="gt_row gt_center" headers="duration" style="background-color: #FFE4C4">15m</td>
 <td class="gt_row gt_center" headers="t_number" style="background-color: #FFE4C4">Break<br>
 </td>
 </tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">2:08 PM</td>
+<td class="gt_row gt_center" headers="end_time">2:18 PM</td>
+<td class="gt_row gt_center" headers="duration">10m</td>
+<td class="gt_row gt_center" headers="t_number">9 - Lightning talk<br>
+Leveraging the Power of Teal-Based R-Shiny Applications: Case Study from a TechBio Company<br>
+Kasra Yousefi<br>
+, Recursion Pharmaceuticals</td>
+</tr>
 <tr class="even">
-<td class="gt_row gt_center" headers="start_time">2:30 PM</td>
-<td class="gt_row gt_center" headers="end_time">3:15 PM</td>
-<td class="gt_row gt_center" headers="duration">45m</td>
-<td class="gt_row gt_center" headers="t_number">3 - Lightning Talk<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+<td class="gt_row gt_center" headers="start_time">2:20 PM</td>
+<td class="gt_row gt_center" headers="end_time">2:30 PM</td>
+<td class="gt_row gt_center" headers="duration">10m</td>
+<td class="gt_row gt_center" headers="t_number">10 - Lightning talk<br>
+A one year recap on teaching statistics to medical students: how can R and Quarto help?<br>
+Chi Zhang<br>
+, University of Oslo</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_center" headers="start_time">3:15 PM</td>
-<td class="gt_row gt_center" headers="end_time">4:30 PM</td>
-<td class="gt_row gt_center" headers="duration">1h 15m</td>
-<td class="gt_row gt_center" headers="t_number">4 - Regular Talk<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+<td class="gt_row gt_center" headers="start_time">2:32 PM</td>
+<td class="gt_row gt_center" headers="end_time">2:52 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">11 - Regular talk<br>
+Creating Data Packages with Overproof {rUM}<br>
+Raymond Balise<br>
+, University of Miami</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">2:54 PM</td>
+<td class="gt_row gt_center" headers="end_time">3:14 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">12 - Regular talk<br>
+SciDataReportR: Streamlining Scientific and Clinical Data Exploration in R<br>
+Raha Dastgheyb<br>
+, Johns Hopkins School of Medicine</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">3:16 PM</td>
+<td class="gt_row gt_center" headers="end_time">3:36 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">13 - Regular talk<br>
+Updating Quarto Slides Automatically with GitHub Actions<br>
+Rose Hartman<br>
+, Children's Hospital of Philadelphia</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time" style="background-color: #FFE4C4">3:36 PM</td>
+<td class="gt_row gt_center" headers="end_time" style="background-color: #FFE4C4">3:51 PM</td>
+<td class="gt_row gt_center" headers="duration" style="background-color: #FFE4C4">15m</td>
+<td class="gt_row gt_center" headers="t_number" style="background-color: #FFE4C4">Break<br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">3:51 PM</td>
+<td class="gt_row gt_center" headers="end_time">4:11 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">14 - Regular talk<br>
+Don't merge datasets when you don't need to. Preserving the 'Experimental unit' is a key!<br>
+Dror Berel<br>
+, Independent statistical consultant</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">4:13 PM</td>
+<td class="gt_row gt_center" headers="end_time">4:33 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">15 - Regular talk<br>
+Generate Raw Synthetic Dataset for Clinical Trial<br>
+Binod Jung Bogati<br>
+,</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">4:35 PM</td>
+<td class="gt_row gt_center" headers="end_time">4:55 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">16 - Regular talk<br>
+OralOpioids: The Role of Statistical Software in Dealing with the US Opioid Crisis<br>
+Ankona Banerjee<br>
+, Baylor College of Medicine</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">4:57 PM</td>
+<td class="gt_row gt_center" headers="end_time">5:17 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">17 - Regular talk<br>
+World beyond {targets}: Embracing Data Pipelines in Life Sciences<br>
+Aga Rasinska<br>
+, Appsilon</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">5:19 PM</td>
+<td class="gt_row gt_center" headers="end_time">5:24 PM</td>
+<td class="gt_row gt_center" headers="duration">5m</td>
+<td class="gt_row gt_center" headers="t_number">18 - Closing remarks<br>
+<br>
+<br>
+,</td>
 </tr>
 </tbody>
 </table>
@@ -2427,62 +2380,25 @@ speaker_titles, companies</td>
 </div>
 </div>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a table for the day of events</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(schedule_day_5) <span class="sc">|&gt;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="at">title =</span> <span class="fu">md</span>(<span class="st">"&lt;br&gt;Meeting Day 2&lt;br&gt;Friday, June 14, 2024.&lt;br&gt;&lt;br&gt;"</span>)) <span class="sc">|&gt;</span> <span class="co"># &lt;- insert the date</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_time</span>(<span class="at">columns =</span> <span class="fu">c</span>(start_time, end_time), <span class="at">time_style =</span> <span class="st">"h_m_p"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_duration</span>(</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> duration,</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">input_units =</span> <span class="st">"minutes"</span>,</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">output_units =</span> <span class="fu">c</span>(<span class="st">"hours"</span>, <span class="st">"minutes"</span>)</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_move</span>(<span class="at">columns =</span> duration, <span class="at">after =</span> end_time) <span class="sc">|&gt;</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_merge</span>(</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">columns =</span> <span class="fu">c</span>(t_number, t_type, t_title, t_speakers, t_speaker_titles, t_companies),</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">pattern =</span> <span class="fu">md</span>(<span class="st">"&lt;&lt;{1} - &gt;&gt;{2}&lt;br&gt;&lt;&lt; {3}&lt;br&gt;{4}&lt;br&gt;{5}, {6}&gt;&gt;"</span>)</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    start_time <span class="sc">~</span> <span class="st">"Start Time"</span>,</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    end_time <span class="sc">~</span> <span class="st">"End Time"</span>,</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    duration <span class="sc">~</span> <span class="st">"Duration"</span>,</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    t_number <span class="sc">~</span> <span class="st">""</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_align</span>(<span class="at">align =</span> <span class="st">"center"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_width</span>(</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(start_time, end_time, duration) <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">90</span>),</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="fu">everything</span>() <span class="sc">~</span> <span class="fu">px</span>(<span class="dv">600</span>)</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_align_table_header</span>(<span class="at">align =</span> <span class="st">"left"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_options</span>(</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">heading.background.color =</span> <span class="st">"lightblue"</span>,</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">column_labels.background.color =</span> <span class="st">"gray85"</span></span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(<span class="at">rows =</span> t_type <span class="sc">==</span> <span class="st">"Break"</span>),</span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"bisque"</span>)</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
 <div>
-<div id="jfwtsbyjrb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#jfwtsbyjrb table {
+<div id="qoqbezpyod" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qoqbezpyod table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#jfwtsbyjrb thead, #jfwtsbyjrb tbody, #jfwtsbyjrb tfoot, #jfwtsbyjrb tr, #jfwtsbyjrb td, #jfwtsbyjrb th {
+#qoqbezpyod thead, #qoqbezpyod tbody, #qoqbezpyod tfoot, #qoqbezpyod tr, #qoqbezpyod td, #qoqbezpyod th {
   border-style: none;
 }
 
-#jfwtsbyjrb p {
+#qoqbezpyod p {
   margin: 0;
   padding: 0;
 }
 
-#jfwtsbyjrb .gt_table {
+#qoqbezpyod .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2508,12 +2424,12 @@ speaker_titles, companies</td>
   border-left-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_caption {
+#qoqbezpyod .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#jfwtsbyjrb .gt_title {
+#qoqbezpyod .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2525,7 +2441,7 @@ speaker_titles, companies</td>
   border-bottom-width: 0;
 }
 
-#jfwtsbyjrb .gt_subtitle {
+#qoqbezpyod .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2537,7 +2453,7 @@ speaker_titles, companies</td>
   border-top-width: 0;
 }
 
-#jfwtsbyjrb .gt_heading {
+#qoqbezpyod .gt_heading {
   background-color: #ADD8E6;
   text-align: left;
   border-bottom-color: #FFFFFF;
@@ -2549,13 +2465,13 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_bottom_border {
+#qoqbezpyod .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_col_headings {
+#qoqbezpyod .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2570,7 +2486,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_col_heading {
+#qoqbezpyod .gt_col_heading {
   color: #333333;
   background-color: #D9D9D9;
   font-size: 100%;
@@ -2590,7 +2506,7 @@ speaker_titles, companies</td>
   overflow-x: hidden;
 }
 
-#jfwtsbyjrb .gt_column_spanner_outer {
+#qoqbezpyod .gt_column_spanner_outer {
   color: #333333;
   background-color: #D9D9D9;
   font-size: 100%;
@@ -2602,15 +2518,15 @@ speaker_titles, companies</td>
   padding-right: 4px;
 }
 
-#jfwtsbyjrb .gt_column_spanner_outer:first-child {
+#qoqbezpyod .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#jfwtsbyjrb .gt_column_spanner_outer:last-child {
+#qoqbezpyod .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#jfwtsbyjrb .gt_column_spanner {
+#qoqbezpyod .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2622,11 +2538,11 @@ speaker_titles, companies</td>
   width: 100%;
 }
 
-#jfwtsbyjrb .gt_spanner_row {
+#qoqbezpyod .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#jfwtsbyjrb .gt_group_heading {
+#qoqbezpyod .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2652,7 +2568,7 @@ speaker_titles, companies</td>
   text-align: left;
 }
 
-#jfwtsbyjrb .gt_empty_group_heading {
+#qoqbezpyod .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2667,15 +2583,15 @@ speaker_titles, companies</td>
   vertical-align: middle;
 }
 
-#jfwtsbyjrb .gt_from_md > :first-child {
+#qoqbezpyod .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#jfwtsbyjrb .gt_from_md > :last-child {
+#qoqbezpyod .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#jfwtsbyjrb .gt_row {
+#qoqbezpyod .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2694,7 +2610,7 @@ speaker_titles, companies</td>
   overflow-x: hidden;
 }
 
-#jfwtsbyjrb .gt_stub {
+#qoqbezpyod .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2707,7 +2623,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#jfwtsbyjrb .gt_stub_row_group {
+#qoqbezpyod .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2721,15 +2637,15 @@ speaker_titles, companies</td>
   vertical-align: top;
 }
 
-#jfwtsbyjrb .gt_row_group_first td {
+#qoqbezpyod .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#jfwtsbyjrb .gt_row_group_first th {
+#qoqbezpyod .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#jfwtsbyjrb .gt_summary_row {
+#qoqbezpyod .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2739,16 +2655,16 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#jfwtsbyjrb .gt_first_summary_row {
+#qoqbezpyod .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_first_summary_row.thick {
+#qoqbezpyod .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#jfwtsbyjrb .gt_last_summary_row {
+#qoqbezpyod .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2758,7 +2674,7 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_grand_summary_row {
+#qoqbezpyod .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2768,7 +2684,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#jfwtsbyjrb .gt_first_grand_summary_row {
+#qoqbezpyod .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2778,7 +2694,7 @@ speaker_titles, companies</td>
   border-top-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_last_grand_summary_row_top {
+#qoqbezpyod .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2788,11 +2704,11 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_striped {
+#qoqbezpyod .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#jfwtsbyjrb .gt_table_body {
+#qoqbezpyod .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2801,7 +2717,7 @@ speaker_titles, companies</td>
   border-bottom-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_footnotes {
+#qoqbezpyod .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2815,7 +2731,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_footnote {
+#qoqbezpyod .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2824,7 +2740,7 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#jfwtsbyjrb .gt_sourcenotes {
+#qoqbezpyod .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2838,7 +2754,7 @@ speaker_titles, companies</td>
   border-right-color: #D3D3D3;
 }
 
-#jfwtsbyjrb .gt_sourcenote {
+#qoqbezpyod .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2846,63 +2762,63 @@ speaker_titles, companies</td>
   padding-right: 5px;
 }
 
-#jfwtsbyjrb .gt_left {
+#qoqbezpyod .gt_left {
   text-align: left;
 }
 
-#jfwtsbyjrb .gt_center {
+#qoqbezpyod .gt_center {
   text-align: center;
 }
 
-#jfwtsbyjrb .gt_right {
+#qoqbezpyod .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#jfwtsbyjrb .gt_font_normal {
+#qoqbezpyod .gt_font_normal {
   font-weight: normal;
 }
 
-#jfwtsbyjrb .gt_font_bold {
+#qoqbezpyod .gt_font_bold {
   font-weight: bold;
 }
 
-#jfwtsbyjrb .gt_font_italic {
+#qoqbezpyod .gt_font_italic {
   font-style: italic;
 }
 
-#jfwtsbyjrb .gt_super {
+#qoqbezpyod .gt_super {
   font-size: 65%;
 }
 
-#jfwtsbyjrb .gt_footnote_marks {
+#qoqbezpyod .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#jfwtsbyjrb .gt_asterisk {
+#qoqbezpyod .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#jfwtsbyjrb .gt_indent_1 {
+#qoqbezpyod .gt_indent_1 {
   text-indent: 5px;
 }
 
-#jfwtsbyjrb .gt_indent_2 {
+#qoqbezpyod .gt_indent_2 {
   text-indent: 10px;
 }
 
-#jfwtsbyjrb .gt_indent_3 {
+#qoqbezpyod .gt_indent_3 {
   text-indent: 15px;
 }
 
-#jfwtsbyjrb .gt_indent_4 {
+#qoqbezpyod .gt_indent_4 {
   text-indent: 20px;
 }
 
-#jfwtsbyjrb .gt_indent_5 {
+#qoqbezpyod .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2935,37 +2851,179 @@ Professor, University of Michigan</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_center" headers="start_time">11:13 AM</td>
-<td class="gt_row gt_center" headers="end_time">12:13 PM</td>
-<td class="gt_row gt_center" headers="duration">1h</td>
+<td class="gt_row gt_center" headers="end_time">12:15 PM</td>
+<td class="gt_row gt_center" headers="duration">1h 2m</td>
 <td class="gt_row gt_center" headers="t_number">2 - Keynote<br>
 Reproducibility in Medical Research<br>
 Gundula Bosch<br>
 Research Professor, Johns Hopkins</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_center" headers="start_time" style="background-color: #FFE4C4">2:00 PM</td>
-<td class="gt_row gt_center" headers="end_time" style="background-color: #FFE4C4">2:30 PM</td>
-<td class="gt_row gt_center" headers="duration" style="background-color: #FFE4C4">30m</td>
+<td class="gt_row gt_center" headers="start_time">12:17 PM</td>
+<td class="gt_row gt_center" headers="end_time">12:37 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">3 - Regular Talk<br>
+Ah, Ha, Ha, Ha, Parameterise! Creating parameterised plot functions for flexible and reproducible data-to-viz pipelines<br>
+Cara Thompson<br>
+, Building Stories with Data</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">12:39 PM</td>
+<td class="gt_row gt_center" headers="end_time">12:59 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">4 - Regular Talk<br>
+HOLD<br>
+<br>
+,</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">1:01 PM</td>
+<td class="gt_row gt_center" headers="end_time">1:21 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">5 - Regular Talk<br>
+Comparing Analysis Method Implementations in Software (CAMIS): An open source repository to document differences in statistical methodology across software<br>
+Agnieszka Tomczyk<br>
+, PAREXEL</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">1:23 PM</td>
+<td class="gt_row gt_center" headers="end_time">1:43 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">6 - Regular Talk<br>
+PhyloTrace - a Shiny App for Bacterial Pathogen Monitoring on a Genomic Level<br>
+Filip Paskali<br>
+,</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time" style="background-color: #FFE4C4">1:43 PM</td>
+<td class="gt_row gt_center" headers="end_time" style="background-color: #FFE4C4">1:58 PM</td>
+<td class="gt_row gt_center" headers="duration" style="background-color: #FFE4C4">15m</td>
 <td class="gt_row gt_center" headers="t_number" style="background-color: #FFE4C4">Break<br>
 </td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_center" headers="start_time">2:30 PM</td>
-<td class="gt_row gt_center" headers="end_time">3:15 PM</td>
-<td class="gt_row gt_center" headers="duration">45m</td>
-<td class="gt_row gt_center" headers="t_number">3 - A Long Title about a Complicated Lightning Talk Topic<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+<td class="gt_row gt_center" headers="start_time">1:58 PM</td>
+<td class="gt_row gt_center" headers="end_time">2:08 PM</td>
+<td class="gt_row gt_center" headers="duration">10m</td>
+<td class="gt_row gt_center" headers="t_number">7 - Lightning Talk<br>
+R in Clinical Competency Committee {shiny + reticulate + selenium + ...}<br>
+Ken Koon Wong<br>
+, Cleveland Clinic Akron General</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_center" headers="start_time">3:15 PM</td>
-<td class="gt_row gt_center" headers="end_time">4:30 PM</td>
-<td class="gt_row gt_center" headers="duration">1h 15m</td>
-<td class="gt_row gt_center" headers="t_number">4 - Regular Talk<br>
-title<br>
-speakers<br>
-speaker_titles, companies</td>
+<td class="gt_row gt_center" headers="start_time">2:10 PM</td>
+<td class="gt_row gt_center" headers="end_time">2:20 PM</td>
+<td class="gt_row gt_center" headers="duration">10m</td>
+<td class="gt_row gt_center" headers="t_number">8 - Lightning Talk<br>
+Health Equity Explorer Application Showcase<br>
+Can Taşlıçukur<br>
+, Boston Medical Center</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">2:22 PM</td>
+<td class="gt_row gt_center" headers="end_time">2:32 PM</td>
+<td class="gt_row gt_center" headers="duration">10m</td>
+<td class="gt_row gt_center" headers="t_number">9 - Lightning Talk<br>
+in_vivo_research_dashboard.Rmd<br>
+Michael McCoy<br>
+, Children's Hospital of Philadelphia</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">2:34 PM</td>
+<td class="gt_row gt_center" headers="end_time">2:44 PM</td>
+<td class="gt_row gt_center" headers="duration">10m</td>
+<td class="gt_row gt_center" headers="t_number">10 - Lightning Talk<br>
+Shiny apps for medical image annotation<br>
+Matt Broerman<br>
+, University of Pittsburgh</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">2:46 PM</td>
+<td class="gt_row gt_center" headers="end_time">3:06 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">11 - Regular Talk<br>
+Automating Sharing of Data Summaries from REDCap, Googlesheets, and Qualtrics with Quarto Webpages and Automated Emails<br>
+Peter Higgins<br>
+, University of Michigan</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">3:08 PM</td>
+<td class="gt_row gt_center" headers="end_time">3:28 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">12 - Regular Talk<br>
+An omnibus R package for propensity score based dynamic borrowing methods for survival data<br>
+Sanhita Sengupta<br>
+, Bristol Myers Squibb</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time" style="background-color: #FFE4C4">3:28 PM</td>
+<td class="gt_row gt_center" headers="end_time" style="background-color: #FFE4C4">3:43 PM</td>
+<td class="gt_row gt_center" headers="duration" style="background-color: #FFE4C4">15m</td>
+<td class="gt_row gt_center" headers="t_number" style="background-color: #FFE4C4">Break<br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">3:43 PM</td>
+<td class="gt_row gt_center" headers="end_time">3:53 PM</td>
+<td class="gt_row gt_center" headers="duration">10m</td>
+<td class="gt_row gt_center" headers="t_number">13 - Lightning Talk<br>
+org+plnr: Packages for Organized Project Material and Effective Analysis<br>
+Richard White<br>
+, Consortium for Statistics in Disease Surveillance</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">3:55 PM</td>
+<td class="gt_row gt_center" headers="end_time">4:05 PM</td>
+<td class="gt_row gt_center" headers="duration">10m</td>
+<td class="gt_row gt_center" headers="t_number">14 - Lightning Talk<br>
+redcapAPI: Analysis-Ready Data Retrieval from REDCap with Advanced Processing Capabilities in R<br>
+Savannah Obregon<br>
+, Vanderbilt University Medical Center</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">4:07 PM</td>
+<td class="gt_row gt_center" headers="end_time">4:17 PM</td>
+<td class="gt_row gt_center" headers="duration">10m</td>
+<td class="gt_row gt_center" headers="t_number">15 - Lightning Talk<br>
+Enhancing Predictive Accuracy and Reproducibility in Medical Research: A Case Study on Thyroid Cancer Using Quarto, tidymodels, and GitHub Actions<br>
+Marly Gotti<br>
+, Apple Inc</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">4:19 PM</td>
+<td class="gt_row gt_center" headers="end_time">4:39 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">16 - Contest Winner<br>
+HOLD<br>
+<br>
+,</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">4:41 PM</td>
+<td class="gt_row gt_center" headers="end_time">5:01 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">17 - Contest Winner<br>
+HOLD<br>
+<br>
+,</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_center" headers="start_time">5:03 PM</td>
+<td class="gt_row gt_center" headers="end_time">5:23 PM</td>
+<td class="gt_row gt_center" headers="duration">20m</td>
+<td class="gt_row gt_center" headers="t_number">18 - Contest Winner<br>
+HOLD<br>
+<br>
+,</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_center" headers="start_time">5:25 PM</td>
+<td class="gt_row gt_center" headers="end_time">5:30 PM</td>
+<td class="gt_row gt_center" headers="duration">5m</td>
+<td class="gt_row gt_center" headers="t_number">19 - Closing Remarks<br>
+<br>
+<br>
+,</td>
 </tr>
 </tbody>
 </table>
