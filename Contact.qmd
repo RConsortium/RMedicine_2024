@@ -1,1 +1,22 @@
+## Contact the R/Medicine Team
 
+### Code of Conduct
+If you have general questions about the code of conduct, please write to conduct@r-consortium.org
+
+If you are reporting abuse, please write to abuse@r-consortium.org
+
+### The Conference
+
+If you have general questions about the conference please write to r-medicine-conf@r-consortium.org
+
+### Sponsorships
+
+If you would like to know about sponsorship opportunities, please write to sponsorship@r-consortium.org
+
+### Speakers
+
+If you are speaking at R/Medicine and need help or information please write to speakers@r-consortium.org
+
+### General Queries
+
+For all other questions not covered by the topics above, please write to admin@r-consortium.org
