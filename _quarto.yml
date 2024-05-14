@@ -10,8 +10,6 @@ website:
         text: Home
       - href: Register.qmd
         text: Register
-      - href: Abstracts.qmd
-        text: Abstracts
       - href: Program.qmd
         text: Program
       - href: workshops.qmd
@@ -24,6 +22,8 @@ website:
         text: Contact us
       - href: Events.qmd
         text: Past Events
+      - href: Committee.qmd
+        text: Committee Members
 
 format:
   html:
