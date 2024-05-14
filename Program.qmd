@@ -216,7 +216,7 @@ schedule_day_4 <-
   "2024-06-10 16:13", "2024-06-10 16:33", "15", "Regular talk", "Generate Raw Synthetic Dataset for Clinical Trial", "Binod Jung Bogati",  " ",
   "2024-06-10 16:35", "2024-06-10 16:55", "16", "Regular talk", "OralOpioids: The Role of Statistical Software in Dealing with the US Opioid Crisis", "Ankona Banerjee",  "Baylor College of Medicine",
   "2024-06-10 16:57", "2024-06-10 17:17", "17", "Regular talk", "World beyond {targets}: Embracing Data Pipelines in Life Sciences", "Aga Rasinska",  "Appsilon",
-  "2024-06-10 17:19", "2024-06-10 17:24", "18", "Closing remarks", "", "", "", "",
+  "2024-06-10 17:19", "2024-06-10 17:24", "18", "Closing remarks", "", "", "",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
