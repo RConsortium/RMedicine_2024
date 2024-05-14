@@ -197,28 +197,6 @@ library(gt)
 # For every day of the conference, have data laid out in this way
 schedule_day_4 <-
   dplyr::tribble(
-<<<<<<< HEAD
-    ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 11:10", "1", "Intro", "Welcome to R/Medicine 2024", "Peter Higgins", "Professor, University of Michigan",
-    "2024-06-10 11:13", "2024-06-10 12:15", "2", "Keynote", "Statistical Challenges in Single-Cell and Spatial Transcriptomics", "Stephanie Hicks", "Associate Professor, Johns Hopkins",
-    "2024-06-10 12:15", "2024-06-10 12:35", "4", "Regular talk", "flowchart: an R package for creating participant flow diagrams integrated with tidyverse", "Pau Satorra",  "Germans Trias i Pujol Research Institute and Hospital (IGTP)",
-    "2024-06-10 12:37", "2024-06-10 12:47", "5", "Lightning talk", "Survival analysis with tidymodels", "Emily Zabor",  "Cleveland Clinic",
-    "2024-06-10 12:49", "2024-06-10 13:09", "6", "Regular talk", "Reporting survival analysis results with the gtsummary and ggsurvfit packages", "Hannah Frick",  "Posit, PBC",
-    "2024-06-10 13:11", "2024-06-10 13:31", "7", "Regular talk", "Cox Regression and other ways to survive survival analyses", "Mitchell Maltenfort",  "Children's Hospital of Philadelphia",
-    "2024-06-10 13:33", "2024-06-10 13:53", "8", "Regular talk", "Identifying latent subgroups using regularized mixture cure models to develop risk stratification systems in cancer: Illustration using the hdcuremodels R package", "Kellie Archer",  "Ohio State University",
-    "2024-06-10 13:53", "2024-06-10 14:08",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:08", "2024-06-10 14:18", "9", "Lightning talk", "Leveraging the Power of Teal-Based R-Shiny Applications: Case Study from a TechBio Company", "Kasra Yousefi",  "Recursion Pharmaceuticals",
-   "2024-06-10 14:20", "2024-06-10 14:30", "10", "Lightning talk", "A one year recap on teaching statistics to medical students: how can R and Quarto help?", "Chi Zhang",  "University of Oslo",
-  "2024-06-10 14:32", "2024-06-10 14:52", "11", "Regular talk", "Creating Data Packages with Overproof {rUM}", "Raymond Balise", "University of Miami",
-  "2024-06-10 14:54", "2024-06-10 15:14", "12", "Regular talk", "SciDataReportR: Streamlining Scientific and Clinical Data Exploration in R", "Raha Dastgheyb",  "Johns Hopkins School of Medicine",
-  "2024-06-10 15:16", "2024-06-10 15:36", "13", "Regular talk", "Updating Quarto Slides Automatically with GitHub Actions", "Rose Hartman",  "Children's Hospital of Philadelphia",
-  "2024-06-10 15:36", "2024-06-10 15:51",  NA, "Break", NA, NA, NA, NA,
-  "2024-06-10 15:51", "2024-06-10 16:11", "14", "Regular talk", "Don't merge datasets when you don't need to. Preserving the 'Experimental unit' is a key!", "Dror Berel",  "Independent statistical consultant",
-  "2024-06-10 16:13", "2024-06-10 16:33", "15", "Regular talk", "Generate Raw Synthetic Dataset for Clinical Trial", "Binod Jung Bogati",  " ",
-  "2024-06-10 16:35", "2024-06-10 16:55", "16", "Regular talk", "OralOpioids: The Role of Statistical Software in Dealing with the US Opioid Crisis", "Ankona Banerjee",  "Baylor College of Medicine",
-  "2024-06-10 16:57", "2024-06-10 17:17", "17", "Regular talk", "World beyond {targets}: Embracing Data Pipelines in Life Sciences", "Aga Rasinska",  "Appsilon",
-  "2024-06-10 17:19", "2024-06-10 17:24", "18", "Closing remarks", "", "", "", "",
-=======
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
     "2024-06-10 11:00", "2024-06-10 11:10", "1", "Intro", "Welcome to R/Medicine 2024", "Peter Higgins", "Professor", "University of Michigan",
     "2024-06-10 11:13", "2024-06-10 12:15", "2", "Keynote", "Statistical Challenges in Single-Cell and Spatial Transcriptomics", "Stephanie Hicks", "Associate Professor", "Johns Hopkins",
@@ -239,7 +217,6 @@ schedule_day_4 <-
   "2024-06-10 16:35", "2024-06-10 16:55", "16", "Regular talk", "OralOpioids: The Role of Statistical Software in Dealing with the US Opioid Crisis", "Ankona Banerjee", "", "Baylor College of Medicine",
   "2024-06-10 16:57", "2024-06-10 17:17", "17", "Regular talk", "World beyond {targets}: Embracing Data Pipelines in Life Sciences", "Aga Rasinska", "", "Appsilon",
   "2024-06-10 17:19", "2024-06-10 17:24", "18", "Closing remarks", "", "", "", "",
->>>>>>> fee111888e26a180b2c8ccce853097d4e188a80f
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
