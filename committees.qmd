@@ -1,0 +1,76 @@
+---
+title: "Committees for R/Medicine 2024"
+---
+
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+
+## Organizing Committee
+
+-   Peter Higgins, Chair
+
+-   Joy Payton
+
+-   Emily Zabor
+
+-   Steven Schwager
+
+-   Joseph Rickert
+
+-   Ray Balise
+
+-   Beth Atkinson
+
+-   Michael Kane
+
+-   Stephan Kadauke
+
+-   Daniel Chen
+
+-   Jaclyn Janis
+
+-   Bryan Mayfield
+
+-   Andey Nunes
+
+-   Ben Gerber
+
+-   Daniel Sjoberg
+
+-   Mara Alexeev
+
+-   Denise Esserman
+
+:::
+
+       
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+
+       
+::: {.column width="45%"}
+## Program Committee
+
+- Steven Schwager, Chair
+
+- Emily Zabor
+
+- Beth Atkinson
+
+- Michael Kane
+
+- Stephan Kadauke
+
+- Daniel Sjoberg
+
+- Ray Balise
+
+:::
+
+::::
+
