@@ -1,16 +1,19 @@
 ---
 title: "R/Medicine Schedule"
 author: "Rich Iannone"
-date: "3/09/2024"
+date: "5/10/2024"
 format: 
   html:
-    code-fold: true
+    code-fold: false
+    echo: false
 ---
 
-```{r}
+
+```{r, day1}
 #| echo: false
 #| warning: false
 #| message: false
+
 library(lubridate)
 library(gt)
 # For every day of the conference, have data laid out in this way
@@ -18,10 +21,11 @@ schedule_day_1 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
     "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Workshop", "Causal Inference in R", "Lucy D'Agostino McGowan, Malcom Barrett", "Assistant Professor, Research Software Engineer", "Wake Forest University, Stanford University",
-    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Workshop", "Promover la Equidad Científica: Una Introducción al uso de R para la programación en Bioestadística y Ciencia de Datos, en Español", "Catalina Canizares-Escobar, Francisco Cardozo", "Study Coordinator, PhD student", "Florida International University",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 16:30", "2A", "Workshop", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 14:30", "2024-06-10 17:30", "2B", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 17:30", "2A", "Workshop", "Google BigQuery: First Steps in R", "Joy Payton", "Data Scientist", "CHOP",
+    "2024-06-10 14:30", "2024-06-10 17:30", "2B", "Workshop", "Project Oriented Workflows", "Shannon Pileggi", "Data Scientist", "Prostate Cancer Clinical Trials Consortium",
+    "2024-06-10 17:30", "2024-06-10 20:30", "3A", "Workshop", "Tidy time series analysis and forecasting", "Mitchell O'Hara-Wild", "Data Scientist", "Nectric"
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
@@ -65,7 +69,7 @@ gt(schedule_day_1) |>
 
 ```
 
-```{r}
+```{r, day2}
 #| echo: false
 #| warning: false
 #| message: false
@@ -75,11 +79,11 @@ library(gt)
 schedule_day_2 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "A Long Workshop Title About a Cool Topic", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:00", "2024-06-10 14:00", "4A", "Workshop", "Next Generation Shiny Apps with {bslib} ", "Garrick Aden-Buie", "Software Engineer", "Posit",
+    "2024-06-10 11:00", "2024-06-10 14:00", "4B", "Workshop", "From R to PowerPoint: Advanced PowerPoint Presentations Using {officer}", "Theo Roe, Colin Gillespie", "R educators", "Jumping Rivers",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 17:30", "2", "Workshop", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 14:30", "2024-06-10 17:30", "3", "Workshop", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 14:30", "2024-06-10 17:30", "5A", "Workshop", "Setting Up a Dockerized R Development Environment with VScode", "Rami Krispin", "Senior Manager/Data Scientist", "Apple",
+    "2024-06-10 14:30", "2024-06-10 17:30", "5B", "Workshop", "Tidying your REDCap Data with {REDCapTidieR}", "Stephan Kadauke, Will Beasley", "Assistant Professor, Associate Professor", "CHOP, Oklahoma University Health Sciences Center",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
@@ -123,7 +127,7 @@ gt(schedule_day_2) |>
 
 ```
 
-```{r}
+```{r, day3}
 #| echo: false
 #| warning: false
 #| message: false
@@ -133,14 +137,14 @@ library(gt)
 schedule_day_3 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 10:00", "2024-06-10 10:50", "1", "A Long Title about a Demonstration of a Cool New Package", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 11:00", "2024-06-10 11:50", "2", "Demo", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 10:00", "2024-06-10 10:55", "1", "Demo", "R Consortium's R-based Test Submission Package for FDA Evaluation: A Milestone in R-based Regulatory Submissions", "Joel Laxamana", "", "Genentech, A Member of the Roche Group",
+    "2024-06-10 11:00", "2024-06-10 11:55", "2", "Demo", "R + Snowflake to enable Medical Research", "Ryan MacLean", "", "Snowflake",
     "2024-06-10 12:00", "2024-06-10 12:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 12:30", "2024-06-10 13:20", "3", "Demo", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 13:30", "2024-06-10 14:20", "4", "Demo", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 14:30", "2024-06-10 15:20", "5", "Demo", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:30", "2024-06-10 16:20", "6", "Demo", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 16:30", "2024-06-10 18:30", "7", "Poster Session", "Poster Session", NA, NA, NA,
+    "2024-06-10 12:30", "2024-06-10 13:25", "3", "Demo", "Handling Health Data Imbalance in Machine Learning Using R ", "Olawale Awe", "", "University of Colorado",
+    "2024-06-10 13:30", "2024-06-10 14:25", "4", "Demo", "An Introduction to Tidy R Spatial Packages: Incorporating Historic Sociodemographic Data from the US Census and Visualizing Geographic Distributions ", "Stephen Uong", "", "Columbia University Mailman School of Public Health",
+    "2024-06-10 14:30", "2024-06-10 15:25", "5", "Demo", "RosyREDCap – a REDCap-project-agnostic R package that uses an API token to make a single, updating, standardized R list object containing all metadata and data for exports, imports, transformation, and shiny applications", "Brandon Rose", "", "University of Miami",
+    "2024-06-10 15:30", "2024-06-10 16:25", "6", "Demo", "Word embeddings in mental health, from exploration to confirmation, towards multidimensional diagnoses", "Thomas Charlon", "", "Harvard Medical School",
+    "2024-06-10 16:30", "2024-06-10 18:35", "7", "Demo", "No ChatGPT? No Problem!: Using the R Ecosystem to Facilitate the Extraction and Use of Knowledge from Scientific Literature", "Paul Kowalczyk", "", "Adaptimmune",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
@@ -184,7 +188,7 @@ gt(schedule_day_3) |>
 
 ```
 
-```{r}
+```{r, day4}
 #| echo: false
 #| warning: false
 #| message: false
@@ -195,16 +199,29 @@ schedule_day_4 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
     "2024-06-10 11:00", "2024-06-10 11:10", "1", "Intro", "Welcome to R/Medicine 2024", "Peter Higgins", "Professor", "University of Michigan",
-    "2024-06-10 11:13", "2024-06-10 12:13", "2", "Keynote", "Statistical Challenges in Single-Cell and Spatial Transcriptomics", "Stephanie Hicks", "Associate Professor", "Johns Hopkins",
-    "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 15:15", "3", "Lightning Talk", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:15", "2024-06-10 16:30", "4", "Regular Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:13", "2024-06-10 12:15", "2", "Keynote", "Statistical Challenges in Single-Cell and Spatial Transcriptomics", "Stephanie Hicks", "Associate Professor", "Johns Hopkins",
+    "2024-06-10 12:15", "2024-06-10 12:35", "4", "Regular talk", "flowchart: an R package for creating participant flow diagrams integrated with tidyverse", "Pau Satorra", "", "Germans Trias i Pujol Research Institute and Hospital (IGTP)",
+    "2024-06-10 12:37", "2024-06-10 12:47", "5", "Lightning talk", "Survival analysis with tidymodels", "Emily Zabor", "", "Cleveland Clinic",
+    "2024-06-10 12:49", "2024-06-10 13:09", "6", "Regular talk", "Reporting survival analysis results with the gtsummary and ggsurvfit packages", "Hannah Frick", "", "Posit, PBC",
+    "2024-06-10 13:11", "2024-06-10 13:31", "7", "Regular talk", "Cox Regression and other ways to survive survival analyses", "Mitchell Maltenfort", "", "Children's Hospital of Philadelphia",
+    "2024-06-10 13:33", "2024-06-10 13:53", "8", "Regular talk", "Identifying latent subgroups using regularized mixture cure models to develop risk stratification systems in cancer: Illustration using the hdcuremodels R package", "Kellie Archer", "", "Ohio State University",
+    "2024-06-10 13:53", "2024-06-10 14:08",  NA, "Break", NA, NA, NA, NA,
+    "2024-06-10 14:08", "2024-06-10 14:18", "9", "Lightning talk", "Leveraging the Power of Teal-Based R-Shiny Applications: Case Study from a TechBio Company", "Kasra Yousefi", "", "Recursion Pharmaceuticals",
+   "2024-06-10 14:20", "2024-06-10 14:30", "10", "Lightning talk", "A one year recap on teaching statistics to medical students: how can R and Quarto help?", "Chi Zhang", "", "University of Oslo",
+  "2024-06-10 14:32", "2024-06-10 14:52", "11", "Regular talk", "Creating Data Packages with Overproof {rUM}", "Raymond Balise", "", "University of Miami",
+  "2024-06-10 14:54", "2024-06-10 15:14", "12", "Regular talk", "SciDataReportR: Streamlining Scientific and Clinical Data Exploration in R", "Raha Dastgheyb", "", "Johns Hopkins School of Medicine",
+  "2024-06-10 15:16", "2024-06-10 15:36", "13", "Regular talk", "Updating Quarto Slides Automatically with GitHub Actions", "Rose Hartman", "", "Children's Hospital of Philadelphia",
+  "2024-06-10 15:36", "2024-06-10 15:51",  NA, "Break", NA, NA, NA, NA,
+  "2024-06-10 15:51", "2024-06-10 16:11", "14", "Regular talk", "Don't merge datasets when you don't need to. Preserving the 'Experimental unit' is a key!", "Dror Berel", "", "Independent statistical consultant",
+  "2024-06-10 16:13", "2024-06-10 16:33", "15", "Regular talk", "Generate Raw Synthetic Dataset for Clinical Trial", "Binod Jung Bogati", "", " ",
+  "2024-06-10 16:35", "2024-06-10 16:55", "16", "Regular talk", "OralOpioids: The Role of Statistical Software in Dealing with the US Opioid Crisis", "Ankona Banerjee", "", "Baylor College of Medicine",
+  "2024-06-10 16:57", "2024-06-10 17:17", "17", "Regular talk", "World beyond {targets}: Embracing Data Pipelines in Life Sciences", "Aga Rasinska", "", "Appsilon",
+  "2024-06-10 17:19", "2024-06-10 17:24", "18", "Closing remarks", "", "", "", "",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
 
 ```{r}
-
 # Create a table for the day of events
 gt(schedule_day_4) |>
   tab_header(title = md("<br>Meeting Day 1<br>Thursday, June 13, 2024.<br><br>")) |> # <- insert the date
@@ -242,7 +259,7 @@ gt(schedule_day_4) |>
 
 ```
 
-```{r}
+```{r, day5}
 #| echo: false
 #| warning: false
 #| message: false
@@ -253,10 +270,26 @@ schedule_day_5 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
     "2024-06-10 11:00", "2024-06-10 11:10", "1", "Welcome Back", "Welcome to R/Medicine 2024", "Peter Higgins", "Professor", "University of Michigan",
-    "2024-06-10 11:13", "2024-06-10 12:13", "2", "Keynote", "Reproducibility in Medical Research", "Gundula Bosch", "Research Professor", "Johns Hopkins",
-    "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
-    "2024-06-10 14:30", "2024-06-10 15:15", "3", "A Long Title about a Complicated Lightning Talk Topic", "title", "speakers", "speaker_titles", "companies",
-    "2024-06-10 15:15", "2024-06-10 16:30", "4", "Regular Talk", "title", "speakers", "speaker_titles", "companies",
+    "2024-06-10 11:13", "2024-06-10 12:15", "2", "Keynote", "Reproducibility in Medical Research", "Gundula Bosch", "Research Professor", "Johns Hopkins",
+    "2024-06-10 12:17", "2024-06-10 12:37", "3", "Regular Talk", "Ah, Ha, Ha, Ha, Parameterise! Creating parameterised plot functions for flexible and reproducible data-to-viz pipelines", "Cara Thompson", " ", "Building Stories with Data",
+    "2024-06-10 12:39", "2024-06-10 12:59", "4", "Regular Talk", "HOLD", "", " ", "",
+    "2024-06-10 13:01", "2024-06-10 13:21", "5", "Regular Talk", "Comparing Analysis Method Implementations in Software (CAMIS): An open source repository to document differences in statistical methodology across software", "Agnieszka Tomczyk", " ", "PAREXEL",
+    "2024-06-10 13:23", "2024-06-10 13:43", "6", "Regular Talk", "PhyloTrace - a Shiny App for Bacterial Pathogen Monitoring on a Genomic Level", "Filip Paskali", " ", " ",
+    "2024-06-10 13:43", "2024-06-10 13:58",  NA, "Break", NA, NA, NA, NA,
+    "2024-06-10 13:58", "2024-06-10 14:08", "7", "Lightning Talk", "R in Clinical Competency Committee {shiny + reticulate + selenium + ...}", "Ken Koon Wong", " ", "Cleveland Clinic Akron General",
+    "2024-06-10 14:10", "2024-06-10 14:20", "8", "Lightning Talk", "Health Equity Explorer Application Showcase", "Can Taşlıçukur, Appsilon", " ", "Bill Adams, Boston Medical Center",
+    "2024-06-10 14:22", "2024-06-10 14:32", "9", "Lightning Talk", "in_vivo_research_dashboard.Rmd", "Michael McCoy", " ", "Children's Hospital of Philadelphia",
+    "2024-06-10 14:34", "2024-06-10 14:44", "10", "Lightning Talk", "Shiny apps for medical image annotation", "Matt Broerman", " ", "University of Pittsburgh",
+    "2024-06-10 14:46", "2024-06-10 15:06", "11", "Regular Talk", "Automating Sharing of Data Summaries from REDCap, Googlesheets, and Qualtrics with Quarto Webpages and Automated Emails", "Peter Higgins", " ", "University of Michigan",
+    "2024-06-10 15:08", "2024-06-10 15:28", "12", "Regular Talk", "An omnibus R package for propensity score based dynamic borrowing methods for survival data", "Sanhita Sengupta", " ", "Bristol Myers Squibb",
+    "2024-06-10 15:28", "2024-06-10 15:43",  NA, "Break", NA, NA, NA, NA,
+    "2024-06-10 15:43", "2024-06-10 15:53", "13", "Lightning Talk", "org+plnr: Packages for Organized Project Material and Effective Analysis", "Richard White", " ", "Consortium for Statistics in Disease Surveillance",
+    "2024-06-10 15:55", "2024-06-10 16:05", "14", "Lightning Talk", "redcapAPI: Analysis-Ready Data Retrieval from REDCap with Advanced Processing Capabilities in R", "Savannah Obregon", " ", "Vanderbilt University Medical Center",
+      "2024-06-10 16:07", "2024-06-10 16:17", "15", "Lightning Talk", "Enhancing Predictive Accuracy and Reproducibility in Medical Research: A Case Study on Thyroid Cancer Using Quarto, tidymodels, and GitHub Actions", "Marly Gotti", " ", "Apple Inc",
+      "2024-06-10 16:19", "2024-06-10 16:39", "16", "Contest Winner", "HOLD", "", " ", "",
+      "2024-06-10 16:41", "2024-06-10 17:01", "17", "Contest Winner", "HOLD", "", " ", "",
+      "2024-06-10 17:03", "2024-06-10 17:23", "18", "Contest Winner", "HOLD", "", " ", "",
+      "2024-06-10 17:25", "2024-06-10 17:30", "19", "Closing Remarks", "", "", " ", "",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```

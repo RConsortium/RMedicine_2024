@@ -132,26 +132,24 @@ Will can be found working on improving [REDCap Workflows](https://ouhscbbmc.gith
 
 ::: columns
 ::: {.column width="45%"}
+
 ### Catalina Canizares-Escobar and Francisco Cardozo
 
 ![](images/catalina.jpeg)
 ![](images/francisco.jpeg)
 
+
 ### Biography
 
-[Catalina Canizares-Escobar](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html) is a passionate data scientist and a Ph.D. candidate in Social Welfare, dedicated to using data to gain insights into emotional disorders. I’ve been delving deep into data analysis, especially with R. My focus? Making data understandable and useful.
+[Catalina Cañizares](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html)  is a passionate data scientist and a Ph.D. candidate in Social Welfare, dedicated to using data to gain insights into emotional disorders. She has been delving deep into data analysis, especially with R. Her focus? Making data understandable and useful. She specializes in cleaning and merging data, and loves exploring data with tools like tidyverse, table1, gtsummary, and skimr, among others. She is also interested in using Machine Learning models, with the tidymodels package, to better understand emotional disorders. Plus, She is all about keeping things clear and reproducible by using tools such as Quarto. 
 
-I specialize in cleaning and merging data, and I love exploring data with tools like tidyverse, table1, gtsummary, and skimr among others. I’m also interested in using Machine Learning models, with the tidymodels package, to better understand emotional disorders.
-
-Plus, I’m all about keeping things clear and reproducible by using tools such as Quarto and RMarkdown. That means you can trust my work, and it can be easily followed by others.
+[Francisco Cardozo](https://focardozom.github.io/) is a PhD canidate in prevention science and community health, he specializes in applying quantitative techniques to evaluate the efficacy of prevention programs, focusing on understanding the dynamics of how and for whom these programs are most effective. He is dedicated to developing precise measurements and analyses that inform decisions about program operations. Francisco is passionate about translating resource science into practical, real-world applications. 
 
 ### Biografía
 
-[Catalina Canizares-Escobar](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html) es un científico de datos apasionado y un Ph.D. Candidato en Bienestar Social, dedicado al uso de datos para obtener información sobre los trastornos emocionales. He estado profundizando en el análisis de datos, especialmente con R. ¿Mi enfoque? Hacer que los datos sean comprensibles y útiles.
+[Catalina Cañizares](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html) es una científica de datos apasionada y candidata Ph.D. en trabajo social. Ella se dedidca al uso de datos para obtener información sobre los trastornos emocionales. Ha estado profundizando en el análisis de datos, especialmente con R y su enfoque es hacer que los datos sean comprensibles y útiles. Se especializo en limpiar y fusionar datos, y le encanta explorar datos con herramientas como tidyverse, table1, gtsummary y skimr, entre otras. También se interesa utilizar modelos de Machine Learning, con el paquete tidymodels, para comprender mejor los trastornos emocionales.
 
-Me especializo en limpiar y fusionar datos, y me encanta explorar datos con herramientas como tidyverse, table1, gtsummary y skimr, entre otras. También me interesa utilizar modelos de Machine Learning, con el paquete tidymodels, para comprender mejor los trastornos emocionales.
-
-Además, me gusta mantener las cosas claras y reproducibles mediante el uso de herramientas como Quarto y RMarkdown. Eso significa que puedes confiar en mi trabajo y que otros pueden seguirlo fácilmente.
+[Francisco Cardozo](https://focardozom.github.io/) es un candidato a PhD en Ciencias de las Prevención y Salud Comunitaria, se especializa en aplicar técnicas cuantitativas para evaluar la eficacia de programas de prevención, centrándose en entender la dinámica de cómo y para quién estos programas son más efectivos. Está dedicado a desarrollar mediciones y análisis  que informen decisiones sobre cómo operar los programas. Francisco siente pasión por traducir hallazgos científicos en aplicaciones prácticas. 
 
 ## Enhancing Scientific Equity: A Spanish Introduction to Using R for Biostatistical and Data Science Programming
 
@@ -167,7 +165,7 @@ Despite the abundant resources available for learning R, most of these materials
 ::: {.column width="45%"}
 ## Promover la Equidad Científica: Una Introducción al uso de R para la programación en Bioestadística y Ciencia de Datos, en Español.
 
-### Abstracto
+### Resumen
 
 A pesar de los abundantes recursos disponibles para aprender R, la mayoría de estos materiales son accesibles principalmente para angloparlantes. Esta barrera del idioma restringe significativamente el acceso de personas que no hablan inglés con fluidez. Como resultado, las comunidades de habla hispana a menudo enfrentan desafíos considerables para acceder a oportunidades de capacitación en software. Esta disparidad conduce a desigualdades en la distribución y utilización de las tecnologías científicas, lo que es particularmente preocupante dada la creciente importancia de las habilidades digitales en la actualidad. Para mitigar estos desafíos y promover la inclusión, proponemos realizar un taller de programación en español durante la conferencia. Esta iniciativa tiene como objetivo cerrar la brecha brindando a los participantes de habla hispana igualdad de oportunidades para interactuar y beneficiarse de los avances tecnológicos. Al hacerlo, no sólo mejoramos las capacidades individuales sino que también contribuimos a una distribución más equitativa de los recursos educativos en la comunidad científica. Este taller equipará a los asistentes con habilidades básicas en R. Nuestro objetivo principal es familiarizar a los participantes con RStudio y sus características clave para generar informes reproducibles. Guiaremos a los asistentes a través del proceso de creación y gestión de proyectos en RStudio y les presentaremos la creación de manuscritos reproducibles utilizando documentos Quarto. El taller utilizará un conjunto de datos disponible públicamente de los CDC, que contiene información sobre el uso de drogas y la ideación suicida entre adolescentes, como un ejemplo práctico del uso de R para la investigación académica en salud pública. Explicaremos cómo utilizar funciones como filtrar, mutar, resumir y seleccionar del conjunto de paquetes tidyverse. Concluiremos demostrando cómo usar ggplot2 para crear visualizaciones en R. Al final del taller, los participantes habrán creado un documento reproducible en formato HTML, detallando los pasos de limpieza de datos y el análisis de un problema social contemporáneo importante. Esta presentación tiene como objetivo cerrar la brecha en la alfabetización en programación entre los investigadores de habla hispana y promover métodos para la investigación científica reproducible.
 
@@ -292,6 +290,7 @@ Colin can be found blogging about [R](https://www.jumpingrivers.com/authors/coli
 
 [Rami Krispin](https://www.linkedin.com/in/rami-krispin/) is a Senior Manager for Data Science and Engineering at Apple. He leads the data science and engineering team at Apple Finance - Services and Infra. The team focuses on translating business problems and requirements into data products using advanced statistical and machine learning models to support and help Apple leadership make data-driven decisions.
 Rami is also an open-source contributor and the author of _Hands-On Time Series Analysis with R_ (Packt), several R packages for time series analysis, and machine learning applications. Rami is currently working on his next book, _Applied Time Series Analysis and Forecasting_, which focuses on forecasting at scale. 
+
 :::
 
 ::: {.column width="10%"}
