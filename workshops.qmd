@@ -132,9 +132,11 @@ Will can be found working on improving [REDCap Workflows](https://ouhscbbmc.gith
 
 ::: columns
 ::: {.column width="45%"}
-### Catalina Cañizares and Francisco Cardozo
+
+### Catalina Canizares-Escobar and Francisco Cardozo
 
 ![](images/catalina.jpeg)
+![](images/francisco.jpeg)
 
 
 ### Biography
@@ -168,8 +170,149 @@ Despite the abundant resources available for learning R, most of these materials
 A pesar de los abundantes recursos disponibles para aprender R, la mayoría de estos materiales son accesibles principalmente para angloparlantes. Esta barrera del idioma restringe significativamente el acceso de personas que no hablan inglés con fluidez. Como resultado, las comunidades de habla hispana a menudo enfrentan desafíos considerables para acceder a oportunidades de capacitación en software. Esta disparidad conduce a desigualdades en la distribución y utilización de las tecnologías científicas, lo que es particularmente preocupante dada la creciente importancia de las habilidades digitales en la actualidad. Para mitigar estos desafíos y promover la inclusión, proponemos realizar un taller de programación en español durante la conferencia. Esta iniciativa tiene como objetivo cerrar la brecha brindando a los participantes de habla hispana igualdad de oportunidades para interactuar y beneficiarse de los avances tecnológicos. Al hacerlo, no sólo mejoramos las capacidades individuales sino que también contribuimos a una distribución más equitativa de los recursos educativos en la comunidad científica. Este taller equipará a los asistentes con habilidades básicas en R. Nuestro objetivo principal es familiarizar a los participantes con RStudio y sus características clave para generar informes reproducibles. Guiaremos a los asistentes a través del proceso de creación y gestión de proyectos en RStudio y les presentaremos la creación de manuscritos reproducibles utilizando documentos Quarto. El taller utilizará un conjunto de datos disponible públicamente de los CDC, que contiene información sobre el uso de drogas y la ideación suicida entre adolescentes, como un ejemplo práctico del uso de R para la investigación académica en salud pública. Explicaremos cómo utilizar funciones como filtrar, mutar, resumir y seleccionar del conjunto de paquetes tidyverse. Concluiremos demostrando cómo usar ggplot2 para crear visualizaciones en R. Al final del taller, los participantes habrán creado un documento reproducible en formato HTML, detallando los pasos de limpieza de datos y el análisis de un problema social contemporáneo importante. Esta presentación tiene como objetivo cerrar la brecha en la alfabetización en programación entre los investigadores de habla hispana y promover métodos para la investigación científica reproducible.
 
 ### Speakers on the Web
-![](images/catalina2.png)
-Catalina Cañizares can be found leading an R club focused on Public Health and Social work [here](https://ccani007.github.io/R_club/), and creating many R teaching resources which can be found [here](https://ccani007.github.io/ccani_website/teaching.html).  
-Francisco Cardozo leads Machine Learning workshops across Latin America, which can be explored [here](https://focardozom.github.io/workshops/), He is an active member of the ROpenSci community which can be found [here](https://ropensci.org/blog/2024/04/18/champions-program-2024/), and also serves as a Software Carpentry [instructor](https://carpentries.org/instructors/)
+
+![](images/catalina2.png) Catalina Cañizares can be found leading an R club focused on Public Health and Social work [here](https://ccani007.github.io/R_club/), and creating many R teaching resources which can be found [here](https://ccani007.github.io/ccani_website/teaching.html).
+:::
+:::
+
+
+::: columns
+::: {.column width="45%"}
+### Shannon Pileggi
+
+![](images/shannon_pileggi.jpeg)
+
+### Biography
+
+[Shannon Pileggi](https://www.pipinghotdata.com/) is a  former statistics college professor now working in industry. I love wrangling, analyzing, and visualizing data, and helping others do the same. Shannon is a member of the leadership team for R-Ladies Global and works as the Lead Data Scientist for the Prostate Cancer Clinical Trials Consortium (PCCTCC).
+
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+## Project Oriented Workflows
+
+### Abstract
+
+In this workshop, we will establish the concept of and apply best practices to RStudio projects as a basic organizational unit of work. This includes creating robust file paths that travel well in time and space; constructing human and machine readable file names that sort nicely; differentiating workflow elements, analysis inputs, and analysis outputs in project structure; and restarting R frequently, with a blank slate. Upon completion of this workshop, you will have strategies for creating organized and reproducible data analysis projects.
+
+### Shannon Pileggi on the Web
+
+Shannon is a former statistics professor now working in industry with the The Prostate Cancer Clinical Trials Consortium (PCCTC). I love wrangling, analyzing, and visualizing data, and helping others do the same. Shannon is a member of R-Ladies Global in Pennsylvania, and can be found blogging at  [Piping Hot Data]( https://www.pipinghotdata.com/), on Mastodon [fosstodon.org/@PipingHotData](https://fosstodon.org/@PipingHotData), and carefully labeling all her  [data](https://www.pipinghotdata.com/posts/2022-09-13-the-case-for-variable-labels-in-r/).
+:::
+:::
+
+
+::: columns
+::: {.column width="45%"}
+### Mitchell O'Hara-Wild
+
+![](images/mitchell_ow.jpeg)
+
+### Biography
+
+[Mitchell O'Hara-Wild](https://mitchelloharawild.com/) is a PhD candidate at Monash University and a Data Scientist at Nectric in Clayton, Victoria, Australia. Data scientist and developer of statistical software. Mitchell is our first antipodean workshop leader, and our first to do an evening (very early morning in Australia) workshop. He is a Data scientist and rstats package developer of time series tools, and is addicted to using local IoT devices for monitoring and automating home permaculture. 
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+## Tidy Time Series
+
+### Abstract
+
+This workshop provides a practical introduction to time series analytics and forecasting using R, utilising the tidyverse and tidy time series tools to enable analysis across many time series. Attendees will learn about commonly seen time series patterns, and how to find them with specialised time series graphics created with ggplot2. Then we will use fable to capture these patterns with statistical time series models, and produce probabilistic forecasts. Finally, participants will learn how to evaluate model performance, using accuracy statistics to choose the model which produces the most accurate forecasts. With a combination of foundational concepts and practical demonstrations, this workshop equips participants with the skills to extract meaning from time series data for informed decision-making in various domains.
+
+### Mitchell O'Hara-Wild on the Web
+
+Mitchell is a Monash University PhD candidate with passions for time series data and data-driven permaculture. Mitchell  can be found blogging at https://mitchelloharawild.com/blog.html, working as a Data Scientist at Nectric on [Github](https://github.com/mitchelloharawild/), and optimizing his home garden to surpass Lisa Lendway's [crop yields](https://stattlc.com/2021/12/01/digging-into-data-science-using-the-garden-dataset/) .
+:::
+:::
+
+
+::: columns
+::: {.column width="45%"}
+### Theo Roe and Colin Gillespie
+
+![](images/theo-roe.webp)
+
+### Biographies
+
+[Theo Roe](https://www.jumpingrivers.com/authors/theo-roe/) holds a 1st Class Honours MMathStat in Mathematics & Statistics from Newcastle University. He is the author of many of the Jumping Rivers courses and works with a range of clients at Jumping Rivers. 
+
+![](images/colin.jpeg)
+
+[Colin Gillespie](https://www.jumpingrivers.com/authors/colin-gillespie/) is a co-founder and CTO of Jumping Rivers. Colin has been using R since 1999. He’s the author of a number of R packages and has published the book _Efficient R Programming_ with O’Reilly. Colin is a Senior Lecturer at Newcastle University, and completed his Ph.D. in Statistics at the University of Strathclyde.
+
+
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+## From R to PowerPoint: Advanced PowerPoint Presentations Using {officer}
+
+### Abstract
+
+Imagine you’re asked to recreate a beautiful, complex PowerPoint presentation using R. Despite Quarto's wide-reaching superpowers, it only offers six measly layout options for Microsoft PowerPoint. The most complex being the simple “two columns”! So, what should I do?
+
+The answer is not Quarto at all; it’s {officer}! In this workshop, we’ll show the process of recreating complex PowerPoint layouts, using {officer}, whilst addressing the pros and cons of abandoning Quarto.
+
+By the end of this workshop, participants will be able to:
+- Understand what possibilities lie within the “Officeverse”
+- Why, for complex PowerPoints, {officer} is better than R Markdown and Quarto
+- Create complex PowerPoint presentations using {officer}
+- Understand how to best combine PowerPoint templates with {officer} for the optimal workflow
+- Understand the issues one will encounter when using {officer}
+
+### Theo Roe and Colin Gillespie on the Web
+
+Theo can be found consulting at Jumping Rivers, blogging [here](https://www.jumpingrivers.com/authors/theo-roe/)  and leaping over the Tyne on Saturday nights in the summertime.
+
+Colin can be found blogging about [R](https://www.jumpingrivers.com/authors/colin-gillespie/), sharing on [Github](https://github.com/csgillespie) and consulting as a member of the Royal Statistical Society.
+:::
+:::
+
+::: columns
+::: {.column width="45%"}
+### Rami Krispin
+
+![](images/rami.jpeg)
+
+### Biography
+
+[Rami Krispin](https://www.linkedin.com/in/rami-krispin/) is a Senior Manager for Data Science and Engineering at Apple. He leads the data science and engineering team at Apple Finance - Services and Infra. The team focuses on translating business problems and requirements into data products using advanced statistical and machine learning models to support and help Apple leadership make data-driven decisions.
+Rami is also an open-source contributor and the author of _Hands-On Time Series Analysis with R_ (Packt), several R packages for time series analysis, and machine learning applications. Rami is currently working on his next book, _Applied Time Series Analysis and Forecasting_, which focuses on forecasting at scale. 
+
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="45%"}
+## Setting Up a Dockerized R Development Environment with VScode
+
+### Abstract
+
+VScode enables a seamless integration of Docker with the Dev Containers extension. This tutorial will focus on setting up a dockerized R development environment within VScode using the Dev Container extension and Docker. The tutorial will cover the following topics:
+- The Foundation of Docker
+- Rocking R on Docker
+- The Dev Container extension
+- Setting Up the R environment
+
+The workshop is based on this tutorial:
+https://github.com/RamiKrispin/vscode-r
+
+### Rami Krispin on the Web
+
+Rami can be found blogging about Docker, Time, and Forecasting on [Medium](https://medium.com/@rami.krispin). He can often be found optimizing one of his 123 repositories on [Github](https://github.com/RamiKrispin). Rami studied Economics and Actuarial Science at the University of Michigan, and worked in Data Science in Michigan until 2018, when he gave up his snow shovel and moved to California.
 :::
 :::
