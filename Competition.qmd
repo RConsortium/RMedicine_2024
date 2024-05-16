@@ -67,7 +67,7 @@ Bryan P. Mayfield, PharmD, MS, Precision Analytical
 ### Prize Information
 
 | Selection                        | Prize                                                                   |
-|----------------------------------|--------------------------------------|
+|----------------------------------|-------------------------------------------------------------------------|
 | Best Overall Analysis/Quarto Doc | Free [Posit Conf 2024](https://posit.co/conference/) Registration       |
 | Best Table                       | \$500 off [Posit Conf 2024](https://posit.co/conference/) Registration  |
 | Best Visualization               | \$500 off [Posit Conf 2024](https://posit.co/conference/) Registration} |
