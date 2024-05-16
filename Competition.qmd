@@ -8,7 +8,7 @@
 
 <br>
 
-The R/Medicine planning committee welcomes your participation in the virtual R/Medicine data challenge. Participants will have from now until May 17th, 2024 to work on submissions for the challenge. There will 1st, 2nd, and 3rd place prizes for overall quality of analyses/Quarto docs, as well as prizes for 2 honorable mention categories: best table and best visualization.
+The R/Medicine planning committee welcomes your participation in the virtual R/Medicine data challenge. Participants will have from now until May 21st, 2024 to work on submissions for the challenge. There will be 3 prizes: one for overall quality of analyses/Quarto docs, as well as prizes for best table and best visualization.
 
 It is well known that opioid use disorder is currently a major public health concern that has significant implications for the entire healthcare system. Understanding more about how we can best develop effective treatment programs is needed now more than ever as we continue to combat the opioid epidemic.
 
@@ -66,9 +66,9 @@ Bryan P. Mayfield, PharmD, MS, Precision Analytical
 
 ### Prize Information
 
-|                                  | 1st Place                                                         | 2nd Place                                                               | 3rd Place                                                 |
-|----------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------------|-----------------------------------------------------------|
-| Best Overall Analysis/Quarto Doc | Free [Posit Conf 2024](https://posit.co/conference/) Registration | \$300 off [Posit Conf 2024](https://posit.co/conference/) Registration  | \$100 off [Posit Conf 2024](https://posit.co/conference/) |
+|                                  | 1st Place                                                         | 2nd Place                                                              | 3rd Place                                                 |
+|----------------|-------------------|---------------------|-----------------|
+| Best Overall Analysis/Quarto Doc | Free [Posit Conf 2024](https://posit.co/conference/) Registration | \$300 off [Posit Conf 2024](https://posit.co/conference/) Registration | \$100 off [Posit Conf 2024](https://posit.co/conference/) |
 
 Best Table - \$500 off [Posit Conf 2024](https://posit.co/conference/) Registration
 
