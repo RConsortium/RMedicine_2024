@@ -60,11 +60,11 @@ Linux Foundation events are an excellent place for getting to know the community
 
 **How To Give a Great Tech Talk**
 
-If your talk is accepted, we want to help you give the best presentation possible.  To do this, we enlisted the assistance of seasoned conference speaker Josh Berkus, who has prepared this in-depth tutorial on “How to Give a Great Tech Talk”:
+If your talk is accepted, we want to help you give the best presentation possible.  To do this, we have listed two videos on how to give a great tech talk:
 
-Part 1: <http://www.youtube.com/watch?v=iE9y3gyF8Kw>
+Your Perfect Tech Talk: <https://www.youtube.com/watch?v=AzVr_nsKoZs>
 
-Part 2: <http://www.youtube.com/watch?v=gcOP4WQfJl4>
+A general MIT lecture on How to Speak: <https://www.youtube.com/watch?v=Unzc731iCUY>
 
 To submit a proposal:
 
