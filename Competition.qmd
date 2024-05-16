@@ -54,7 +54,7 @@ Bryan P. Mayfield, PharmD, MS, Precision Analytical
 
 ### Guidelines
 
-**When:** Now - May 17th, 2024
+**When:** Now - May 21st, 2024
 
 **Where:** The R/Medicine data challenge is entirely virtual, with information and rules of the challenge available on this website. Updates will be posted on this website.
 
@@ -66,15 +66,13 @@ Bryan P. Mayfield, PharmD, MS, Precision Analytical
 
 ### Prize Information
 
-|                                  | 1st Place                                                         | 2nd Place                                                              | 3rd Place                                                 |
-|----------------|-------------------|---------------------|-----------------|
-| Best Overall Analysis/Quarto Doc | Free [Posit Conf 2024](https://posit.co/conference/) Registration | \$300 off [Posit Conf 2024](https://posit.co/conference/) Registration | \$100 off [Posit Conf 2024](https://posit.co/conference/) |
+| Selection                        | Prize                                                                   |
+|----------------------------------|--------------------------------------|
+| Best Overall Analysis/Quarto Doc | Free [Posit Conf 2024](https://posit.co/conference/) Registration       |
+| Best Table                       | \$500 off [Posit Conf 2024](https://posit.co/conference/) Registration  |
+| Best Visualization               | \$500 off [Posit Conf 2024](https://posit.co/conference/) Registration} |
 
-Best Table - \$500 off [Posit Conf 2024](https://posit.co/conference/) Registration
-
-Best Visualization - \$500 off [Posit Conf 2024](https://posit.co/conference/) Registration
-
-Finalists will be required to present their project at the R/Medicine conference (can be prerecorded).
+Finalists will be **required** to present their project at the R/Medicine conference (can be prerecorded) on Friday afternoon in our closing session for the prizewinners on June 14, 2024.
 
 ### FAQs
 
