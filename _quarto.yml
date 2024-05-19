@@ -24,6 +24,9 @@ website:
         text: Contact us
       - href: Events.qmd
         text: Past Events
+      - href: committees.qmd
+        text: Committees
+      
 
 format:
   html:

@@ -2,12 +2,8 @@
 title: "Committees for R/Medicine 2024"
 ---
 
-
-:::: {.columns}
-
+::: columns
 ::: {.column width="45%"}
-
-
 ## Organizing Committee
 
 -   Peter Higgins, Chair
@@ -43,34 +39,25 @@ title: "Committees for R/Medicine 2024"
 -   Mara Alexeev
 
 -   Denise Esserman
-
 :::
 
-       
 ::: {.column width="10%"}
 <!-- empty column to create gap -->
 :::
 
-
-       
 ::: {.column width="45%"}
 ## Program Committee
 
-- Steven Schwager, Chair
+-   Steven Schwager, Chair
 
-- Emily Zabor
+-   Emily Zabor
 
-- Beth Atkinson
+-   Beth Atkinson
 
-- Michael Kane
+-   Michael Kane
 
-- Stephan Kadauke
+-   Daniel Sjoberg
 
-- Daniel Sjoberg
-
-- Ray Balise
-
+-   Ray Balise
 :::
-
-::::
-
+:::
