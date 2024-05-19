@@ -24,7 +24,7 @@ An abstract proposal should describe a presentation of methodology, a study or p
 
 [Important Notes]{.underline}
 
-All speakers are required to adhere to our [Code of Conduct](https://events.linuxfoundation.org/r-medicine/attend/code-of-conduct/). We also highly recommend that speakers take our online [Inclusive Speaker Orientation Course](https://training.linuxfoundation.org/linux-courses/open-source-compliance-courses/inclusive-speaker-orientation).
+All speakers are required to adhere to our [Code of Conduct](Attend.qmd). We also highly recommend that speakers take our online [Inclusive Speaker Orientation Course](https://training.linuxfoundation.org/linux-courses/open-source-compliance-courses/inclusive-speaker-orientation).
 
 [The Chat]{.underline}
 
@@ -54,9 +54,9 @@ There are many ways to give a presentation about projects and technologies witho
 
 Remember the questions above when writing your proposal, and think of ways to make it interesting for attendees as you share your experiences, educate the community about a method or an issue, or generate interest in a project.
 
-**First Time Submitting? Don’t Feel Intimidated**
+**First Time Submitting? Don't Feel Intimidated**
 
-Linux Foundation events are an excellent place for getting to know the community and sharing your ideas and the work you are doing.  We strongly encourage first-time speakers to submit talks for our events.  If you aren’t sure about your abstract, reach out to us and we will be happy to provide advice on your proposal.
+Linux Foundation events are an excellent place for getting to know the community and sharing your ideas and the work you are doing.  We strongly encourage first-time speakers to submit talks for our events.  If you aren't sure about your abstract, reach out to us and we will be happy to provide advice on your proposal.
 
 **How To Give a Great Tech Talk**
 
