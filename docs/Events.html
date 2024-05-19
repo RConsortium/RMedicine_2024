@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R/Medicine 2024</title>
+<title>R/Medicine 2024 - Past R/Medicine Conferences</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,6 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,7 +68,82 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-events-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date","listing-image","listing-playlist"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-events-listing'] = new List('listing-events-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: white;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: white;
+background: #330033;
+      }
+</style>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -74,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -117,11 +194,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Competition</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Contact.html" aria-current="page"> 
+    <a class="nav-link" href="./Contact.html"> 
 <span class="menu-text">Contact us</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Events.html"> 
+    <a class="nav-link active" href="./Events.html" aria-current="page"> 
 <span class="menu-text">Past Events</span></a>
   </li>  
   <li class="nav-item">
@@ -136,57 +213,177 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page">
+      <h1 class="title">Past R/Medicine Conferences</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#contact-the-rmedicine-team" id="toc-contact-the-rmedicine-team" class="nav-link active" data-scroll-target="#contact-the-rmedicine-team">Contact the R/Medicine Team</a>
-  <ul class="collapse">
-  <li><a href="#code-of-conduct" id="toc-code-of-conduct" class="nav-link" data-scroll-target="#code-of-conduct">Code of Conduct</a></li>
-  <li><a href="#the-conference" id="toc-the-conference" class="nav-link" data-scroll-target="#the-conference">The Conference</a></li>
-  <li><a href="#sponsorships" id="toc-sponsorships" class="nav-link" data-scroll-target="#sponsorships">Sponsorships</a></li>
-  <li><a href="#speakers" id="toc-speakers" class="nav-link" data-scroll-target="#speakers">Speakers</a></li>
-  <li><a href="#general-queries" id="toc-general-queries" class="nav-link" data-scroll-target="#general-queries">General Queries</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
-<section id="contact-the-rmedicine-team" class="level2">
-<h2 class="anchored" data-anchor-id="contact-the-rmedicine-team">Contact the R/Medicine Team</h2>
-<section id="code-of-conduct" class="level3">
-<h3 class="anchored" data-anchor-id="code-of-conduct">Code of Conduct</h3>
-<p>If you have general questions about the code of conduct, please write to conduct@r-consortium.org</p>
-<p>If you are reporting abuse, please write to abuse@r-consortium.org</p>
-</section>
-<section id="the-conference" class="level3">
-<h3 class="anchored" data-anchor-id="the-conference">The Conference</h3>
-<p>If you have general questions about the conference please write to r-medicine-conf@r-consortium.org</p>
-</section>
-<section id="sponsorships" class="level3">
-<h3 class="anchored" data-anchor-id="sponsorships">Sponsorships</h3>
-<p>If you would like to know about sponsorship opportunities, please write to sponsorship@r-consortium.org</p>
-</section>
-<section id="speakers" class="level3">
-<h3 class="anchored" data-anchor-id="speakers">Speakers</h3>
-<p>If you are speaking at R/Medicine and need help or information please write to speakers@r-consortium.org</p>
-</section>
-<section id="general-queries" class="level3">
-<h3 class="anchored" data-anchor-id="general-queries">General Queries</h3>
-<p>For all other questions not covered by the topics above, please write to admin@r-consortium.org</p>
+
+<div id="listing-events-listing" class="quarto-listing quarto-listing-container-custom">
+
+<ul class="list" style="list-style-type:none">
+
+<div class="list-container">
+
+  <div class="item-container" data-index="0" data-listing-date-sort="1685937600000">
+
+  <li data-index="1" data-listing-date-sort="1685937600000">
+
+  <div id="itemImage">
+    <a href="https://events.linuxfoundation.org/r-medicine/" class="listing-image">
+      <img src="./images/events/2023.png" width="300" height="300">
+    </a>
+  </div>
+  
+    <div class="listing-links">
+    <p class="no-anchor listing-title" style="margin-bottom: 3px;">R/Medicine 2023</p>
+    <a href="https://events.linuxfoundation.org/r-medicine/" target="_blank" class="listing-url button">Event Website</a>
+    <a href="https://www.youtube.com/playlist?list=PL4IzsxWztPdlpR3NqGzUI01M4_jqzIWqo" target="_blank" class="listing-url button">YouTube Playlist</a>
+  </div>
+  
+  </li>
+  
+  </div>
+    
+
+  <div class="item-container" data-index="2" data-listing-date-sort="1661227200000">
+
+  <li data-index="3" data-listing-date-sort="1661227200000">
+
+  <div id="itemImage">
+    <a href="https://events.linuxfoundation.org/archive/2022/r-medicine/" class="listing-image">
+      <img src="./images/events/2022.png" width="300" height="300">
+    </a>
+  </div>
+  
+    <div class="listing-links">
+    <p class="no-anchor listing-title" style="margin-bottom: 3px;">R/Medicine 2022</p>
+    <a href="https://events.linuxfoundation.org/archive/2022/r-medicine/" target="_blank" class="listing-url button">Event Website</a>
+    <a href="https://www.youtube.com/playlist?list=PL4IzsxWztPdmSeucR67EH_8_hzldqYZX4" target="_blank" class="listing-url button">YouTube Playlist</a>
+  </div>
+  
+  </li>
+  
+  </div>
+    
+
+  <div class="item-container" data-index="4" data-listing-date-sort="1629777600000">
+
+  <li data-index="5" data-listing-date-sort="1629777600000">
+
+  <div id="itemImage">
+    <a href="https://r-medicine-2021.netlify.app/" class="listing-image">
+      <img src="./images/events/2021.png" width="300" height="300">
+    </a>
+  </div>
+  
+    <div class="listing-links">
+    <p class="no-anchor listing-title" style="margin-bottom: 3px;">R/Medicine 2021</p>
+    <a href="https://r-medicine-2021.netlify.app/" target="_blank" class="listing-url button">Event Website</a>
+    <a href="https://www.youtube.com/watch?v=sM9GEAm6Uew&amp;list=PL4IzsxWztPdmHxCpS_c2l_jbMfrywWciZ" target="_blank" class="listing-url button">YouTube Playlist</a>
+  </div>
+  
+  </li>
+  
+  </div>
+    
+
+  <div class="item-container" data-index="6" data-listing-date-sort="1598500800000">
+
+  <li data-index="7" data-listing-date-sort="1598500800000">
+
+  <div id="itemImage">
+    <a href="https://events.linuxfoundation.org/archive/2020/r-medicine/" class="listing-image">
+      <img src="./images/events/2020.png" width="300" height="300">
+    </a>
+  </div>
+  
+    <div class="listing-links">
+    <p class="no-anchor listing-title" style="margin-bottom: 3px;">R/Medicine 2020</p>
+    <a href="https://events.linuxfoundation.org/archive/2020/r-medicine/" target="_blank" class="listing-url button">Event Website</a>
+    <a href="https://www.youtube.com/watch?v=vE-oMxWYgIo&amp;list=PL4IzsxWztPdljYo7uE5G_R2PtYw3fUReo" target="_blank" class="listing-url button">YouTube Playlist</a>
+  </div>
+  
+  </li>
+  
+  </div>
+    
+
+  <div class="item-container" data-index="8" data-listing-date-sort="1568260800000">
+
+  <li data-index="9" data-listing-date-sort="1568260800000">
+
+  <div id="itemImage">
+    <a href="https://r-medicine-2019.netlify.app/" class="listing-image">
+      <img src="./images/events/2019.png" width="300" height="300">
+    </a>
+  </div>
+  
+    <div class="listing-links">
+    <p class="no-anchor listing-title" style="margin-bottom: 3px;">R/Medicine 2019</p>
+    <a href="https://r-medicine-2019.netlify.app/" target="_blank" class="listing-url button">Event Website</a>
+    <a href="https://www.youtube.com/@RConsortium" target="_blank" class="listing-url button">YouTube Playlist</a>
+  </div>
+  
+  </li>
+  
+  </div>
+    
+
+  <div class="item-container" data-index="10" data-listing-date-sort="1536292800000">
+
+  <li data-index="11" data-listing-date-sort="1536292800000">
+
+  <div id="itemImage">
+    <a href="https://r-medicine-2018.netlify.app/" class="listing-image">
+      <img src="./images/events/2018.png" width="300" height="300">
+    </a>
+  </div>
+  
+    <div class="listing-links">
+    <p class="no-anchor listing-title" style="margin-bottom: 3px;">R/Medicine 2018</p>
+    <a href="https://r-medicine-2018.netlify.app/" target="_blank" class="listing-url button">Event Website</a>
+    <a href="https://www.youtube.com/@RConsortium" target="_blank" class="listing-url button">YouTube Playlist</a>
+  </div>
+  
+  </li>
+  
+  </div>
+    
+
+</div>
+
+</ul>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
-</section>
-</section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
