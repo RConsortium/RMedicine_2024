@@ -51,21 +51,21 @@ Under Dr. Bosch’s leadership, the R3ISE team offers graduate-level programs th
 :::
 :::
 
-### BROUGHT TO YOU BY
+## BROUGHT TO YOU BY
 
 
 <br>
 
 [![](images/R-con.png){fig-alt="R Consortium" fig-align="center" height="150"}](https://www.r-consortium.org/)
 
-### SPONSORED BY
+## SPONSORED BY
 
-#### Silver Sponsors
+### Silver Sponsors
 
 ::: columns
 ::: {.column width="45%"}
 
-[![](images/genentech.png){fig-alt="Genentech" fig-align="center" height="100"}](https://www.gene.com/)
+[![](images/genentech.png){fig-alt="Genentech" fig-align="center" height="150"}](https://www.gene.com/)
 
 :::
 
@@ -81,7 +81,7 @@ Under Dr. Bosch’s leadership, the R3ISE team offers graduate-level programs th
 :::
 
 
-### MAILING LIST
+## MAILING LIST
 
 Join our mailing list to hear all the latest about events, news and more
 
@@ -103,7 +103,7 @@ Join our mailing list to hear all the latest about events, news and more
 });
 </script>
 ```
-### HELP EDIT THIS WEBSITE
+## HELP EDIT THIS WEBSITE
 
 This entire website was made using Quarto and R.
 
