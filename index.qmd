@@ -65,7 +65,7 @@ Under Dr. Bosch’s leadership, the R3ISE team offers graduate-level programs th
 ::: columns
 ::: {.column width="45%"}
 
-[![](images/genentech.png){fig-alt="Genentech" fig-align="center" height="160"}](https://www.gene.com/)
+[![](images/genentech.png){fig-alt="Genentech" fig-align="center" height="100"}](https://www.gene.com/)
 
 :::
 
