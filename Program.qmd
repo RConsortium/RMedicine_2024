@@ -274,7 +274,7 @@ schedule_day_5 <-
     "2024-06-14 11:00", "2024-06-14 11:10", "1", "Welcome Back", "Welcome to R/Medicine 2024", "Peter Higgins", "University of Michigan",
     "2024-06-14 11:13", "2024-06-14 12:15", "2", "Keynote", "Reproducibility in Medical Research", "Gundula Bosch", "Johns Hopkins",
     "2024-06-14 12:17", "2024-06-14 12:37", "3", "Regular Talk", "Ah, Ha, Ha, Ha, Parameterise! Creating parameterised plot functions for flexible and reproducible data-to-viz pipelines", "Cara Thompson", "Building Stories with Data",
-    "2024-06-14 12:39", "2024-06-14 12:59", "4", "Regular Talk", NA, NA, NA, 
+    "2024-06-14 12:39", "2024-06-14 12:59", "4", "Regular Talk", "Rmageddon or Rmolehill? Mitigating Critical Vulnerabilities and Streamlining Deployment Processes", "Jake Riley and Hojjat Salmasian", "Children's Hospital of Philadelphia", 
     "2024-06-14 13:01", "2024-06-14 13:21", "5", "Regular Talk", "Comparing Analysis Method Implementations in Software (CAMIS): An open source repository to document differences in statistical methodology across software", "Agnieszka Tomczyk",  "PAREXEL",
     "2024-06-14 13:23", "2024-06-14 13:43", "6", "Regular Talk", "PhyloTrace - a Shiny App for Bacterial Pathogen Monitoring on a Genomic Level", "Filip Paskali", "",
     "2024-06-14 13:43", "2024-06-14 13:58",  NA, "Break", NA, NA, NA, 
