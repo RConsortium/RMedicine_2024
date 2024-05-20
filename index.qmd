@@ -58,9 +58,9 @@ Under Dr. Bosch’s leadership, the R3ISE team offers graduate-level programs th
 
 [![](images/R-con.png){fig-alt="R Consortium" fig-align="center" height="150"}](https://www.r-consortium.org/)
 
-#### SPONSORED BY
+### SPONSORED BY
 
-## Silver Sponsors
+#### Silver Sponsors
 
 ::: columns
 ::: {.column width="45%"}
@@ -81,7 +81,7 @@ Under Dr. Bosch’s leadership, the R3ISE team offers graduate-level programs th
 :::
 
 
-#### MAILING LIST
+### MAILING LIST
 
 Join our mailing list to hear all the latest about events, news and more
 
