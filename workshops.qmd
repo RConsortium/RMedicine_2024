@@ -2,7 +2,12 @@
 
 ::: columns
 ::: {.column width="45%"}
-### Lucy D’Agostino McGowan
+### Malcolm Barrett and Lucy D’Agostino McGowan
+
+![](images/malcolm_headshot.png)
+
+### Biography
+Malcolm Barrett is an epidemiologist and open-source software developer. After receiving his Ph.D. in epidemiology from the University of Southern California, he worked as a data scientist at Apple and Posit. His work has focused on causal inference methodology and software development, including many R packages for causal inference. Collectively, open-source tools he has authored have millions of downloads. Malcolm also teaches workshops and courses in R, software development, and causal inference.
 
 ![](images/Lucy_D_M.jpg)
 
@@ -22,7 +27,8 @@
 
 This workshop will use the NHANES Epidemiologic Follow-up Study (NHEFS) data. In this workshop, we’ll teach the essential elements of answering causal questions in R through causal diagrams, and causal modeling techniques such as propensity scores and inverse probability weighting.
 
-### Dr. McGowan on the Web
+### Drs. Barrett and McGowan on the Web
+Dr. Barrett can be found ggdagging on Github at [malcolmbarrett/ggdag], scoring the propensity score weights for all possible outcomes  [malcolmbarrett/propensity], and on Twitter [\@malco_barrett](https://twitter.com/malco_barrett).
 
 Dr. McGowan can be found blogging at [livefreeordichotomize.com](https://livefreeordichotomize.com/), on Twitter [\@LucyStats](https://twitter.com/LucyStats), and podcasting on the American Journal of Epidemiology partner podcast, [Casual Inference](https://casualinfer.libsyn.com/).
 :::
