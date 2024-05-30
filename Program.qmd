@@ -139,7 +139,7 @@ schedule_day_3 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_companies,
     "2024-06-12 10:00", "2024-06-12 10:55", "1", "Demo", "R Consortium's R-based Test Submission Package for FDA Evaluation: A Milestone in R-based Regulatory Submissions", "Joel Laxamana", "Genentech, A Member of the Roche Group",
-    "2024-06-12 11:00", "2024-06-12 11:55", "2", "Demo", "R + Snowflake to enable Medical Research", "Ryan MacLean and Gabriel Mullen", "Snowflake",
+    "2024-06-12 11:00", "2024-06-12 11:55", "2", "Demo", "R + Snowflake to enable Medical Research", "Rika Gorn, Posit", "Ralph Braun, Snowflake",
     "2024-06-12 12:00", "2024-06-12 12:30",  NA, "Break", NA, NA, NA, 
     "2024-06-12 12:30", "2024-06-12 13:25", "3", "Demo", "Handling Health Data Imbalance in Machine Learning Using R ", "Olawale Awe", "University of Colorado",
     "2024-06-12 13:30", "2024-06-12 14:25", "4", "Demo", "An Introduction to Tidy R Spatial Packages: Incorporating Historic Sociodemographic Data from the US Census and Visualizing Geographic Distributions ", "Stephen Uong and Christina Mehranbod", "Columbia University Mailman School of Public Health",
