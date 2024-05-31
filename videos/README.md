@@ -1,1 +1,0 @@
-This folder is for all videos that participants want to upload
