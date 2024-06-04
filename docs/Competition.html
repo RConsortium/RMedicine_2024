@@ -1,696 +1,980 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="quarto-1.4.553" />
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>R/Medicine 2024</title>
+    <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+        vertical-align: middle;
+      }
+      /* CSS for syntax highlighting */
+      pre > code.sourceCode { white-space: pre; position: relative; }
+      pre > code.sourceCode > span { line-height: 1.25; }
+      pre > code.sourceCode > span:empty { height: 1.2em; }
+      .sourceCode { overflow: visible; }
+      code.sourceCode > span { color: inherit; text-decoration: inherit; }
+      div.sourceCode { margin: 1em 0; }
+      pre.sourceCode { margin: 0; }
+      @media screen {
+      div.sourceCode { overflow: auto; }
+      }
+      @media print {
+      pre > code.sourceCode { white-space: pre-wrap; }
+      pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+      }
+      pre.numberSource code
+        { counter-reset: source-line 0; }
+      pre.numberSource code > span
+        { position: relative; left: -4em; counter-increment: source-line; }
+      pre.numberSource code > span > a:first-child::before
+        { content: counter(source-line);
+          position: relative; left: -1em; text-align: right; vertical-align: baseline;
+          border: none; display: inline-block;
+          -webkit-touch-callout: none; -webkit-user-select: none;
+          -khtml-user-select: none; -moz-user-select: none;
+          -ms-user-select: none; user-select: none;
+          padding: 0 4px; width: 4em;
+        }
+      pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+      div.sourceCode
+        {   }
+      @media screen {
+      pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+      }
+    </style>
 
+    <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+    <script src="site_libs/quarto-nav/headroom.min.js"></script>
+    <script src="site_libs/clipboard/clipboard.min.js"></script>
+    <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+    <script src="site_libs/quarto-search/fuse.min.js"></script>
+    <script src="site_libs/quarto-search/quarto-search.js"></script>
+    <meta name="quarto:offset" content="./" />
+    <script src="site_libs/quarto-html/quarto.js"></script>
+    <script src="site_libs/quarto-html/popper.min.js"></script>
+    <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+    <script src="site_libs/quarto-html/anchor.min.js"></script>
+    <link href="site_libs/quarto-html/tippy.css" rel="stylesheet" />
+    <link
+      href="site_libs/quarto-html/quarto-syntax-highlighting.css"
+      rel="stylesheet"
+      id="quarto-text-highlighting-styles"
+    />
+    <script src="site_libs/bootstrap/bootstrap.min.js"></script>
+    <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet" />
+    <link
+      href="site_libs/bootstrap/bootstrap.min.css"
+      rel="stylesheet"
+      id="quarto-bootstrap"
+      data-mode="light"
+    />
+    <script id="quarto-search-options" type="application/json">
+      {
+        "location": "navbar",
+        "copy-button": false,
+        "collapse-after": 3,
+        "panel-placement": "end",
+        "type": "overlay",
+        "limit": 50,
+        "keyboard-shortcut": ["f", "/", "s"],
+        "show-item-context": false,
+        "language": {
+          "search-no-results-text": "No results",
+          "search-matching-documents-text": "matching documents",
+          "search-copy-link-title": "Copy link to search",
+          "search-hide-matches-text": "Hide additional matches",
+          "search-more-match-text": "more match in this document",
+          "search-more-matches-text": "more matches in this document",
+          "search-clear-button-title": "Clear",
+          "search-text-placeholder": "",
+          "search-detached-cancel-button-title": "Cancel",
+          "search-submit-button-title": "Submit",
+          "search-label": "Search"
+        }
+      }
+    </script>
 
-<title>R/Medicine 2024</title>
-<style>
-code{white-space: pre-wrap;}
-span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
-div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
-  vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-</style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
-
-
-<link rel="stylesheet" href="styles.css">
-</head>
-
-<body class="nav-fixed">
-
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">R/Medicine 2024</span>
-    </a>
-  </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
+  <body class="nav-fixed">
+    <div id="quarto-search-results"></div>
+    <header id="quarto-header" class="headroom fixed-top">
+      <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+        <div class="navbar-container container-fluid">
+          <div class="navbar-brand-container mx-auto">
+            <a class="navbar-brand" href="./index.html">
+              <span class="navbar-title">R/Medicine 2024</span>
+            </a>
+          </div>
+          <div id="quarto-search" class="" title="Search"></div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Register.html"> 
-<span class="menu-text">Register</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Abstracts.html"> 
-<span class="menu-text">Abstracts</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Program.html"> 
-<span class="menu-text">Program</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./workshops.qmd"> 
-<span class="menu-text">Workshops</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Attend.html"> 
-<span class="menu-text">Code of Conduct</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./Competition.html" aria-current="page"> 
-<span class="menu-text">Competition</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Contact.html"> 
-<span class="menu-text">Contact us</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./Events.html"> 
-<span class="menu-text">Past Events</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./committees.html"> 
-<span class="menu-text">Committees</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">
+                  <span class="menu-text">Home</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Register.html">
+                  <span class="menu-text">Register</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Abstracts.html">
+                  <span class="menu-text">Abstracts</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Program.html">
+                  <span class="menu-text">Program</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./workshops.html">
+                  <span class="menu-text">Workshops</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Attend.html">
+                  <span class="menu-text">Code of Conduct</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="./Competition.html"
+                  aria-current="page"
+                >
+                  <span class="menu-text">Competition</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Contact.html">
+                  <span class="menu-text">Contact us</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Events.html">
+                  <span class="menu-text">Past Events</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./committees.html">
+                  <span class="menu-text">Committees</span></a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- /navcollapse -->
+          <div class="quarto-navbar-tools"></div>
+        </div>
+        <!-- /container-fluid -->
+      </nav>
+    </header>
+    <!-- content -->
+    <div
+      id="quarto-content"
+      class="quarto-container page-columns page-rows-contents page-layout-article page-navbar"
+    >
+      <!-- sidebar -->
+      <!-- margin-sidebar -->
+      <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#competition" id="toc-competition" class="nav-link active" data-scroll-target="#competition">Competition</a>
-  <ul class="collapse">
-  <li><a href="#the-rmedicine-data-challenge" id="toc-the-rmedicine-data-challenge" class="nav-link" data-scroll-target="#the-rmedicine-data-challenge"><strong>The R/Medicine Data Challenge</strong></a></li>
-  <li><a href="#guidelines" id="toc-guidelines" class="nav-link" data-scroll-target="#guidelines">Guidelines</a></li>
-  <li><a href="#prize-information" id="toc-prize-information" class="nav-link" data-scroll-target="#prize-information">Prize Information</a></li>
-  <li><a href="#faqs" id="toc-faqs" class="nav-link" data-scroll-target="#faqs">FAQs</a></li>
-  <li><a href="#submit" id="toc-submit" class="nav-link" data-scroll-target="#submit">Submit:</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
+          <h2 id="toc-title">On this page</h2>
 
-
-
-
-<section id="competition" class="level2">
-<h2 class="anchored" data-anchor-id="competition">Competition</h2>
-<p><strong>How can we optimize medication treatments for opioid use disorder?</strong></p>
-<p><strong>Which individuals are more at risk of dropping out of a treatment program?</strong></p>
-<p><strong>Which individuals are more at risk of relapsing?</strong></p>
-<p><br></p>
-<p>The R/Medicine planning committee welcomes your participation in the virtual R/Medicine data challenge. Participants will have from now until May 21st, 2024 to work on submissions for the challenge. There will be 3 prizes: one for overall quality of analyses/Quarto docs, as well as prizes for best table and best visualization.</p>
-<p>It is well known that opioid use disorder is currently a major public health concern that has significant implications for the entire healthcare system. Understanding more about how we can best develop effective treatment programs is needed now more than ever as we continue to combat the opioid epidemic.</p>
-<section id="the-rmedicine-data-challenge" class="level3">
-<h3 class="anchored" data-anchor-id="the-rmedicine-data-challenge"><strong>The R/Medicine Data Challenge</strong></h3>
-<p>In this data challenge, you will analyze various factors that may contribute to either treatment success or treatment failure for opioid use disorder using harmonized data collected from three multi-site clinical trials from the CTN. We encourage you to read more about how this data was collected <a href="https://ctnlibrary.org/protocol/ctn0094/">here</a>.</p>
-<p>We ask that all analyses be done and submitted as Quarto documents. Participants can submit as an individual or as part of a team (but not both). The maximum team size is 3. Your goal will be to transform these datasets into actionable indicators that illustrate which factors are important to understanding why some patients achieve success with treatment for opioid use disorder and why others drop out or relapse.</p>
-<p>The data for this challenge is available on CRAN.The following 2 code chunks demonstrate how to install and load the necessary packages. You can read more about the packages on CRAN <a href="https://cran.r-project.org/web/packages/public.ctn0094data/index.html">here</a> and <a href="https://cran.r-project.org/web/packages/public.ctn0094extra/index.html">here</a>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"public.ctn0094data"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"public.ctn0094extra"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(public.ctn0094data)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(public.ctn0094extra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>In addition to the provided data, you may request to use additional publicly available data in your submission by submitting a request by May 1st, 2024 at 5:00PM EST. If approved, the data will be made available to all participants.</p>
-<p>You will be evaluated by judges based on the relevance, completeness, and quality of your submission. Remember that tables and visualizations will also be judged and ranked separately for the prizes of best table and best visualization. Judges include:</p>
-<p>Raymond Balise, PhD, University of Miami</p>
-<p>Peter Higgins, MD, PhD, MSc, University of Michigan</p>
-<p>Bryan P. Mayfield, PharmD, MS, Precision Analytical</p>
-<section id="example-topics" class="level4">
-<h4 class="anchored" data-anchor-id="example-topics">Example Topics</h4>
-<ul>
-<li><p>Which demographic characteristics are most associated with drop out/relapse rates?</p></li>
-<li><p>Are there any drugs/substances that seem to be more associated with higher or lower drop out/relapse rates?</p></li>
-</ul>
-</section>
-</section>
-<section id="guidelines" class="level3">
-<h3 class="anchored" data-anchor-id="guidelines">Guidelines</h3>
-<p><strong>When:</strong> Now - May 21st, 2024</p>
-<p><strong>Where:</strong> The R/Medicine data challenge is entirely virtual, with information and rules of the challenge available on this website. Updates will be posted on this website.</p>
-<p><strong>Who you are:</strong> We welcome any participants over age 18, especially undergraduate students, graduate students, and early professional data scientists and biostatisticians. Analysts based in academic institutions, government statistical offices, think tanks, policy labs, and community organizations are encouraged to participate.</p>
-<p><strong>What topics you can explore:</strong> Participants can analyze the included opioid use disorder data in tandem with with any other related publicly available data submitted for approval before May 1st, 2024.</p>
-<p><strong>Submissions and evaluation:</strong> Participants will conduct their analyses and submit a short project narrative that describes the research question, analytic approach, and key findings. We encourage participants to find creative ways to incorporate tables, visualizations, and other aspects of data storytelling to create a compelling narrative. In addition to their completed analysis with the indicators they used, participants will be asked to submit documentation describing each step of their process. The documentation should be detailed enough as to make the project fully replicable. The narrative, methods, organization, and documentation of each participant’s project will be evaluated for relevance, completeness, and quality. More information on evaluation will be added to the FAQs section at the bottom of this page.</p>
-</section>
-<section id="prize-information" class="level3">
-<h3 class="anchored" data-anchor-id="prize-information">Prize Information</h3>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Selection</th>
-<th>Prize</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Best Overall Analysis/Quarto Doc</td>
-<td>Free <a href="https://posit.co/conference/">Posit Conf 2024</a> Registration</td>
-</tr>
-<tr class="even">
-<td>Best Table</td>
-<td>$500 off <a href="https://posit.co/conference/">Posit Conf 2024</a> Registration</td>
-</tr>
-<tr class="odd">
-<td>Best Visualization</td>
-<td>$500 off <a href="https://posit.co/conference/">Posit Conf 2024</a> Registration}</td>
-</tr>
-</tbody>
-</table>
-<p>Finalists will be <strong>required</strong> to present their project at the R/Medicine conference (can be prerecorded) on Friday afternoon in our closing session for the prizewinners on June 14, 2024.</p>
-</section>
-<section id="faqs" class="level3">
-<h3 class="anchored" data-anchor-id="faqs">FAQs</h3>
-<p>Question: Are IDs of the care team or individual case workers associated with site/clinic visits available?</p>
-<p>Answer: No.&nbsp;The granular details on treatment site and care providers are masked to assure the anonymity of the patients. However, the information on the treatment site/clinic can be found in the table named <code>site_masked</code>.</p>
-<p>Question: Is there a way to identify when participants no-show to the clinic?</p>
-<p>Answer: Unfortunately, there is no easy way to determine this. In theory, participants should have received weekly screenings, but this was likely not the case for all participants.</p>
-</section>
-<section id="submit" class="level3">
-<h3 class="anchored" data-anchor-id="submit">Submit:</h3>
-<p><a href="https://docs.google.com/forms/d/14eRHDwQ5vBAKB8UXNzsOYfXm0t9OMeZnaRRYaJequPI/viewform?edit_requested=true">Fill out this form</a></p>
-
-
-</section>
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
-          }
-        }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
-        }
-        return container.innerHTML
-      } else {
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(note);
-        }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
-    }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
-          }
-        } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
-          .then(res => res.text())
-          .then(html => {
-            const parser = new DOMParser();
-            const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
-            if (note !== null) {
-              const html = processXRef(id, note);
-              instance.setContent(html);
-            } 
-          }).finally(() => {
-            instance.enable();
-            instance.show();
+          <ul>
+            <li>
+              <a
+                href="#competition"
+                id="toc-competition"
+                class="nav-link active"
+                data-scroll-target="#competition"
+                >Competition</a
+              >
+              <ul class="collapse">
+                <li>
+                  <a
+                    href="#the-rmedicine-data-challenge"
+                    id="toc-the-rmedicine-data-challenge"
+                    class="nav-link"
+                    data-scroll-target="#the-rmedicine-data-challenge"
+                    ><strong>The R/Medicine Data Challenge</strong></a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#guidelines"
+                    id="toc-guidelines"
+                    class="nav-link"
+                    data-scroll-target="#guidelines"
+                    >Guidelines</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#prize-information"
+                    id="toc-prize-information"
+                    class="nav-link"
+                    data-scroll-target="#prize-information"
+                    >Prize Information</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#faqs"
+                    id="toc-faqs"
+                    class="nav-link"
+                    data-scroll-target="#faqs"
+                    >FAQs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#submit"
+                    id="toc-submit"
+                    class="nav-link"
+                    data-scroll-target="#submit"
+                    >Submit:</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- main -->
+      <main class="content" id="quarto-document-content">
+        <section id="competition" class="level2">
+          <h2 class="anchored" data-anchor-id="competition">Competition</h2>
+          <p>
+            <strong
+              >How can we optimize medication treatments for opioid use
+              disorder?</strong
+            >
+          </p>
+          <p>
+            <strong
+              >Which individuals are more at risk of dropping out of a treatment
+              program?</strong
+            >
+          </p>
+          <p>
+            <strong>Which individuals are more at risk of relapsing?</strong>
+          </p>
+          <p><br /></p>
+          <p>
+            The R/Medicine planning committee welcomes your participation in the
+            virtual R/Medicine data challenge. Participants will have from now
+            until May 21st, 2024 to work on submissions for the challenge. There
+            will be 3 prizes: one for overall quality of analyses/Quarto docs,
+            as well as prizes for best table and best visualization.
+          </p>
+          <p>
+            It is well known that opioid use disorder is currently a major
+            public health concern that has significant implications for the
+            entire healthcare system. Understanding more about how we can best
+            develop effective treatment programs is needed now more than ever as
+            we continue to combat the opioid epidemic.
+          </p>
+          <section id="the-rmedicine-data-challenge" class="level3">
+            <h3 class="anchored" data-anchor-id="the-rmedicine-data-challenge">
+              <strong>The R/Medicine Data Challenge</strong>
+            </h3>
+            <p>
+              In this data challenge, you will analyze various factors that may
+              contribute to either treatment success or treatment failure for
+              opioid use disorder using harmonized data collected from three
+              multi-site clinical trials from the CTN. We encourage you to read
+              more about how this data was collected
+              <a href="https://ctnlibrary.org/protocol/ctn0094/">here</a>.
+            </p>
+            <p>
+              We ask that all analyses be done and submitted as Quarto
+              documents. Participants can submit as an individual or as part of
+              a team (but not both). The maximum team size is 3. Your goal will
+              be to transform these datasets into actionable indicators that
+              illustrate which factors are important to understanding why some
+              patients achieve success with treatment for opioid use disorder
+              and why others drop out or relapse.
+            </p>
+            <p>
+              The data for this challenge is available on CRAN.The following 2
+              code chunks demonstrate how to install and load the necessary
+              packages. You can read more about the packages on CRAN
+              <a
+                href="https://cran.r-project.org/web/packages/public.ctn0094data/index.html"
+                >here</a
+              >
+              and
+              <a
+                href="https://cran.r-project.org/web/packages/public.ctn0094extra/index.html"
+                >here</a
+              >.
+            </p>
+            <div class="cell">
+              <div class="sourceCode cell-code" id="cb1">
+                <pre
+                  class="sourceCode r code-with-copy"
+                ><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"public.ctn0094data"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"public.ctn0094extra"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="sourceCode cell-code" id="cb2">
+                <pre
+                  class="sourceCode r code-with-copy"
+                ><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(public.ctn0094data)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(public.ctn0094extra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre>
+              </div>
+            </div>
+            <p>
+              In addition to the provided data, you may request to use
+              additional publicly available data in your submission by
+              submitting a request by May 1st, 2024 at 5:00PM EST. If approved,
+              the data will be made available to all participants.
+            </p>
+            <p>
+              You will be evaluated by judges based on the relevance,
+              completeness, and quality of your submission. Remember that tables
+              and visualizations will also be judged and ranked separately for
+              the prizes of best table and best visualization. Judges include:
+            </p>
+            <p>Raymond Balise, PhD, University of Miami</p>
+            <p>Peter Higgins, MD, PhD, MSc, University of Michigan</p>
+            <p>Bryan P. Mayfield, PharmD, MS, Precision Analytical</p>
+            <section id="example-topics" class="level4">
+              <h4 class="anchored" data-anchor-id="example-topics">
+                Example Topics
+              </h4>
+              <ul>
+                <li>
+                  <p>
+                    Which demographic characteristics are most associated with
+                    drop out/relapse rates?
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Are there any drugs/substances that seem to be more
+                    associated with higher or lower drop out/relapse rates?
+                  </p>
+                </li>
+              </ul>
+            </section>
+          </section>
+          <section id="guidelines" class="level3">
+            <h3 class="anchored" data-anchor-id="guidelines">Guidelines</h3>
+            <p><strong>When:</strong> Now - May 21st, 2024</p>
+            <p>
+              <strong>Where:</strong> The R/Medicine data challenge is entirely
+              virtual, with information and rules of the challenge available on
+              this website. Updates will be posted on this website.
+            </p>
+            <p>
+              <strong>Who you are:</strong> We welcome any participants over age
+              18, especially undergraduate students, graduate students, and
+              early professional data scientists and biostatisticians. Analysts
+              based in academic institutions, government statistical offices,
+              think tanks, policy labs, and community organizations are
+              encouraged to participate.
+            </p>
+            <p>
+              <strong>What topics you can explore:</strong> Participants can
+              analyze the included opioid use disorder data in tandem with with
+              any other related publicly available data submitted for approval
+              before May 1st, 2024.
+            </p>
+            <p>
+              <strong>Submissions and evaluation:</strong> Participants will
+              conduct their analyses and submit a short project narrative that
+              describes the research question, analytic approach, and key
+              findings. We encourage participants to find creative ways to
+              incorporate tables, visualizations, and other aspects of data
+              storytelling to create a compelling narrative. In addition to
+              their completed analysis with the indicators they used,
+              participants will be asked to submit documentation describing each
+              step of their process. The documentation should be detailed enough
+              as to make the project fully replicable. The narrative, methods,
+              organization, and documentation of each participant’s project will
+              be evaluated for relevance, completeness, and quality. More
+              information on evaluation will be added to the FAQs section at the
+              bottom of this page.
+            </p>
+          </section>
+          <section id="prize-information" class="level3">
+            <h3 class="anchored" data-anchor-id="prize-information">
+              Prize Information
+            </h3>
+            <table class="table">
+              <thead>
+                <tr class="header">
+                  <th>Selection</th>
+                  <th>Prize</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd">
+                  <td>Best Overall Analysis/Quarto Doc</td>
+                  <td>
+                    Free
+                    <a href="https://posit.co/conference/">Posit Conf 2024</a>
+                    Registration
+                  </td>
+                </tr>
+                <tr class="even">
+                  <td>Best Table</td>
+                  <td>
+                    $500 off
+                    <a href="https://posit.co/conference/">Posit Conf 2024</a>
+                    Registration
+                  </td>
+                </tr>
+                <tr class="odd">
+                  <td>Best Visualization</td>
+                  <td>
+                    $500 off
+                    <a href="https://posit.co/conference/">Posit Conf 2024</a>
+                    Registration}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              Finalists will be <strong>required</strong> to present their
+              project at the R/Medicine conference (can be prerecorded) on
+              Friday afternoon in our closing session for the prizewinners on
+              June 14, 2024.
+            </p>
+          </section>
+          <section id="faqs" class="level3">
+            <h3 class="anchored" data-anchor-id="faqs">FAQs</h3>
+            <p>
+              Question: Are IDs of the care team or individual case workers
+              associated with site/clinic visits available?
+            </p>
+            <p>
+              Answer: No.&nbsp;The granular details on treatment site and care
+              providers are masked to assure the anonymity of the patients.
+              However, the information on the treatment site/clinic can be found
+              in the table named <code>site_masked</code>.
+            </p>
+            <p>
+              Question: Is there a way to identify when participants no-show to
+              the clinic?
+            </p>
+            <p>
+              Answer: Unfortunately, there is no easy way to determine this. In
+              theory, participants should have received weekly screenings, but
+              this was likely not the case for all participants.
+            </p>
+          </section>
+          <section id="submit" class="level3">
+            <h3 class="anchored" data-anchor-id="submit">Submit:</h3>
+            <p>
+              <a
+                href="https://docs.google.com/forms/d/14eRHDwQ5vBAKB8UXNzsOYfXm0t9OMeZnaRRYaJequPI/viewform?edit_requested=true"
+                >Fill out this form</a
+              >
+            </p>
+          </section>
+        </section>
+      </main>
+      <!-- /main -->
+      <script id="quarto-html-after-body" type="application/javascript">
+        window.document.addEventListener("DOMContentLoaded", function (event) {
+          const toggleBodyColorMode = (bsSheetEl) => {
+            const mode = bsSheetEl.getAttribute("data-mode");
+            const bodyEl = window.document.querySelector("body");
+            if (mode === "dark") {
+              bodyEl.classList.add("quarto-dark");
+              bodyEl.classList.remove("quarto-light");
+            } else {
+              bodyEl.classList.add("quarto-light");
+              bodyEl.classList.remove("quarto-dark");
+            }
+          };
+          const toggleBodyColorPrimary = () => {
+            const bsSheetEl = window.document.querySelector(
+              "link#quarto-bootstrap"
+            );
+            if (bsSheetEl) {
+              toggleBodyColorMode(bsSheetEl);
+            }
+          };
+          toggleBodyColorPrimary();
+          const icon = "";
+          const anchorJS = new window.AnchorJS();
+          anchorJS.options = {
+            placement: "right",
+            icon: icon,
+          };
+          anchorJS.add(".anchored");
+          const isCodeAnnotation = (el) => {
+            for (const clz of el.classList) {
+              if (clz.startsWith("code-annotation-")) {
+                return true;
+              }
+            }
+            return false;
+          };
+          const clipboard = new window.ClipboardJS(".code-copy-button", {
+            text: function (trigger) {
+              const codeEl = trigger.previousElementSibling.cloneNode(true);
+              for (const childEl of codeEl.children) {
+                if (isCodeAnnotation(childEl)) {
+                  childEl.remove();
+                }
+              }
+              return codeEl.innerText;
+            },
           });
-        }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
+          clipboard.on("success", function (e) {
+            // button target
+            const button = e.trigger;
+            // don't keep focus
+            button.blur();
+            // flash "checked"
+            button.classList.add("code-copy-button-checked");
+            var currentTitle = button.getAttribute("title");
+            button.setAttribute("title", "Copied!");
+            let tooltip;
+            if (window.bootstrap) {
+              button.setAttribute("data-bs-toggle", "tooltip");
+              button.setAttribute("data-bs-placement", "left");
+              button.setAttribute("data-bs-title", "Copied!");
+              tooltip = new bootstrap.Tooltip(button, {
+                trigger: "manual",
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8],
+              });
+              tooltip.show();
             }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
+            setTimeout(function () {
+              if (tooltip) {
+                tooltip.hide();
+                button.removeAttribute("data-bs-title");
+                button.removeAttribute("data-bs-toggle");
+                button.removeAttribute("data-bs-placement");
+              }
+              button.setAttribute("title", currentTitle);
+              button.classList.remove("code-copy-button-checked");
+            }, 1000);
+            // clear code selection
+            e.clearSelection();
+          });
+          var localhostRegex = new RegExp(
+            /^(?:http|https):\/\/localhost\:?[0-9]*\//
+          );
+          var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("/" + window.location.host + "/");
+          var isInternal = (href) => {
+            return (
+              filterRegex.test(href) ||
+              localhostRegex.test(href) ||
+              mailtoRegex.test(href)
+            );
+          };
+          // Inspect non-navigation links and adorn them if external
+          var links = window.document.querySelectorAll(
+            "a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)"
+          );
+          for (var i = 0; i < links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
             }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
+          }
+          function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+            const config = {
+              allowHTML: true,
+              maxWidth: 500,
+              delay: 100,
+              arrow: false,
+              appendTo: function (el) {
+                return el.parentElement;
+              },
+              interactive: true,
+              interactiveBorder: 10,
+              theme: "quarto",
+              placement: "bottom-start",
+            };
+            if (contentFn) {
+              config.content = contentFn;
             }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
+            if (onTriggerFn) {
+              config.onTrigger = onTriggerFn;
             }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
+            if (onUntriggerFn) {
+              config.onUntrigger = onUntriggerFn;
+            }
+            window.tippy(el, config);
+          }
+          const noterefs = window.document.querySelectorAll(
+            'a[role="doc-noteref"]'
+          );
+          for (var i = 0; i < noterefs.length; i++) {
+            const ref = noterefs[i];
+            tippyHover(ref, function () {
+              // use id or data attribute instead here
+              let href =
+                ref.getAttribute("data-footnote-href") ||
+                ref.getAttribute("href");
+              try {
+                href = new URL(href).hash;
+              } catch {}
+              const id = href.replace(/^#\/?/, "");
+              const note = window.document.getElementById(id);
+              if (note) {
+                return note.innerHTML;
+              } else {
+                return "";
+              }
+            });
+          }
+          const xrefs = window.document.querySelectorAll("a.quarto-xref");
+          const processXRef = (id, note) => {
+            // Strip column container classes
+            const stripColumnClz = (el) => {
+              el.classList.remove("page-full", "page-columns");
+              if (el.children) {
+                for (const child of el.children) {
+                  stripColumnClz(child);
+                }
+              }
+            };
+            stripColumnClz(note);
+            if (id === null || id.startsWith("sec-")) {
+              // Special case sections, only their first couple elements
+              const container = document.createElement("div");
+              if (note.children && note.children.length > 2) {
+                container.appendChild(note.children[0].cloneNode(true));
+                for (let i = 1; i < note.children.length; i++) {
+                  const child = note.children[i];
+                  if (child.tagName === "P" && child.innerText === "") {
+                    continue;
+                  } else {
+                    container.appendChild(child.cloneNode(true));
+                    break;
+                  }
+                }
+                if (window.Quarto?.typesetMath) {
+                  window.Quarto.typesetMath(container);
+                }
+                return container.innerHTML;
+              } else {
+                if (window.Quarto?.typesetMath) {
+                  window.Quarto.typesetMath(note);
+                }
+                return note.innerHTML;
+              }
+            } else {
+              // Remove any anchor links if they are present
+              const anchorLink = note.querySelector("a.anchorjs-link");
+              if (anchorLink) {
+                anchorLink.remove();
+              }
+              if (window.Quarto?.typesetMath) {
+                window.Quarto.typesetMath(note);
+              }
+              // TODO in 1.5, we should make sure this works without a callout special case
+              if (note.classList.contains("callout")) {
+                return note.outerHTML;
+              } else {
+                return note.innerHTML;
+              }
+            }
+          };
+          for (var i = 0; i < xrefs.length; i++) {
+            const xref = xrefs[i];
+            tippyHover(
+              xref,
+              undefined,
+              function (instance) {
+                instance.disable();
+                let url = xref.getAttribute("href");
+                let hash = undefined;
+                if (url.startsWith("#")) {
+                  hash = url;
+                } else {
+                  try {
+                    hash = new URL(url).hash;
+                  } catch {}
+                }
+                if (hash) {
+                  const id = hash.replace(/^#\/?/, "");
+                  const note = window.document.getElementById(id);
+                  if (note !== null) {
+                    try {
+                      const html = processXRef(id, note.cloneNode(true));
+                      instance.setContent(html);
+                    } finally {
+                      instance.enable();
+                      instance.show();
+                    }
+                  } else {
+                    // See if we can fetch this
+                    fetch(url.split("#")[0])
+                      .then((res) => res.text())
+                      .then((html) => {
+                        const parser = new DOMParser();
+                        const htmlDoc = parser.parseFromString(
+                          html,
+                          "text/html"
+                        );
+                        const note = htmlDoc.getElementById(id);
+                        if (note !== null) {
+                          const html = processXRef(id, note);
+                          instance.setContent(html);
+                        }
+                      })
+                      .finally(() => {
+                        instance.enable();
+                        instance.show();
+                      });
+                  }
+                } else {
+                  // See if we can fetch a full url (with no hash to target)
+                  // This is a special case and we should probably do some content thinning / targeting
+                  fetch(url)
+                    .then((res) => res.text())
+                    .then((html) => {
+                      const parser = new DOMParser();
+                      const htmlDoc = parser.parseFromString(html, "text/html");
+                      const note = htmlDoc.querySelector("main.content");
+                      if (note !== null) {
+                        // This should only happen for chapter cross references
+                        // (since there is no id in the URL)
+                        // remove the first header
+                        if (
+                          note.children.length > 0 &&
+                          note.children[0].tagName === "HEADER"
+                        ) {
+                          note.children[0].remove();
+                        }
+                        const html = processXRef(null, note);
+                        instance.setContent(html);
+                      }
+                    })
+                    .finally(() => {
+                      instance.enable();
+                      instance.show();
+                    });
+                }
+              },
+              function (instance) {}
+            );
+          }
+          let selectedAnnoteEl;
+          const selectorForAnnotation = (cell, annotation) => {
+            let cellAttr = 'data-code-cell="' + cell + '"';
+            let lineAttr = 'data-code-annotation="' + annotation + '"';
+            const selector = "span[" + cellAttr + "][" + lineAttr + "]";
+            return selector;
+          };
+          const selectCodeLines = (annoteEl) => {
+            const doc = window.document;
+            const targetCell = annoteEl.getAttribute("data-target-cell");
+            const targetAnnotation = annoteEl.getAttribute(
+              "data-target-annotation"
+            );
+            const annoteSpan = window.document.querySelector(
+              selectorForAnnotation(targetCell, targetAnnotation)
+            );
+            const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+            const lineIds = lines.map((line) => {
+              return targetCell + "-" + line;
+            });
+            let top = null;
+            let height = null;
+            let parent = null;
+            if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+              if (lineIds.length > 1) {
+                const lastEl = window.document.getElementById(
+                  lineIds[lineIds.length - 1]
+                );
+                const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+                height = bottom - top;
+              }
+              if (top !== null && height !== null && parent !== null) {
+                // cook up a div (if necessary) and position it
+                let div = window.document.getElementById(
+                  "code-annotation-line-highlight"
+                );
+                if (div === null) {
+                  div = window.document.createElement("div");
+                  div.setAttribute("id", "code-annotation-line-highlight");
+                  div.style.position = "absolute";
+                  parent.appendChild(div);
+                }
+                div.style.top = top - 2 + "px";
+                div.style.height = height + 4 + "px";
+                div.style.left = 0;
+                let gutterDiv = window.document.getElementById(
+                  "code-annotation-line-highlight-gutter"
+                );
+                if (gutterDiv === null) {
+                  gutterDiv = window.document.createElement("div");
+                  gutterDiv.setAttribute(
+                    "id",
+                    "code-annotation-line-highlight-gutter"
+                  );
+                  gutterDiv.style.position = "absolute";
+                  const codeCell = window.document.getElementById(targetCell);
+                  const gutter = codeCell.querySelector(
+                    ".code-annotation-gutter"
+                  );
+                  gutter.appendChild(gutterDiv);
+                }
+                gutterDiv.style.top = top - 2 + "px";
+                gutterDiv.style.height = height + 4 + "px";
+              }
+              selectedAnnoteEl = annoteEl;
+            }
+          };
+          const unselectCodeLines = () => {
+            const elementsIds = [
+              "code-annotation-line-highlight",
+              "code-annotation-line-highlight-gutter",
+            ];
+            elementsIds.forEach((elId) => {
+              const div = window.document.getElementById(elId);
+              if (div) {
+                div.remove();
+              }
+            });
+            selectedAnnoteEl = undefined;
+          };
+          // Handle positioning of the toggle
+          window.addEventListener(
+            "resize",
+            throttle(() => {
+              elRect = undefined;
+              if (selectedAnnoteEl) {
+                selectCodeLines(selectedAnnoteEl);
+              }
+            }, 10)
+          );
+          function throttle(fn, ms) {
+            let throttle = false;
+            let timer;
+            return (...args) => {
+              if (!throttle) {
+                // first call gets through
+                fn.apply(this, args);
+                throttle = true;
+              } else {
+                // all the others get throttled
+                if (timer) clearTimeout(timer); // cancel #2
+                timer = setTimeout(() => {
+                  fn.apply(this, args);
+                  timer = throttle = false;
+                }, ms);
+              }
+            };
+          }
+          // Attach click handler to the DT
+          const annoteDls = window.document.querySelectorAll(
+            "dt[data-target-cell]"
+          );
+          for (const annoteDlNode of annoteDls) {
+            annoteDlNode.addEventListener("click", (event) => {
+              const clickedEl = event.target;
+              if (clickedEl !== selectedAnnoteEl) {
+                unselectCodeLines();
+                const activeEl = window.document.querySelector(
+                  "dt[data-target-cell].code-annotation-active"
+                );
+                if (activeEl) {
+                  activeEl.classList.remove("code-annotation-active");
+                }
+                selectCodeLines(clickedEl);
+                clickedEl.classList.add("code-annotation-active");
+              } else {
+                // Unselect the line
+                unselectCodeLines();
+                clickedEl.classList.remove("code-annotation-active");
+              }
+            });
+          }
+          const findCites = (el) => {
+            const parentEl = el.parentElement;
+            if (parentEl) {
+              const cites = parentEl.dataset.cites;
+              if (cites) {
+                return {
+                  el,
+                  cites: cites.split(" "),
+                };
+              } else {
+                return findCites(el.parentElement);
+              }
+            } else {
+              return undefined;
+            }
+          };
+          var bibliorefs = window.document.querySelectorAll(
+            'a[role="doc-biblioref"]'
+          );
+          for (var i = 0; i < bibliorefs.length; i++) {
+            const ref = bibliorefs[i];
+            const citeInfo = findCites(ref);
+            if (citeInfo) {
+              tippyHover(citeInfo.el, function () {
+                var popup = window.document.createElement("div");
+                citeInfo.cites.forEach(function (cite) {
+                  var citeDiv = window.document.createElement("div");
+                  citeDiv.classList.add("hanging-indent");
+                  citeDiv.classList.add("csl-entry");
+                  var biblioDiv = window.document.getElementById("ref-" + cite);
+                  if (biblioDiv) {
+                    citeDiv.innerHTML = biblioDiv.innerHTML;
+                  }
+                  popup.appendChild(citeDiv);
+                });
+                return popup.innerHTML;
+              });
+            }
           }
         });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
-      });
-    }
-  }
-});
-</script>
-</div> <!-- /content -->
-
-
-
-
-</body></html>
+      </script>
+    </div>
+    <!-- /content -->
+  </body>
+</html>
