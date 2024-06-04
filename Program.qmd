@@ -276,7 +276,7 @@ schedule_day_5 <-
     "2024-06-14 12:17", "2024-06-14 12:37", "3", "Regular Talk", "Ah, Ha, Ha, Ha, Parameterise! Creating parameterised plot functions for flexible and reproducible data-to-viz pipelines", "Cara Thompson", "Building Stories with Data",
     "2024-06-14 12:39", "2024-06-14 12:59", "4", "Regular Talk", "Rmageddon - Mitigating Critical Vulnerabilities and Streamlining Deployment Processes", "Jake Riley and Hojjat Salmasian", "Children's Hospital of Philadelphia", 
     "2024-06-14 13:01", "2024-06-14 13:21", "5", "Regular Talk", "Comparing Analysis Method Implementations in Software (CAMIS): An open source repository to document differences in statistical methodology across software", "Agnieszka Tomczyk",  "PAREXEL",
-    "2024-06-14 13:23", "2024-06-14 13:43", "6", "Regular Talk", "PhyloTrace - a Shiny App for Bacterial Pathogen Monitoring on a Genomic Level", "Filip Paskali", "",
+    "2024-06-14 13:23", "2024-06-14 13:43", "6", "Regular Talk", "PhyloTrace - a Shiny App for Bacterial Pathogen Monitoring on a Genomic Level", "Filip Paskali and Marian Freisleben", "Furtwangen University",
     "2024-06-14 13:43", "2024-06-14 13:58",  NA, "Break", NA, NA, NA, 
     "2024-06-14 13:58", "2024-06-14 14:08", "7", "Lightning Talk", "R in Clinical Competency Committee {shiny + reticulate + selenium + ...}", "Ken Koon Wong", "Cleveland Clinic Akron General",
     "2024-06-14 14:10", "2024-06-14 14:20", "8", "Lightning Talk", "Health Equity Explorer Application Showcase", "Can Taşlıçukur, Appsilon", "Bill Adams, Boston Medical Center",
