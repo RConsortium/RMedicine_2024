@@ -2,9 +2,8 @@
 
 ::: columns
 ::: {.column width="45%"}
-### Malcolm Barrett and Lucy D’Agostino McGowan
+### Travis Gerke and Lucy D’Agostino McGowan
 
-![](images/malcolm_headshot.png)
 
 ### Biography
 Malcolm Barrett is an epidemiologist and open-source software developer. After receiving his Ph.D. in epidemiology from the University of Southern California, he worked as a data scientist at Apple and Posit. His work has focused on causal inference methodology and software development, including many R packages for causal inference. Collectively, open-source tools he has authored have millions of downloads. Malcolm also teaches workshops and courses in R, software development, and causal inference.
