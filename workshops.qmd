@@ -2,11 +2,11 @@
 
 ::: columns
 ::: {.column width="45%"}
-### Malcolm Barrett and Lucy D’Agostino McGowan
+### Travis Gerke and Lucy D’Agostino McGowan
 
 
 ### Biography
-Malcolm Barrett is an epidemiologist and open-source software developer. After receiving his Ph.D. in epidemiology from the University of Southern California, he worked as a data scientist at Apple and Posit. His work has focused on causal inference methodology and software development, including many R packages for causal inference. Collectively, open-source tools he has authored have millions of downloads. Malcolm also teaches workshops and courses in R, software development, and causal inference.
+Travis Gerke is an epidemiologist and open-source software developer. After receiving his Ph.D. in epidemiology from the University of Southern California, he worked as a data scientist at Apple and Posit. His work has focused on causal inference methodology and software development, including many R packages for causal inference. Collectively, open-source tools he has authored have millions of downloads. Malcolm also teaches workshops and courses in R, software development, and causal inference.
 
 ![](images/Lucy_D_M.jpg)
 
@@ -26,8 +26,8 @@ Malcolm Barrett is an epidemiologist and open-source software developer. After r
 
 This workshop will use the NHANES Epidemiologic Follow-up Study (NHEFS) data. In this workshop, we’ll teach the essential elements of answering causal questions in R through causal diagrams, and causal modeling techniques such as propensity scores and inverse probability weighting.
 
-### Drs. Barrett and McGowan on the Web
-Dr. Barrett can be found ggdagging on Github at [malcolmbarrett/ggdag], scoring the propensity score weights for all possible outcomes  [malcolmbarrett/propensity], and on Twitter [\@malco_barrett](https://twitter.com/malco_barrett).
+### Drs. Gerke and McGowan on the Web
+Dr. Gerke can be found on [Github](https://github.com/tgerke) and on Twitter [\@mtravisgerke](https://twitter.com/travisgerke). Dr. Gerke leds cancer-focused research teams in the application and development of tools for applied machine learning, causal inference, and biostatistics. They direct data science efforts in cloud-based informatics and advanced analytics with a focus on oncology clinical trials.
 
 Dr. McGowan can be found blogging at [livefreeordichotomize.com](https://livefreeordichotomize.com/), on Twitter [\@LucyStats](https://twitter.com/LucyStats), and podcasting on the American Journal of Epidemiology partner podcast, [Casual Inference](https://casualinfer.libsyn.com/).
 :::
