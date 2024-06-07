@@ -21,7 +21,7 @@ library(gt)
 schedule_day_1 <-
   dplyr::tribble(
     ~start_time, ~end_time, ~t_number, ~t_type, ~t_title, ~t_speakers, ~t_speaker_titles, ~t_companies,
-    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Workshop", "Causal Inference in R", "Lucy D'Agostino McGowan, Malcom Barrett", "Assistant Professor, Research Software Engineer", "Wake Forest University, Stanford University",
+    "2024-06-10 11:00", "2024-06-10 14:00", "1A", "Workshop", "Causal Inference in R", "Travis Gerke", "Director of Data Science", "Prostate Cancer Clinical Trials Consortium",
     "2024-06-10 11:00", "2024-06-10 14:00", "1B", "Workshop", "Promover la Equidad Científica: Una Introducción al uso de R para la programación en Bioestadística y Ciencia de Datos, en Español", "Catalina Canizares-Escobar, Francisco Cardozo", "Study Coordinator, PhD student", "Florida International University",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
     "2024-06-10 14:30", "2024-06-10 17:30", "2A", "Workshop", "Google BigQuery: First Steps in R", "Joy Payton", "Data Scientist", "CHOP",
