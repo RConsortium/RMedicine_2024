@@ -114,13 +114,21 @@ Garrick can be found blogging at [garrickadenbuie.com](https://www.garrickadenbu
 :::
 
 ::: {.column width="45%"}
-## Tidying your REDCap Data with {REDCapTidieR}
+## REDCap + R: Teaming Up in the Tidyverse
 
 ### Abstract
 
-This workshop will use the {REDCap Tidier} package to get clinical data out of REDCap and prepare it for analysis. REDCap is an electronic data capture software that is widely used in the medical research community. The REDCapR package streamlines calls to the REDCap API from an R environment. One of REDCapR’s main uses is to import records from a REDCap project. This works well for simple projects, however this workflow becomes fugly when complex databases that include longitudinal structure and/or repeating instruments are used.
+🔍 What You'll Learn:
 
-The REDCapTidieR package aims to make the life of analysts who deal with complex REDCap databases easier. It builds upon REDCapR to make its output tidier. Instead of one large data frame that contains all the data from your project, you get to work with a set of tidy tibbles, one for each REDCap instrument.
+- Seamlessly integrate REDCap with R using REDCapR and REDCapTidieR.
+- Master data extraction and manipulation of complex longitudinal and repeated instruments data.
+- Perform sophisticated data analysis and visualization using Quarto, the successor to R Markdown.
+- Write data back to REDCap efficiently using the REDCap API.
+
+👥 This workshop is perfect for:
+
+- REDCap users looking to enhance their data analysis capabilities with R.
+- R users seeking to leverage REDCap as a robust database for their projects.
 
 ### Stephan Kadauke and Will Beasley on the Web
 
