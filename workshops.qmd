@@ -2,17 +2,18 @@
 
 ::: columns
 ::: {.column width="45%"}
-### Travis Gerke and Lucy D’Agostino McGowan
+### Travis Gerke 
 
+![](images/travis.jpeg)
 
 ### Biography
+
 Travis Gerke is an epidemiologist and open-source software developer. After receiving his Ph.D. in epidemiology from the University of Southern California, he worked as a data scientist at Apple and Posit. His work has focused on causal inference methodology and software development, including many R packages for causal inference. Collectively, open-source tools he has authored have millions of downloads. Malcolm also teaches workshops and courses in R, software development, and causal inference.
 
-![](images/Lucy_D_M.jpg)
 
-### Biography
 
-[Lucy D’Agostino McGowan](https://www.lucymcgowan.com/about/) is an assistant professor in the Department of Statistical Sciences at Wake Forest University. She received her PhD in Biostatistics from Vanderbilt University and completed her postdoctoral training at Johns Hopkins University Bloomberg School of Public Health. Her research focuses on analytic design theory, statistical communication, causal inference, and data science pedagogy.
+### Contributors
+The materials for this workshop were developed by Malcolm Barrett and Lucy D'Agostino McGowan.
 :::
 
 ::: {.column width="10%"}
@@ -27,6 +28,7 @@ Travis Gerke is an epidemiologist and open-source software developer. After rece
 This workshop will use the NHANES Epidemiologic Follow-up Study (NHEFS) data. In this workshop, we’ll teach the essential elements of answering causal questions in R through causal diagrams, and causal modeling techniques such as propensity scores and inverse probability weighting.
 
 ### Drs. Gerke and McGowan on the Web
+
 Dr. Gerke can be found on [Github](https://github.com/tgerke) and on Twitter [\@mtravisgerke](https://twitter.com/travisgerke). Dr. Gerke leds cancer-focused research teams in the application and development of tools for applied machine learning, causal inference, and biostatistics. They direct data science efforts in cloud-based informatics and advanced analytics with a focus on oncology clinical trials.
 
 Dr. McGowan can be found blogging at [livefreeordichotomize.com](https://livefreeordichotomize.com/), on Twitter [\@LucyStats](https://twitter.com/LucyStats), and podcasting on the American Journal of Epidemiology partner podcast, [Casual Inference](https://casualinfer.libsyn.com/).
@@ -137,24 +139,21 @@ Will can be found working on improving [REDCap Workflows](https://ouhscbbmc.gith
 
 ::: columns
 ::: {.column width="45%"}
-
 ### Catalina Canizares-Escobar and Francisco Cardozo
 
-![](images/catalina.jpeg)
-![](images/francisco.jpeg)
-
+![](images/catalina.jpeg) ![](images/francisco.jpeg)
 
 ### Biography
 
-[Catalina Cañizares](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html)  is a passionate data scientist and a Ph.D. candidate in Social Welfare, dedicated to using data to gain insights into emotional disorders. She has been delving deep into data analysis, especially with R. Her focus? Making data understandable and useful. She specializes in cleaning and merging data, and loves exploring data with tools like tidyverse, table1, gtsummary, and skimr, among others. She is also interested in using Machine Learning models, with the tidymodels package, to better understand emotional disorders. Plus, She is all about keeping things clear and reproducible by using tools such as Quarto. 
+[Catalina Cañizares](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html) is a passionate data scientist and a Ph.D. candidate in Social Welfare, dedicated to using data to gain insights into emotional disorders. She has been delving deep into data analysis, especially with R. Her focus? Making data understandable and useful. She specializes in cleaning and merging data, and loves exploring data with tools like tidyverse, table1, gtsummary, and skimr, among others. She is also interested in using Machine Learning models, with the tidymodels package, to better understand emotional disorders. Plus, She is all about keeping things clear and reproducible by using tools such as Quarto.
 
-[Francisco Cardozo](https://focardozom.github.io/) is a PhD canidate in prevention science and community health, he specializes in applying quantitative techniques to evaluate the efficacy of prevention programs, focusing on understanding the dynamics of how and for whom these programs are most effective. He is dedicated to developing precise measurements and analyses that inform decisions about program operations. Francisco is passionate about translating resource science into practical, real-world applications. 
+[Francisco Cardozo](https://focardozom.github.io/) is a PhD canidate in prevention science and community health, he specializes in applying quantitative techniques to evaluate the efficacy of prevention programs, focusing on understanding the dynamics of how and for whom these programs are most effective. He is dedicated to developing precise measurements and analyses that inform decisions about program operations. Francisco is passionate about translating resource science into practical, real-world applications.
 
 ### Biografía
 
 [Catalina Cañizares](https://global.fiu.edu/world-centers/world-center-colombia/fulbrighters/catalina-canizares-escobar.html) es una científica de datos apasionada y candidata Ph.D. en trabajo social. Ella se dedidca al uso de datos para obtener información sobre los trastornos emocionales. Ha estado profundizando en el análisis de datos, especialmente con R y su enfoque es hacer que los datos sean comprensibles y útiles. Se especializo en limpiar y fusionar datos, y le encanta explorar datos con herramientas como tidyverse, table1, gtsummary y skimr, entre otras. También se interesa utilizar modelos de Machine Learning, con el paquete tidymodels, para comprender mejor los trastornos emocionales.
 
-[Francisco Cardozo](https://focardozom.github.io/) es un candidato a PhD en Ciencias de las Prevención y Salud Comunitaria, se especializa en aplicar técnicas cuantitativas para evaluar la eficacia de programas de prevención, centrándose en entender la dinámica de cómo y para quién estos programas son más efectivos. Está dedicado a desarrollar mediciones y análisis  que informen decisiones sobre cómo operar los programas. Francisco siente pasión por traducir hallazgos científicos en aplicaciones prácticas. 
+[Francisco Cardozo](https://focardozom.github.io/) es un candidato a PhD en Ciencias de las Prevención y Salud Comunitaria, se especializa en aplicar técnicas cuantitativas para evaluar la eficacia de programas de prevención, centrándose en entender la dinámica de cómo y para quién estos programas son más efectivos. Está dedicado a desarrollar mediciones y análisis que informen decisiones sobre cómo operar los programas. Francisco siente pasión por traducir hallazgos científicos en aplicaciones prácticas.
 
 ## Enhancing Scientific Equity: A Spanish Introduction to Using R for Biostatistical and Data Science Programming
 
@@ -180,7 +179,6 @@ A pesar de los abundantes recursos disponibles para aprender R, la mayoría de e
 :::
 :::
 
-
 ::: columns
 ::: {.column width="45%"}
 ### Shannon Pileggi
@@ -189,8 +187,7 @@ A pesar de los abundantes recursos disponibles para aprender R, la mayoría de e
 
 ### Biography
 
-[Shannon Pileggi](https://www.pipinghotdata.com/) is a  former statistics college professor now working in industry. I love wrangling, analyzing, and visualizing data, and helping others do the same. Shannon is a member of the leadership team for R-Ladies Global and works as the Lead Data Scientist for the Prostate Cancer Clinical Trials Consortium (PCCTCC).
-
+[Shannon Pileggi](https://www.pipinghotdata.com/) is a former statistics college professor now working in industry. I love wrangling, analyzing, and visualizing data, and helping others do the same. Shannon is a member of the leadership team for R-Ladies Global and works as the Lead Data Scientist for the Prostate Cancer Clinical Trials Consortium (PCCTCC).
 :::
 
 ::: {.column width="10%"}
@@ -206,10 +203,9 @@ In this workshop, we will establish the concept of and apply best practices to R
 
 ### Shannon Pileggi on the Web
 
-Shannon is a former statistics professor now working in industry with the The Prostate Cancer Clinical Trials Consortium (PCCTC). I love wrangling, analyzing, and visualizing data, and helping others do the same. Shannon is a member of R-Ladies Global in Pennsylvania, and can be found blogging at  [Piping Hot Data]( https://www.pipinghotdata.com/), on Mastodon [fosstodon.org/@PipingHotData](https://fosstodon.org/@PipingHotData), and carefully labeling all her  [data](https://www.pipinghotdata.com/posts/2022-09-13-the-case-for-variable-labels-in-r/).
+Shannon is a former statistics professor now working in industry with the The Prostate Cancer Clinical Trials Consortium (PCCTC). I love wrangling, analyzing, and visualizing data, and helping others do the same. Shannon is a member of R-Ladies Global in Pennsylvania, and can be found blogging at [Piping Hot Data](https://www.pipinghotdata.com/), on Mastodon [fosstodon.org/\@PipingHotData](https://fosstodon.org/@PipingHotData), and carefully labeling all her [data](https://www.pipinghotdata.com/posts/2022-09-13-the-case-for-variable-labels-in-r/).
 :::
 :::
-
 
 ::: columns
 ::: {.column width="45%"}
@@ -219,7 +215,7 @@ Shannon is a former statistics professor now working in industry with the The Pr
 
 ### Biography
 
-[Mitchell O'Hara-Wild](https://mitchelloharawild.com/) is a PhD candidate at Monash University and a Data Scientist at Nectric in Clayton, Victoria, Australia. Data scientist and developer of statistical software. Mitchell is our first antipodean workshop leader, and our first to do an evening (very early morning in Australia) workshop. He is a Data scientist and rstats package developer of time series tools, and is addicted to using local IoT devices for monitoring and automating home permaculture. 
+[Mitchell O'Hara-Wild](https://mitchelloharawild.com/) is a PhD candidate at Monash University and a Data Scientist at Nectric in Clayton, Victoria, Australia. Data scientist and developer of statistical software. Mitchell is our first antipodean workshop leader, and our first to do an evening (very early morning in Australia) workshop. He is a Data scientist and rstats package developer of time series tools, and is addicted to using local IoT devices for monitoring and automating home permaculture.
 :::
 
 ::: {.column width="10%"}
@@ -235,10 +231,9 @@ This workshop provides a practical introduction to time series analytics and for
 
 ### Mitchell O'Hara-Wild on the Web
 
-Mitchell is a Monash University PhD candidate with passions for time series data and data-driven permaculture. Mitchell  can be found blogging at https://mitchelloharawild.com/blog.html, working as a Data Scientist at Nectric on [Github](https://github.com/mitchelloharawild/), and optimizing his home garden to surpass Lisa Lendway's [crop yields](https://stattlc.com/2021/12/01/digging-into-data-science-using-the-garden-dataset/) .
+Mitchell is a Monash University PhD candidate with passions for time series data and data-driven permaculture. Mitchell can be found blogging at https://mitchelloharawild.com/blog.html, working as a Data Scientist at Nectric on [Github](https://github.com/mitchelloharawild/), and optimizing his home garden to surpass Lisa Lendway's [crop yields](https://stattlc.com/2021/12/01/digging-into-data-science-using-the-garden-dataset/) .
 :::
 :::
-
 
 ::: columns
 ::: {.column width="45%"}
@@ -248,13 +243,11 @@ Mitchell is a Monash University PhD candidate with passions for time series data
 
 ### Biographies
 
-[Theo Roe](https://www.jumpingrivers.com/authors/theo-roe/) holds a 1st Class Honours MMathStat in Mathematics & Statistics from Newcastle University. He is the author of many of the Jumping Rivers courses and works with a range of clients at Jumping Rivers. 
+[Theo Roe](https://www.jumpingrivers.com/authors/theo-roe/) holds a 1st Class Honours MMathStat in Mathematics & Statistics from Newcastle University. He is the author of many of the Jumping Rivers courses and works with a range of clients at Jumping Rivers.
 
 ![](images/colin.jpeg)
 
-[Colin Gillespie](https://www.jumpingrivers.com/authors/colin-gillespie/) is a co-founder and CTO of Jumping Rivers. Colin has been using R since 1999. He’s the author of a number of R packages and has published the book _Efficient R Programming_ with O’Reilly. Colin is a Senior Lecturer at Newcastle University, and completed his Ph.D. in Statistics at the University of Strathclyde.
-
-
+[Colin Gillespie](https://www.jumpingrivers.com/authors/colin-gillespie/) is a co-founder and CTO of Jumping Rivers. Colin has been using R since 1999. He’s the author of a number of R packages and has published the book *Efficient R Programming* with O’Reilly. Colin is a Senior Lecturer at Newcastle University, and completed his Ph.D. in Statistics at the University of Strathclyde.
 :::
 
 ::: {.column width="10%"}
@@ -270,16 +263,11 @@ Imagine you’re asked to recreate a beautiful, complex PowerPoint presentation 
 
 The answer is not Quarto at all; it’s {officer}! In this workshop, we’ll show the process of recreating complex PowerPoint layouts, using {officer}, whilst addressing the pros and cons of abandoning Quarto.
 
-By the end of this workshop, participants will be able to:
-- Understand what possibilities lie within the “Officeverse”
-- Why, for complex PowerPoints, {officer} is better than R Markdown and Quarto
-- Create complex PowerPoint presentations using {officer}
-- Understand how to best combine PowerPoint templates with {officer} for the optimal workflow
-- Understand the issues one will encounter when using {officer}
+By the end of this workshop, participants will be able to: - Understand what possibilities lie within the “Officeverse” - Why, for complex PowerPoints, {officer} is better than R Markdown and Quarto - Create complex PowerPoint presentations using {officer} - Understand how to best combine PowerPoint templates with {officer} for the optimal workflow - Understand the issues one will encounter when using {officer}
 
 ### Theo Roe and Colin Gillespie on the Web
 
-Theo can be found consulting at Jumping Rivers, blogging [here](https://www.jumpingrivers.com/authors/theo-roe/)  and leaping over the Tyne on Saturday nights in the summertime.
+Theo can be found consulting at Jumping Rivers, blogging [here](https://www.jumpingrivers.com/authors/theo-roe/) and leaping over the Tyne on Saturday nights in the summertime.
 
 Colin can be found blogging about [R](https://www.jumpingrivers.com/authors/colin-gillespie/), sharing on [Github](https://github.com/csgillespie) and consulting as a member of the Royal Statistical Society.
 :::
@@ -293,9 +281,7 @@ Colin can be found blogging about [R](https://www.jumpingrivers.com/authors/coli
 
 ### Biography
 
-[Rami Krispin](https://www.linkedin.com/in/rami-krispin/) is a Senior Manager for Data Science and Engineering at Apple. He leads the data science and engineering team at Apple Finance - Services and Infra. The team focuses on translating business problems and requirements into data products using advanced statistical and machine learning models to support and help Apple leadership make data-driven decisions.
-Rami is also an open-source contributor and the author of _Hands-On Time Series Analysis with R_ (Packt), several R packages for time series analysis, and machine learning applications. Rami is currently working on his next book, _Applied Time Series Analysis and Forecasting_, which focuses on forecasting at scale. 
-
+[Rami Krispin](https://www.linkedin.com/in/rami-krispin/) is a Senior Manager for Data Science and Engineering at Apple. He leads the data science and engineering team at Apple Finance - Services and Infra. The team focuses on translating business problems and requirements into data products using advanced statistical and machine learning models to support and help Apple leadership make data-driven decisions. Rami is also an open-source contributor and the author of *Hands-On Time Series Analysis with R* (Packt), several R packages for time series analysis, and machine learning applications. Rami is currently working on his next book, *Applied Time Series Analysis and Forecasting*, which focuses on forecasting at scale.
 :::
 
 ::: {.column width="10%"}
@@ -307,14 +293,9 @@ Rami is also an open-source contributor and the author of _Hands-On Time Series 
 
 ### Abstract
 
-VScode enables a seamless integration of Docker with the Dev Containers extension. This tutorial will focus on setting up a dockerized R development environment within VScode using the Dev Container extension and Docker. The tutorial will cover the following topics:
-- The Foundation of Docker
-- Rocking R on Docker
-- The Dev Container extension
-- Setting Up the R environment
+VScode enables a seamless integration of Docker with the Dev Containers extension. This tutorial will focus on setting up a dockerized R development environment within VScode using the Dev Container extension and Docker. The tutorial will cover the following topics: - The Foundation of Docker - Rocking R on Docker - The Dev Container extension - Setting Up the R environment
 
-The workshop is based on this tutorial:
-https://github.com/RamiKrispin/vscode-r
+The workshop is based on this tutorial: https://github.com/RamiKrispin/vscode-r
 
 ### Rami Krispin on the Web
 
