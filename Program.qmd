@@ -84,7 +84,7 @@ schedule_day_2 <-
     "2024-06-10 11:00", "2024-06-10 14:00", "4B", "Workshop", "From R to PowerPoint: Advanced PowerPoint Presentations Using {officer}", "Theo Roe, Colin Gillespie", "R educators", "Jumping Rivers",
     "2024-06-10 14:00", "2024-06-10 14:30",  NA, "Break", NA, NA, NA, NA,
     "2024-06-10 14:30", "2024-06-10 17:30", "5A", "Workshop", "Setting Up a Dockerized R Development Environment with VScode", "Rami Krispin", "Senior Manager/Data Scientist", "Apple",
-    "2024-06-10 14:30", "2024-06-10 17:30", "5B", "Workshop", "Tidying your REDCap Data with {REDCapTidieR}", "Stephan Kadauke, Will Beasley", "Assistant Professor, Associate Professor", "CHOP, Oklahoma University Health Sciences Center",
+    "2024-06-10 14:30", "2024-06-10 17:30", "5B", "Workshop", "REDCap + R: Teaming Up in the Tidyverse", "Stephan Kadauke, Will Beasley", "Assistant Professor, Associate Professor", "CHOP, Oklahoma University Health Sciences Center",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
 ```
