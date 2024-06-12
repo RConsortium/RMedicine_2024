@@ -145,7 +145,7 @@ schedule_day_3 <-
     "2024-06-12 13:30", "2024-06-12 14:25", "4", "Demo", "An Introduction to Tidy R Spatial Packages: Incorporating Historic Sociodemographic Data from the US Census and Visualizing Geographic Distributions ", "Stephen Uong and Christina Mehranbod", "Columbia University Mailman School of Public Health",
     "2024-06-12 14:30", "2024-06-12 15:25", "5", "Demo", "RosyREDCap – a REDCap-project-agnostic R package that uses an API token to make a single, updating, standardized R list object containing all metadata and data for exports, imports, transformation, and shiny applications", "Brandon Rose", "University of Miami",
     "2024-06-12 15:30", "2024-06-12 16:25", "6", "Demo", "Word embeddings in mental health, from exploration to confirmation, towards multidimensional diagnoses", "Thomas Charlon", "Harvard Medical School",
-    "2024-06-12 16:30", "2024-06-12 17:25", "7", "Demo", "No ChatGPT? No Problem!: Using the R Ecosystem to Facilitate the Extraction and Use of Knowledge from Scientific Literature", "Paul Kowalczyk", "Adaptimmune",
+    "2024-06-12 16:30", "2024-06-12 17:25", NA, "Break", NA, NA, NA,
     "2024-06-12 17:30", "2024-06-12 18:25", "8", "Demo", "Using logistic regression coefficients as a query vector for semantic search.", "Robert Horton", "WV Labs",
   ) |>
   dplyr::mutate(duration = time_length(ymd_hm(end_time) - ymd_hm(start_time), unit = "mins"))
