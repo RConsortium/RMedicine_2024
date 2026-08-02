@@ -4,6 +4,7 @@ project:
 
 website:
   title: "R/Medicine 2024"
+  google-analytics: "G-B697SX1BNN"
   navbar:
     left:
       - href: index.qmd
